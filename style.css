@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/*
+Theme Name: Keepin - Basic Theme
+Theme URI: https://www.keepin.com.ve/
+Author: Keepin
+Author URI: https://www.keepin.com.ve
+Description: Tema base para iniciar la creaciónde plantillas presonalizadas para los clientes. Uso exclusivo de TeamKeep 
+Version: 0.1.1 (Solo HOME)
+Text Domain: Keepin
+WordPress Available:  yes
+*/
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    /*border: thin solid #B0B;*/
+  }
+  .row{
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+/*
+ * Blog name and description
+ */
+
+.header {
+  width: 100%;
+  height: 130px;
+
+  }
+
+.area-logo{
+  padding: 0px;
+  padding-left: 30px;
+  margin: 0px;
+  height: 100%;
+
+  background-color: #F8F8FF; /* GhostWhite */
+
+}
+.imglogo{
+   /* border: thin solid blue;
+  background-color: yellow;*/
+}
+
+.area-menu{
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+
+  /* Para centrado Vertical de elementos internos */
+  position: relative;
+
+  background-color: #F0FFF0;  /* HoneyDew  */
+
+}
+
+/** Menu header **/
+.header-menu {
+  margin: 0px;
+  padding: 0px;
+  
+  width: 100%;
+
+  /* Fuente y posicionamiento del texto */
+  padding-right: 20px;
+  font-size: 22px;
+  text-align: right;
+
+  /* Centrado Vertical */ 
+  position: absolute;
+  top: 35%;
+}
+
+.header-menu li{
+  padding: 5px;
+  display: inline-block;
+}
+.header-menu a{
+  color: black;
+  text-decoration: none;
+}
+.header-menu a:hover{
+  color: red;
+}
+
+
+/*
+ * Contener de contenido central
+ */
+
+.cont-central{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: -10px;
+    min-height: calc(100vh - 245px);
+
+    background-color: #dddd44; /* PaleGreen   */
+}
+
+/*
+ * Columna de la izquierda (principal Blog) y SideBar
+ */
+
+.blog-main {
+  margin:0px;
+  padding: 10px 0 0 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  min-height: calc(100vh - 245px);
+}
+
+.sidebar{
+  margin: 0px;
+  padding: 10px;
+  min-height: calc(100vh - 245px);
+
+  background-color: #FFFFF0; /* Ivory */ 
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 0px;
+  margin: 0 0px 0px;
+}
+.sidebar-module-inset {
+  padding: 0px;
+  background-color: #f5f5f5;
+  border-radius: 0px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 0px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.footer {
+  padding: 0px;
+  min-height: 100px;
+  color: #999;
+  text-align: center;
+  background-color: #BBB;
+  border-top: 1px solid #e5e5e5;
+  /*position: relative;*/
+}
+.footer p:last-child {
+  margin-bottom: 0;
+}
+
+/*** Menu Footer ***/
+.area-menufoot{
+  padding: 0px;
+  margin: 0px;
+  min-height: 100px;
+
+  background-color: #F0FFF0;  /* HoneyDew  */
+  opacity: 0.5;
+
+  position: relative;
+}
+
+
+.footer-menu {
+  margin-top: 0px;
+  padding: 0px 10px;
+  text-align: left;
+  font-size: 16px;
+
+  /*Centrado Vertical y horizontal*/ 
+  position: absolute;
+  top: 30%;
+}
+.footer-menu li{
+  padding: 5px;
+  display: inline-block;
+}
+.footer-menu a{
+  color: black;
+  text-decoration: none;
+}
+.footer-menu a:hover{
+  color: red;
+}
+
+/***  Area de Widgets en el footer ***/
+
+.area-widgetsfoot{
+  min-height: 100px;
+  height: 100%;
+  text-align: right;
+  padding: 20px 10px 0 0;
+
+  background-color: #E0FFFF; /* LightCyan  */
+  opacity: 0.5;
+}
