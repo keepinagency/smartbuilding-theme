@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*
+Theme Name: SmartBuilding - Theme Web
+Theme URI: https://www.smartBuilding.cl/
+Author: Keepin Team
+Author URI: https://www.keepinagency.com/
+Description: Primera versión del tema para la Web de SmartBuilding, desarrollado por KeepinAgency. Uso exclusivo de SmartBuilding Team 
+Version: 0.0.1 
+Text Domain: SmartBuilding
+WordPress Available:  yes
+*/
+
+/*@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('fonts/Gotham/Gotham-Bold.eot'); /* IE9 Compat Modes ---*/
+  /*src: url('fonts/Gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 ---- */
+    /* url('fonts/Gotham/Gotham-Bold.woff') format('woff'), /* Modern Browsers ----- */
+     /*url('fonts/Gotham/Gotham-Bold.ttf')  format('truetype'), /* Safari, Android, iOS  LISTO */
+     /*url('fonts/Gotham/Gotham-Bold.svg#svgFontName') format('svg'); /* Legacy iOS ---- */
+/*     ;
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('fonts/Gotham/Gotham-Book.eot'); /* IE9 Compat Modes ---*/
+  /*src: url('fonts/Gotham/Gotham-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 ---- */
+    /* url('fonts/Gotham/Gotham-Book.woff') format('woff'), /* Modern Browsers ----- */
+     /*url('fonts/Gotham/Gotham-Book.ttf')  format('truetype'), /* Safari, Android, iOS  LISTO */
+     /*url('fonts/Gotham/Gotham-Book.svg#svgFontName') format('svg'); /* Legacy iOS ---- */
+     /*;
+   font-weight: 400;
+   font-style: normal;
+}*/
+
+.menu-item:hover{
+  background-color: #86AA35;
+}
+
+    /*****HOME - PRODUCTO*****
+    **************************/
+
+.titulo-producto{
+    font-size: 1.5em;
+    color: #000;
+    background-color:white;
+    /*height: 122px !important;*/
+}
+.titulo-negrita {
+  color:#86AA35;
+}
+.miniatura-producto{
+    background-position: center;
+    min-height: 50vh;
+}
+.titulo-post {
+    background: rgba(134,170,53, 0.65) !important;
+    text-decoration: none !important;
+    min-height: 5em;
+}
+.contenido-producto{
+  background: rgba(134,170,53, 0.65) !important;
+  text-align: justify;
+}
