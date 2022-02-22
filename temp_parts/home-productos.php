@@ -1,6 +1,9 @@
 <?php 
-/*** Esta es la plantilla para el home ***/    
-$nuevo_arreglo = new WP_Query(array(
+/*** 
+ *  Nuestros productos, categoría de entradas    
+ *  Categoría: Productos   
+ ***/       
+$arreglo_productos = new WP_Query(array(
 	'post_type'=>'post', 
     'category_name' => 'productos',
     'order'=>'ASC',
@@ -8,12 +11,12 @@ $nuevo_arreglo = new WP_Query(array(
 ));
 ?>
 <div class="row contenedor-productoHome p-0 m-0">
-    <?php if ($nuevo_arreglo->have_posts()) :?>
+    <?php if ($arreglo_productos->have_posts()) :?>
         <div class="row col-12 p-0 m-0">
             <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center p-4">
-                <b class="titulo-negrita">Nuestros</b>&nbsp;Productos
+                <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</p>
             </div>
-            <?php while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
+            <?php while ($arreglo_productos->have_posts()) : $arreglo_productos->the_post();?>
                 <div class="content-post col-12 col-lg-4 p-1 m-0 p-lg-1">  
                     <div class="miniatura-producto d-flex align-items-end p-0 m-0" 
                                 style="background-image: url('<?php echo the_post_thumbnail_url('');?>'); background-size: cover;"> 
