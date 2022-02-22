@@ -1,0 +1,39 @@
+<?php 
+/*** 
+ *  Nuestros servicios, categoría de entradas    
+ *  Categoría: Servicios   
+ ***/ 
+$arreglo_servicios = new WP_Query(array(
+	'post_type'=>'post', 
+    'category_name' => 'servicios',
+    'order'=>'ASC',
+	'posts_per_page'=>6
+));
+?>
+<div id="servicios" class="col-12 row p-0 m-0 py-5">
+    <?php if ($arreglo_servicios->have_posts()) : ?>
+        <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center p-4">
+            <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Servicios</p>
+        </div>
+        
+        <?php while ($arreglo_servicios->have_posts()) : $arreglo_servicios->the_post();?>
+            <div class="pt-2 col-12 col-lg-6 p-lg-0 m-lg-0 d-flex justify-content-lg-center row">
+
+                <div class="col-lg-3 p-lg-0 m-lg-0">
+                    <?php the_post_thumbnail('Thumbnail'); ?> 
+               </div>
+               
+               <div class="row col-lg-6 p-lg-0 m-lg-0 ">
+                    <div class="titulo-servicios col-lg-12 p-0 m-0">
+                        <?php the_title(); ?>
+                    </div>
+                    <div class="post-servicios col-lg-12 p-0 m-0">
+                        <?php the_excerpt();?>
+                    </div>
+               </div>
+
+            </div>
+        <?php endwhile;?>
+    <?php endif;?>
+</div>
+

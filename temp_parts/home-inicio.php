@@ -1,5 +1,9 @@
 <?php 
-$posts_slides = new WP_Query(array (
+/*** 
+ *  Sliders en inicio del home, categoría de entradas    
+ *  Categoría: Presentación
+ ***/ 
+$arreglo_slides = new WP_Query(array (
     'post_type'     =>'post',
 	'category_name' =>'presentacion',
 	'orderby'		=>'rand'
@@ -8,7 +12,7 @@ $posts_slides = new WP_Query(array (
 <!--div class="content_home d-flex flex-column p-0 m-0 h-100"-->
     <div id="carruselHome" class="carousel slide p-0 m-0 d-block col-12" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <?php $i=1; while($posts_slides->have_posts()) : $posts_slides->the_post();?>
+            <?php $i=1; while($arreglo_slides->have_posts()) : $arreglo_slides->the_post();?>
                 <div class="carousel-item <?php if ($i == 1) echo 'active'; ?>" > 
                     <img class="img-carousel d-block w-100" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     <div class="carousel-caption visible-lg">
