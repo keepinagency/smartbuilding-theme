@@ -40,7 +40,7 @@ $arreglo_testimonio = new WP_Query(array(
                         <div class="col-6 col-lg-12 d-lg-flex align-items-center justify-content-lg-center pb-3">
                             <?php the_post_thumbnail('full'); ?>  
                         </div>
-                        <div class="col-12 col-lg-12 p-0 d-lg-flex justify-content-lg-center text-center px-3 cont-clientes">
+                        <div class="col-12 col-lg-12 p-0 d-lg-flex justify-content-lg-center text-center px-3 cont-clientes fst-italic">
                             <?php the_content();?>
                         </div>
                     </div>

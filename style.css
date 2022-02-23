@@ -67,16 +67,12 @@ WordPress Available:  yes
   **************************/
 .titulo-servicios{
   color: #86AA35;
-  font-size: 1.5em;
+  font-size: 1.4em;
   /*line-height: 1.1em;*/
-}
-.titulo-servicios:hover{
-  color: #86AA35;
-  text-decoration-line: none;
 }
 .post-servicios{
   color: #413a4d;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
   /*****HOME - TESTIMONIOS*****
@@ -107,5 +103,17 @@ WordPress Available:  yes
     border-top: solid 2px #86AA35;
     border-bottom: solid 2px #86AA35;
   }
-  
+}
+ /*****HOME - CONTÁCTANOS*****
+  **************************/
+.btn-submit:hover{
+  background-color: #86AA35;
+}
+  .titulo-redes{
+  font-size: 1.4em;
+  /*line-height: 1.1em;*/
+}
+.parrafo-contacto{
+  font-size: 0.8em;
+  text-align: justify;
 }
