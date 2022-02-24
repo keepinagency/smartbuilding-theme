@@ -4,7 +4,7 @@
  *  Categoría: ""   
  ***/  
 ?>
-<div class="row p-0 m-0">
+<div class="row p-0 m-0 mb-lg-2">
     <div class="titulo-producto col-12 text-uppercase d-flex align-items-center justify-content-center p-4">
         <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Contác</b>tanos</p>
     </div>
