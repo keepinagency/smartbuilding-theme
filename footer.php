@@ -21,46 +21,124 @@
 </div--><!-- /.row -->
 </div><!-- /.container -->
 <!-- Footer -->
- <!-- Grid container -->
-<footer class="bg-light text-center ">
-<!--div class="titulo-redes col-lg-6 col-12 text-uppercase">
-        <p class="border-2 border-bottom border-success">Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales</p>
-    <div>
-    <div class="col-lg-6 p-0 m-0">
-        
-        <div class="col-lg-12 col-12 d-flex justify-content-center">
-            <!-- RSS -->
-            <!--a href="" class="text-decoration-none me-3">
-                <img src="<?= smartbuilding_IMG. 'rss.jpeg'?>"/>
-            </a>
-
-            <!-- Facebook -->
-            <!--a href="" class="text-decoration-none me-2">
-                <img src="<?= smartbuilding_IMG. 'facebook.jpeg'?>"/>
-            </a>
-
-            <!-- Gplus -->
-            <!--a href="" class="text-decoration-none me-2">
-                <img src="<?= smartbuilding_IMG. 'gplus.jpeg'?>"/>
-            </a>
-
-            <!-- LinkedIn -->
-            <!--a href="" class="text-decoration-none me-2">
-                <img src="<?= smartbuilding_IMG. 'linked-in.jpeg'?>"/>
-            </a>
-
-            <!-- Pinterest -->
-            <!--a href="" class="text-decoration-none me-2">
-                <img src="<?= smartbuilding_IMG. 'pinterest.jpeg'?>"/>
-            </a>
-        </div-->
+ <!-- Redes Sociales -->
+<footer class="footer text-center">
+    <!--div class="titulo-redes col-lg-6 col-12 text-uppercase">
+        <p>Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales</p>
+    <div-->
+	<div class="row col-12 conten-social p-0 m-0">
+		<div class="col-lg-5">
+			<p class="parrafo-info ps-2">
+			<b class="titulo-negrita">¿Quienes Somos?</b> Queremos ser referentes en la industria de la Construcción Sustentable y la eficiencia energética, con aplicaciones 
+				residenciales y Comerciales. Líderes en ofrecer tecnologías y soluciones para las personas que buscan no sólo ahorros en sus consumos 
+				energéticos sino que también su impacto en el entorno y el planeta.
+			</p>
+		</div>
+		<div class="col-12 col-lg-3">
+			<div class="conten-social-redes">
+				<p class="titulo-redes">Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales</p>
+			</div>
+			<div class="col-12 p-0 d-flex justify-content-center">
+				<!-- RSS -->
+				<a href="" class="text-decoration-none me-2">
+					<img src="<?= smartbuilding_IMG. 'rss.jpeg'?>"/>
+				</a>
+				<!-- Facebook -->
+				<a href="" class="text-decoration-none me-2">
+					<img src="<?= smartbuilding_IMG. 'facebook.jpeg'?>"/>
+				</a>
+				<!-- Gplus -->
+				<a href="" class="text-decoration-none me-2">
+					<img src="<?= smartbuilding_IMG. 'gplus.jpeg'?>"/>
+				</a>
+				<!-- LinkedIn -->
+				<a href="" class="text-decoration-none me-2">
+					<img src="<?= smartbuilding_IMG. 'linked-in.jpeg'?>"/>
+				</a>
+				<!-- Pinterest -->
+				<a href="" class="text-decoration-none me-2">
+					<img src="<?= smartbuilding_IMG. 'pinterest.jpeg'?>"/>
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-4 p-0 m-0 ">
+			<div class="contact-details row p-0 m-0">
+				<div class="col-6">
+					<span>
+						<img src="<?= smartbuilding_IMG. 'direccion.png'?>"/>DIRECCIÓN
+					</span>
+					<p>El Juncal #901, Bodega3, Quilicura</p>
+				</div>
+				<div class="col-6">
+					<span>
+						<img src="<?= smartbuilding_IMG. 'phone.png'?>"/>TELÉFONO
+					</span>
+					<p>+56 22 9480016</p>
+				</div>
+				<div class="col-6">
+					<span>
+						<img src="<?= smartbuilding_IMG. 'email.png'?>"/>CORREO
+					</span>
+					<p>contacto@smartbuilding.cl</p>
+				</div>
+				<div class="col-6">
+					<span>
+						<img src="<?= smartbuilding_IMG. 'enlace.png'?>"/>SITIO WEB
+					</span>
+					<p>http://smartbuilding.cl/</p>
+				</div>
+			</div>
+		</div><!-- Contact Us Widget -->
+	</div>
+	
   <!-- Copyright -->
-  <div class="p-2 d-flex justify-content-center" style="background-color: rgba(0, 0, 0, 0.05);">
-	<p>© 2022 Copyright SmartBuilding. Otro sitio web desarrollado, a medida por. 
-		<a class="text-reset fw-bold" href="https://www.keepinagency.com/" target="blank">Keepin Agency</a>
-	</p>
+  <div class="col-12 p-2 d-flex justify-content-center">
+	  <p class="copyright">© 2022 Copyright SmartBuilding. <b class="copy-url">Otro sitio web desarrollado, a medida por.</b> 
+		<a class="text-reset fw-bold" href="https://www.keepinagency.com/" target="blank">
+			Keepin Agency
+		</a>
+	  </p>
   </div>
   <!-- Copyright -->
+
+	<!--div class="col-12 d-lg-flex flex-lg-row-reverse pl-lg-5">
+		<!--SOCIAL MEDIA-->
+		<!--div class="col-12 p-0 pt-3 pb-3 d-flex flex-row align-items-center col-lg-6 pl-lg-4 justify-content-lg-center">
+
+			<a href="<?php echo $url_int; ?>" target="_blank" class="pl-4">
+				<img src="<?php echo $instalogo; ?>" alt="" id="">
+			</a>
+			<a href="<?php echo $url_fbk; ?>" target="_blank" class="pl-4">
+				<img src="<?php echo $facelogo;?>" alt="" id="">
+			</a>
+			<a href="<?php echo $url_lik;?> " target="_blank" class="pl-4">
+				<img src="<?php echo $linkelogo;?>" alt="" id="">
+			</a>
+			<a href="<?php echo $url_git;?>" target="_blank" class="pl-4">
+				<img src="<?php echo $gitlogo;?>" alt="" id="">
+			</a>
+
+		</div>
+	</div-->
+
+	<!--MENÚ-->
+	<div class="col-12 d-md-flex flex-md-row p-0 justify-content-center">
+		<nav class="navbar navbar-ligth col-12 p-0 m-0">
+			<div class="col-12 p-0 pb-lg-0 pt-lg-0 h-100">
+				<?php
+					wp_nav_menu( array(
+						'container'       => 'div',
+						'container_class' => 'col-12 col-lg-12 d-lg-block p-0 m-0',
+						'container_id'    => 'idFooterMenu',
+						'items_wrap'      => '<ul id="%1$s" class="%2$s p-0 m-0 w-100 nav nav-tabs justify-content-center ">%3$s</ul>',
+						'theme_location'  => 'footer-menu',
+						'menu_class'      => 'footer-menu',
+						'walker'          => new WP_Bootstrap_Navwalker())
+					);
+				?>
+			</div>
+		</nav>
+	</div>
 </footer>
 <!-- Footer -->
 

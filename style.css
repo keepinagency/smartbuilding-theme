@@ -117,3 +117,33 @@ WordPress Available:  yes
   font-size: 0.8em;
   text-align: justify;
 }
+
+.footer{
+  background: #323131;
+}
+.conten-social-redes{
+  font-size: 0.8em;
+}
+.parrafo-info{
+  font-size: 0.7em;
+  color: #fff;
+  text-align: justify;
+}
+.titulo-redes{
+  color: #FFFFFF;
+}
+.conten-social{
+  background-color: rgba(31,31,31, 0.50);
+}
+.contact-details{
+  font-size: 0.7em;
+  color: #fff;
+}
+.copyright{
+  color: #3F4F6B;
+  font-size: 0.8em;
+}
+.copy-url{
+  color:#CADBF2;
+  font-size: 0.8em;
+}
