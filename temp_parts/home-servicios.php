@@ -17,17 +17,15 @@ $arreglo_servicios = new WP_Query(array(
         </div>
         
         <?php while ($arreglo_servicios->have_posts()) : $arreglo_servicios->the_post();?>
-            <div class="pt-2 col-12 col-lg-6 p-lg-0 m-lg-0 d-flex justify-content-lg-center row">
-
-                <div class="col-lg-3 p-lg-0 m-lg-0">
+            <div class="pt-2 col-12 col-lg-6 p-lg-0 m-lg-0 d-flex justify-content-center justify-content-lg-center row">
+                <div class="col-lg-3 p-lg-0 m-lg-0 col-3">
                     <?php the_post_thumbnail('Thumbnail'); ?> 
                </div>
-               
-               <div class="row col-lg-6 p-lg-0 m-lg-0 ">
-                    <div class="titulo-servicios col-lg-12 p-0 m-0">
+               <div class="row col-lg-6 col-6 p-lg-0 m-lg-0 p-3">
+                    <div class="titulo-servicios col-lg-12 col-16 p-2 m-0">
                         <?php the_title(); ?>
                     </div>
-                    <div class="post-servicios col-lg-12 p-0 m-0">
+                    <div class="post-servicios col-lg-12 col-12 p-2 m-0">
                         <?php the_excerpt();?>
                     </div>
                </div>

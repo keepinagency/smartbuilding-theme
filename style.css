@@ -33,9 +33,14 @@ WordPress Available:  yes
    font-weight: 400;
    font-style: normal;
 }*/
-
+.menu-item {
+  font-size: 1.2rem !important;
+  text-align: center !important;
+  color: #413a4d;
+}
 .menu-item:hover{
   background-color: #86AA35;
+  border-radius: 0.2em;
 }
 
   /*****HOME - PRODUCTO*****
@@ -43,21 +48,29 @@ WordPress Available:  yes
 .titulo-producto{
     font-size: 1.8em;
     color: #000;
-    /*background-color:white;
-    height: 122px !important;*/
 }
 .titulo-negrita {
   color:#86AA35;
 }
 .miniatura-producto{
     background-position: center;
-    min-height: 50vh;
+    min-height: 40vh;
+}
+.miniatura-producto:hover{
+    background-position: center;
+    min-height: 40vh;
 }
 .titulo-post {
     background: rgba(134,170,53, 0.65) !important;
     text-decoration: none !important;
     min-height: 5em;
 }
+.titulo-post:hover {
+  background: rgb(134,170,53) !important;
+  text-decoration: none !important;
+  min-height: 5em;
+}
+
 .contenido-producto{
   background: rgba(134,170,53, 0.65) !important;
   text-align: justify;
@@ -68,7 +81,6 @@ WordPress Available:  yes
 .titulo-servicios{
   color: #86AA35;
   font-size: 1.4em;
-  /*line-height: 1.1em;*/
 }
 .post-servicios{
   color: #413a4d;
@@ -92,18 +104,11 @@ WordPress Available:  yes
   font-size: 0.8em;
   color: #000000;
 }
-@media (min-width:680px){
   .middle_aboutus_home{
     border-left: solid 2px #86AA35;
     border-right: solid 2px #86AA35;
   }
-}
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  .middle_aboutus_home{
-    border-top: solid 2px #86AA35;
-    border-bottom: solid 2px #86AA35;
-  }
-}
+
  /*****HOME - CONTÁCTANOS*****
   **************************/
 .btn-submit:hover{
@@ -146,4 +151,30 @@ WordPress Available:  yes
 .copy-url{
   color:#CADBF2;
   font-size: 0.8em;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .miniatura-producto{
+    background-position: center;
+    min-height: 50vh;
+  }
+  .titulo-post {
+      background: rgba(134,170,53, 0.65) !important;
+      text-decoration: none !important;
+      min-height: 10em;
+  }
+  .enlace-post{
+    font-size: 1.5em;
+  }
+  .titulo-servicios {
+    font-size: 1.5em;
+  }
+  .post-servicios{
+    font-size: 1.3em;
+  }
+   .middle_aboutus_home{
+    border-left: none;
+    border-right: none;
+    border-top: solid 2px #86AA35;
+    border-bottom: solid 2px #86AA35;
+  }
 }

@@ -10,11 +10,11 @@ $arreglo_slides = new WP_Query(array (
 ));
 ?>
 <!--div class="content_home d-flex flex-column p-0 m-0 h-100"-->
-    <div id="carruselHome" class="carousel slide p-0 m-0 d-block col-12" data-bs-ride="carousel">
+    <div id="carruselHome" class="carousel slide p-0 m-0 col-12" data-bs-ride="carousel">
         <div class="carousel-inner">
             <?php $i=1; while($arreglo_slides->have_posts()) : $arreglo_slides->the_post();?>
                 <div class="carousel-item <?php if ($i == 1) echo 'active'; ?>" > 
-                    <img class="img-carousel d-block w-100" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                    <img class="img-carousel w-100 h-100" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     <div class="carousel-caption visible-lg">
                         <h3><?php the_title(); ?></h3>
                         <p><?php the_content(); ?></p>

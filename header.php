@@ -21,8 +21,8 @@
             <div class="col-2 d-flex justify-content-center d-lg-none">
                 <button class="navbar-toggler d-md-block d-lg-none p-2"  type="button"
                         data-toggle="collapse" 
-                        data-target="#menukeepin" 
-                        aria-controls="menukeepin" 
+                        data-target="#menusmartbuilding" 
+                        aria-controls="menusmartbuilding" 
                         aria-expanded="false" 
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon "></span>
@@ -34,9 +34,9 @@
                 <?php
                     wp_nav_menu( array(
                         'container'       => 'div',
-                        'container_class' => 'collapse navbar-collapse d-lg-block 
-                                              h-100 navbar-expand-lg navbar-light',
-                        'container_id'    => 'menukeepin',
+                        'container_class' => 'collapse navbar-collapse d-lg-block p-0 pl-lg-4 m-0 
+                                              h-100 d-lg-flex justify-content-start navbar-expand-lg navbar-light',
+                        'container_id'    => 'menusmartbuilding',
                         'items_wrap'      => '<ul id="%1$s" class="%2$s navbar-nav mt-0 mt-lg-0 align-content-center">%3$s</ul>',
                         'theme_location'  => 'header-menu',
                         'menu_class'      => 'header-menu',

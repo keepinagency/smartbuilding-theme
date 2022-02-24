@@ -33,14 +33,14 @@ $arreglo_testimonio = new WP_Query(array(
                     $justifytext = "text-right text-lg-center";
                     $classmiddle = "";
                 }?>
-                    <div class="col-12 col-lg-4 d-lg-flex flex-lg-row flex-lg-column p-0 m-0 aboutus_home <?=$classmiddle?>">
-                        <div class="post-clientes col-6 col-lg-12 d-lg-flex justify-content-center py-2">
+                    <div class="aboutus_home <?=$classmiddle?> col-12 col-lg-4 d-flex flex-row<?=$direccion?> flex-lg-column p-0 m-0 p-lg-2 align-self-lg-start pr-lg-5 pl-lg-5 row">
+                        <div class="post-clientes col-3 col-lg-12 d-lg-flex justify-content-center py-2">
                             <?php the_title(); ?>
                         </div>
-                        <div class="col-6 col-lg-12 d-lg-flex align-items-center justify-content-lg-center pb-3">
+                        <div class="col-4 col-lg-12 d-lg-flex align-items-center justify-content-lg-center pb-3">
                             <?php the_post_thumbnail('full'); ?>  
                         </div>
-                        <div class="col-12 col-lg-12 p-0 d-lg-flex justify-content-lg-center text-center px-3 cont-clientes fst-italic">
+                        <div class="col-5 col-lg-12 p-0 d-lg-flex justify-content-lg-center text-center px-3 cont-clientes fst-italic">
                             <?php the_content();?>
                         </div>
                     </div>
