@@ -61,27 +61,27 @@
 				</a>
 			</div>
 		</div>
-		<div class="col-lg-4 p-0 m-0 ">
-			<div class="contact-details row p-0 m-0">
-				<div class="col-6">
+		<div class="col-lg-4 p-0 m-0 col-12">
+			<div class="contact-details row p-lg-0 m-lg-0 mt-3">
+				<div class="col-lg-6">
 					<span>
 						<img src="<?= smartbuilding_IMG. 'direccion.png'?>"/>DIRECCIÓN
 					</span>
 					<p>El Juncal #901, Bodega3, Quilicura</p>
 				</div>
-				<div class="col-6">
+				<div class="col-lg-6">
 					<span>
 						<img src="<?= smartbuilding_IMG. 'phone.png'?>"/>TELÉFONO
 					</span>
 					<p>+56 22 9480016</p>
 				</div>
-				<div class="col-6">
+				<div class="col-lg-6">
 					<span>
 						<img src="<?= smartbuilding_IMG. 'email.png'?>"/>CORREO
 					</span>
 					<p>contacto@smartbuilding.cl</p>
 				</div>
-				<div class="col-6">
+				<div class="col-lg-6">
 					<span>
 						<img src="<?= smartbuilding_IMG. 'enlace.png'?>"/>SITIO WEB
 					</span>

@@ -99,6 +99,7 @@ WordPress Available:  yes
 .post-clientes {
   font-size: 1.2em;
   color: #000000;
+  font-weight: bold;
 }
 .cont-clientes{
   font-size: 0.8em;
@@ -166,15 +167,30 @@ WordPress Available:  yes
     font-size: 1.5em;
   }
   .titulo-servicios {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   .post-servicios{
-    font-size: 1.3em;
+    font-size: 0.8em;
   }
    .middle_aboutus_home{
     border-left: none;
     border-right: none;
     border-top: solid 2px #86AA35;
     border-bottom: solid 2px #86AA35;
+  }
+  .post-clientes {
+    font-size: 1em;
+    color: #000000;
+    font-weight: bold;
+  }
+  .cont-clientes{
+    font-size: 0.8em;
+    color: #000000;
+  }
+  .form-nom{
+    font-size: 0.8em !important;
+  }
+  .contact-details p{
+    font-size: 1em;
   }
 }

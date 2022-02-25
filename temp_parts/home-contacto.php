@@ -4,7 +4,7 @@
  *  Categoría: ""   
  ***/  
 ?>
-<div class="row p-0 m-0 mb-lg-2">
+<div class="row p-0 m-0">
     <div class="titulo-producto col-12 text-uppercase d-flex align-items-center justify-content-center p-4">
         <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Contác</b>tanos</p>
     </div>
@@ -14,28 +14,28 @@
         </iframe>
     </div>
     <div class="col-lg-6">
-        <div class="titulo-producto col-12 text-uppercase d-flex align-items-center justify-content-center p-4 d-block d-lg-none d-md-none">
+        <div class="titulo-producto col-12 text-uppercase d-flex align-items-center justify-content-center p-lg-4 d-block d-lg-none">
             <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Formulario de cont</b>acto</p>
         </div>
         <form action="<?php echo get_template_directory_uri().'/temp_parts/contactanos.php'; ?>" method="post">
             <div class="row">
                 <div class="form-group col-lg-12 p-2">
-                    <label class="text-capitalize">nombre:</label>
+                    <label class="text-capitalize form-nom">nombre:</label>
                     <input type="text" class="form-control border-2" name="nombre" id="nombre" style="border-radius: 10px; border-color: #86AA35;" required>
                 </div>
                 <div class="form-group col-lg-12 p-2">
-                    <label class="text-capitalize">correo:</label>
+                    <label class="text-capitalize form-nom">correo:</label>
                     <input type="text" class="form-control border-2" name="correo" id="correo" style="border-radius: 10px; border-color: #86AA35;" required>
                 </div>
                 <div class="form-group col-lg-12 p-2">
-                    <label class="text-capitalize">teléfono:</label>
+                    <label class="text-capitalize form-nom">teléfono:</label>
                     <input type="text" class="form-control border-2" name="telefono" id="telefono" style="border-radius: 10px; border-color: #86AA35;" required>
                 </div>
                 <div class="form-group col-lg-12 p-2">
-                    <label class="text-capitalize">mensaje:</label>
+                    <label class="text-capitalize form-nom">mensaje:</label>
                     <textarea rows="5" cols="20" class="form-control border-2" name="mensaje" id="mensaje" style="border-radius: 10px; border-color: #86AA35;" required></textarea>
                 </div>
-                <div class="d-lg-flex justify-content-lg-end">
+                <div class="d-lg-flex justify-content-lg-end d-flex justify-content-end">
                     <button type="submit" class="btn w-25 btn-submit border-2" style="border-radius: 10px; border-color: #86AA35;" onclick="vacioFunc()">Enviar</button>
                 </div>
             </div>      
