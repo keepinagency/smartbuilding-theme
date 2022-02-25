@@ -42,6 +42,20 @@ WordPress Available:  yes
   background-color: #86AA35;
   border-radius: 0.2em;
 }
+  /***HOME - PRESENTACIÓN***
+  **************************/
+.carousel-caption h3{
+  font-weight: bold;
+  color: #86AA35;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2em;
+}
+.carousel-caption p{
+  /*font-weight: bold;*/
+  background-color: rgba(139, 139, 137, 0.65);
+  font-size: 1.5em;
+  color: #fff;
+}
 
   /*****HOME - PRODUCTO*****
   **************************/
@@ -154,6 +168,17 @@ WordPress Available:  yes
   font-size: 0.8em;
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .carousel-caption h3{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #86AA35;
+    background-color: rgba(0, 0, 0, 0.5);*/
+  }
+  .carousel-caption p{
+    font-size: 0.5em;
+    font-weight: bold;
+    background-color: rgba(139, 139, 137, 0.65);
+  }
   .miniatura-producto{
     background-position: center;
     min-height: 50vh;
