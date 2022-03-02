@@ -26,15 +26,20 @@ $nuevo_arreglo = new WP_Query(array(
         <div class="col-12 text-center mt-3">
             <h3>Sector Corporativo</h3>
             <p>El 62% del consumo energético en oficinas promedio en Chile es en Climatización e Iluminación.</p>
-            <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-hotelero.png'?>" style="width:50%;"/>
+            <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-corporativo.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #2C5660;">
             <h3 class="text-center py-3">Climatización e Iluminación</h3>
+            <p class="px-5 pb-3 text-center">Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: Primero, 
+            incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de Calor que sea eficiente tanto en los Consumos 
+            como en la transmisión del calor que genera al ambiente.</p>
         <?php 
             while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">
                     <?php $current_cat_id = the_category_ID(false);
                         echo '<h3>' . get_cat_name($current_cat_id) . '</h3>';
+                        $catID = get_the_category();
+                        echo category_description( $catID[0] );
                     ?>
                 </div-->
                 <div class="row d-flex flex-lg-row col-12 p-0 m-0 col-lg-4">
