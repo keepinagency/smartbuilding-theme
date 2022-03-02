@@ -35,10 +35,8 @@ $arreglo_slides = new WP_Query(array (
         <div class="p-0 m-0 d-none d-sm-block" id="botones">
             <a class="carousel-control-prev" href="#carruselHome" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carruselHome" role="button" data-bs-slide="next">
-                <span class="sr-only">Next</span>
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
