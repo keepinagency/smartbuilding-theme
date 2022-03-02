@@ -13,7 +13,7 @@ function smartbuilding_setup(){
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'custom-logo', array(
 		'height'      => 100,
-		'width'       => 434,
+		'width'       => 400,
 		'flex-height' => false,
 		'flex-width'  => false,
 		'header-text' => array( 'site-title', 'site-description'),
@@ -90,12 +90,68 @@ function custom_smartbuilding_register( $wp_customize ) {
         'type' => 'text',
     ));
 }
+/************** METABOXES PARA EL TITULO ****************
+********************************************************/
+
+function descrip() { 
+	add_meta_box( 'descrip','Indique la Descripción a ser usado para esta página.','la_descripcion','post','normal','high' );  
+}
+function la_descripcion() {
+    global $wpdb, $post;
+    $descrip  = get_post_meta($post->ID, 'descripcion', true);
+    echo '<label"><strong>Descripci&oacute;n:</strong></label>
+    <textarea type="text" name="descripcion" id="descripcion" value="'.htmlspecialchars($descrip).' "rows="5" cols="50"   /></textarea></br>';
+}
+function guardar_descripcion() {
+    global $wpdb, $post;
+    if (!$post_id) $post_id = $_POST['post_ID'];
+    if (!$post_id) return $post;
+    $price= $_POST['descripcion'];
+    update_post_meta($post_id, 'descripcion', $price);
+}
+
+
+function subtitulo() { 
+	add_meta_box( 'subtitulo','Indique el Subtitulo a ser usado para esta página.','el_subtitulo','page','normal','high' );  
+}
+function el_subtitulo() {
+    global $wpdb, $post;
+    $subfirst  = get_post_meta($post->ID, 'subtitulo', true);
+    $subsecond = get_post_meta($post->ID, 'sub_titulo', true);
+
+    echo '<label"><strong>Titulo:</strong></label>
+    <input type="text" name="subtitulo" id="subtitulo" value="'.htmlspecialchars($subfirst).'" style="width: 300px;" /></br>';
+    echo '<label"><strong>Sub Titulo:</strong></label>
+    <input type="text" name="sub_titulo" id="sub_titulo" value="'.htmlspecialchars($subsecond).'" style="width: 300px;" /></br>';
+}
+function guardar_subtitulo() {
+    global $wpdb, $post;
+    if (!$post_id) $post_id = $_POST['post_ID'];
+    if (!$post_id) return $post;
+    $price= $_POST['subtitulo'];
+    update_post_meta($post_id, 'subtitulo', $price);
+}
+function guardar_sub_titulo() {
+    global $wpdb, $post;
+    if (!$post_id) $post_id = $_POST['post_ID'];
+    if (!$post_id) return $post;
+    $price= $_POST['sub_titulo'];
+    update_post_meta($post_id, 'sub_titulo', $price);
+}
 
 /*Ejecución de acciones o funciones definidas*/
-add_action('wp_enqueue_scripts', 'smartbuilding_cssjs'); 				// CCS
+add_action('wp_enqueue_scripts', 'smartbuilding_cssjs'); 				    // CCS
 add_action( 'wp_enqueue_scripts', 'smartbuilding_enqueue_scripts' );		// Scripts Javas	
-add_action('after_setup_theme', 'smartbuilding_setup');					// Colocar título, logo de la página e imagen destacada desde wordpress
-add_action('after_setup_theme', 'smartbuilding_register_menu');			// Menú
+add_action('after_setup_theme', 'smartbuilding_setup');					    // Colocar título, logo de la página e imagen destacada desde wordpress
+add_action('after_setup_theme', 'smartbuilding_register_menu');			    // Menú
 add_action( 'customize_register', 'custom_smartbuilding_register' );		// Personalizador
+add_action( 'excerpt_length' , 'custom_excerpt_length', 999 );	            // Extracto
+add_action( 'add_meta_boxes', 'descrip' );                                  //Metaboxes para POST
+add_action('save_post', 'guardar_descripcion');
+add_action('publish_post', 'guardar_descripcion');
 
-add_action( 'excerpt_length' , 'custom_excerpt_length', 999 );	// Extracto
+add_action( 'add_meta_boxes', 'subtitulo' );                    //Metaboxes para PAGE
+add_action( 'save_post', 'guardar_subtitulo' );                 //guardar subtitulo metabox en PAGE
+add_action( 'publish_post', 'guardar_subtitulo' );              //Publicar subtitulo metabox en PAGE
+add_action('save_post', 'guardar_sub_titulo');                  //guardar sub_titulo metabox en PAGE
+add_action('publish_post', 'guardar_sub_titulo');               //Publicar sub_titulo metabox en PAGE

@@ -22,7 +22,7 @@
 </div><!-- /.container -->
 <!-- Footer -->
  <!-- Redes Sociales -->
-<footer class="footer text-center my-2">
+<footer class="footer text-center">
     <!--div class="titulo-redes col-lg-6 col-12 text-uppercase">
         <p>Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales</p>
     <div-->
