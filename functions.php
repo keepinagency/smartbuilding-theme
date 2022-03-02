@@ -49,47 +49,6 @@ function custom_excerpt_length( $length){
 	return 25;
 }
 
-/***** FUNCIONES CUSTOM PARA EL PERSONZALIDOR *******
-*****************************************************/
-function custom_smartbuilding_register( $wp_customize ) {
-
-	/** Panel OPCIONES SMARTBUILDING HOME para el personalizador **/
-    $wp_customize->add_panel( 'smartbuilding', array(
-        'title' => 'Personalizador',
-        'description' => 'Opciones personalizadas',
-        'priority' => 1,
-    ));
-	/******* SECCIÓN PARA TÍTULO HOME *********
-    ******************************************/
-    $wp_customize->add_section( 'titulohome', array(
-        'title' => __( 'Opciones a personalizar', 'textdomain' ),
-        'panel' => 'smartbuilding',
-        'priority' => 1,
-    ));
-    /** Setting TÍTULO *********
-    ***    HOME       ********/
-    $wp_customize->add_setting( 'home-título', array(
-        'type' => 'option',
-        'capability' => 'edit_theme_options',
-    ));
-    $wp_customize->add_control( 'home-título', array(
-        'label' => __( 'Ingrese título para el Home', 'textdomain' ),
-        'section' => 'titulohome',
-        'priority' => 1,
-        'type' => 'textarea',
-    ));
-	/** Setting BTN-TXT *********/
-    $wp_customize->add_setting( 'txt-btn', array(
-        'type' => 'option',
-        'capability' => 'edit_theme_options',
-    ));
-    $wp_customize->add_control('txt-btn', array(
-        'label' => __( 'Texto Botom Home', 'textdomain' ),
-        'section' => 'titulohome',
-        'priority' => 1,
-        'type' => 'text',
-    ));
-}
 /************** METABOXES PARA EL TITULO ****************
 ********************************************************/
 
@@ -109,7 +68,6 @@ function guardar_descripcion() {
     $price= $_POST['descripcion'];
     update_post_meta($post_id, 'descripcion', $price);
 }
-
 
 function subtitulo() { 
 	add_meta_box( 'subtitulo','Indique el Subtitulo a ser usado para esta página.','el_subtitulo','page','normal','high' );  
@@ -138,6 +96,38 @@ function guardar_sub_titulo() {
     $price= $_POST['sub_titulo'];
     update_post_meta($post_id, 'sub_titulo', $price);
 }
+
+/***** FUNCIONES CUSTOM PARA EL PERSONZALIDOR *******
+*****************************************************/
+function custom_smartbuilding_register( $wp_customize ) {
+
+	/** Panel OPCIONES SMARTBUILDING HOME para el personalizador **/
+    $wp_customize->add_panel( 'smartbuilding', array(
+        'title' => 'Personalizador',
+        'description' => 'Opciones personalizadas',
+        'priority' => 1,
+    ));
+        /******* SECCIÓN PARA TÍTULO HOME *********
+        ******************************************/
+        $wp_customize->add_section( 'titulohome', array(
+            'title' => __( 'Personalizar Footer', 'textdomain' ),
+            'panel' => 'smartbuilding',
+            'priority' => 1,
+        ));
+            /** Setting TÍTULO *********
+            ***    HOME       ********/
+            $wp_customize->add_setting( 'home-título', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control( 'home-título', array(
+                'label' => __( 'Ingrese título para el Home', 'textdomain' ),
+                'section' => 'titulohome',
+                'priority' => 1,
+                'type' => 'textarea',
+            ));
+}
+
 
 /*Ejecución de acciones o funciones definidas*/
 add_action('wp_enqueue_scripts', 'smartbuilding_cssjs'); 				    // CCS

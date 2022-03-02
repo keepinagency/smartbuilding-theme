@@ -10,19 +10,19 @@
                 ?>
                 <div class="row page-cont col-12 d-flex-lg justify-content-lg-center p-0 m-0">
 
-                    <div class="pag-post d-flex-lg justify-content-lg-center text-justify col-lg-10 p-lg-0 m-lg-0 col-12">
+                    <div class="pag-post col-12 p-0 m-0 d-flex-lg justify-content-lg-center text-justify col-lg-10 p-lg-0 m-lg-0 col-12">
                         <?php the_content(); ?>
                     </div>
-                    <div class="page-img col-lg-8 d-flex-lg justify-content-lg-end align-self-lg-center text-center d-none d-sm-block pb-lg-3">
-                        <?php the_post_thumbnail('large');?>
+                    <div class="page-img col-12 d-flex justify-content-center p-0 m-0 col-lg-8 d-flex-lg justify-content-lg-end align-self-lg-center text-center d-none d-sm-block pb-lg-3">
+                        <?php the_post_thumbnail('medium');?>
                     </div>
 
-                    <div class="page-imgmob col-12 d-flex justify-content-center p-0 m-0 d-lg-none">
+                    <!--div class="page-imgmob col-12 d-flex justify-content-center p-0 m-0 d-lg-none">
                         <?php the_post_thumbnail('medium');?>
                     </div>
                     <div class="pag-post col-12 p-0 m-0 d-block d-sm-none">
                         <?php the_content(); ?>
-                    </div>
+                    </div-->
                 </div><!-- /.blog-post -->
                 <?php
             endwhile;
