@@ -8,37 +8,45 @@
 <body <?php body_class(); ?> class="p-0 m-0">
 <div class="container-fluid p-0 m-0 h-100">
     <div class="header p-0 m-0 row">
-        <nav class="navbar navbar-light col-12">
-            <div class="col-10 ps-5 col-lg-4 d-lg-flex justify-content-lg-around">
-                <a class="navbar-brand m-0 p-0"  href="<?php echo get_home_url(); ?>">
+
+        <nav class="navbar navbar-expand-lg navbar-light col-12 p-0 m-0">
+
+            <div class="container-fluid p-0 m-0 pb-2">
+                
+                <a class="navbar-brand p-2 ps-lg-5 p-0 m-0 py-lg-2 col-8 col-lg-5"  
+                    href="<?php echo get_home_url(); ?>">
                     <?php
                         $custom_logo_id = get_theme_mod( 'custom_logo' );
                         $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-                        echo '<img class="imglogo" src="' . esc_url( $custom_logo_url ) . '" alt="Logo ">';
                     ?>
+                    <img class=""
+                            src="<?=esc_url( $custom_logo_url )?>" 
+                            alt="Logo ">
                 </a>
-            </div>
 
-            <div class="col-2 d-flex justify-content-center d-lg-none">
-                <button class="navbar-toggler d-md-block d-lg-none p-2"  type="button"
-                        data-toggle="collapse" 
-                        data-target="#menusmartbuilding" 
+                <button class="navbar-toggler h-100 me-3" type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#menusmartbuilding" 
                         aria-controls="menusmartbuilding" 
                         aria-expanded="false" 
                         aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon "></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-            </div>
-            
-            <!--Area menu   area-menu   -->
-            <div class="col-12 col-lg-4 d-lg-flex justify-content-lg-around navbar-expand-lg navbar-light m-0 p-0">         
+                
+                <!--Area menu   area-menu   -->
                 <?php
+                    /*
+                        d-lg-block 
+                    */
                     wp_nav_menu( array(
                         'container'       => 'div',
-                        'container_class' => 'collapse navbar-collapse d-lg-block p-0 pl-lg-4 m-0 
-                                              h-100 d-lg-flex justify-content-start navbar-expand-lg navbar-light',
+                        'container_class' => 'collapse navbar-collapse  
+                                            p-0 m-0 pt-2 d-lg-block ',
                         'container_id'    => 'menusmartbuilding',
-                        'items_wrap'      => '<ul id="%1$s" class="%2$s navbar-nav mt-0 mt-lg-0 align-content-center">%3$s</ul>',
+                        'items_wrap'      => '<ul id="%1$s" class="%2$s navbar-nav w-100 
+                                                                mt-0 mt-lg-0 pe-lg-5
+                                                                d-lg-flex justify-content-end
+                                                                align-content-center">%3$s</ul>',
                         'theme_location'  => 'header-menu',
                         'menu_class'      => 'header-menu',
                         'walker'          => new WP_Bootstrap_Navwalker())
