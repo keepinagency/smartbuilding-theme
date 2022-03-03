@@ -7,7 +7,6 @@ Esta es la plantilla para el Bog del menu
 get_header();
 $sub = get_post_meta($post->ID, 'subtitulo', true);
 $sub_ = get_post_meta($post->ID, 'sub_titulo', true);
-$paginacion_nueva = get_query_var('paged');
 $nuevo_arreglo = new WP_Query(array(
 	'post_type'=>'post', 
     'category_name' => 'calefaccion',
@@ -19,11 +18,11 @@ $nuevo_arreglo = new WP_Query(array(
     <?php if ($nuevo_arreglo->have_posts()) : ?>
         <div class="col-12 col-lg-12 p-0 m-0" 
             style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; width:100%; min-height:70vh;">
-            <div class="col-12 text-center col-lg-12 text-lg-center pt-5">
+            <div class="col-12 text-center col-lg-12 text-lg-center pt-5 p-0 m-0">
                 <h1><?php echo $sub.' '.$sub_; ?></h1>
             </div>
         </div>
-        <div class="col-12 text-center m-5">
+        <div class="col-12 text-center my-5">
             <h3>Sector Residencial</h3>
             <p>El 67% del consumo energético de un hogar promedio en Chile (Casa o Departamento) es en Calefacción y Agua Caliente.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-residencial.png'?>" style="width:50%;"/>
@@ -45,7 +44,7 @@ $nuevo_arreglo = new WP_Query(array(
                             <?php the_post_thumbnail('') ;?>
                         </a>
                     </div> 
-                    <div class="row cont-corpotel col-12 m-0 p-0 text-center">
+                    <div class="cont-corpotel col-12 m-0 p-0 text-center">
                         <div class="col-10 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class=" p-0 m-0" href="<?php the_permalink(); ?>">
                                 <div class="p-2 m-0 text-white">

@@ -7,7 +7,6 @@ Esta es la plantilla para el Bog del menu
 get_header();
 $sub = get_post_meta($post->ID, 'subtitulo', true);
 $sub_ = get_post_meta($post->ID, 'sub_titulo', true);
-$paginacion_nueva = get_query_var('paged');
 $nuevo_arreglo = new WP_Query(array(
 	'post_type'=>'post', 
     'category_name' => 'industrial',
@@ -23,7 +22,7 @@ $nuevo_arreglo = new WP_Query(array(
                 <h1><?php echo $sub.' '.$sub_; ?></h1>
             </div>
         </div>
-        <div class="col-12 text-center m-5">
+        <div class="col-12 text-center my-5">
             <h3>Sector Comercio e Industria</h3>
             <p>El 85% del consumo energético promedio en el comercio y en la industria en Chile es en Climatización e Iluminación.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-comercio-industria.png'?>" style="width:50%;"/>
