@@ -101,30 +101,268 @@ function guardar_sub_titulo() {
 *****************************************************/
 function custom_smartbuilding_register( $wp_customize ) {
 
-	/** Panel OPCIONES SMARTBUILDING HOME para el personalizador **/
+	/** Panel OPCIONES SMARTBUILDING PAGE para el personalizador **
+    ***************************************************************
+    ***************************************************************/
     $wp_customize->add_panel( 'smartbuilding', array(
-        'title' => 'Personalizador',
+        'title' => 'Personalizar Page',
         'description' => 'Opciones personalizadas',
         'priority' => 1,
     ));
-        /******* SECCIÓN PARA TÍTULO HOME *********
+        /*SECCIÓN PARA AGUAS CALIENTES - INTERNAS**
         ******************************************/
-        $wp_customize->add_section( 'titulohome', array(
-            'title' => __( 'Personalizar Footer', 'textdomain' ),
+        $wp_customize->add_section( 'aguacaliente', array(
+            'title' => __( 'Soluciones residenciales', 'textdomain' ),
             'panel' => 'smartbuilding',
             'priority' => 1,
         ));
-            /** Setting TÍTULO *********
-            ***    HOME       ********/
-            $wp_customize->add_setting( 'home-título', array(
+            /** Setting TEXT **********/
+            $wp_customize->add_setting( 'titulo-aguas', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control( 'home-título', array(
-                'label' => __( 'Ingrese título para el Home', 'textdomain' ),
-                'section' => 'titulohome',
+            $wp_customize->add_control('titulo-aguas', array(
+                'label' => __( 'Ingrese título', 'textdomain' ),
+                'section' => 'aguacaliente',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+            /** Setting TEXT-AREA *****/
+            $wp_customize->add_setting( 'contenido-aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control( 'contenido-aguas', array(
+                'label' => __( 'Ingrese contenido', 'textdomain' ),
+                'section' => 'aguacaliente',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
+
+    /** Panel OPCIONES SMART BUILDING FOOTER para el personalizador **
+    ****************************************************************
+    ***************************************************************/
+    $wp_customize->add_panel( 'smart building', array(
+        'title' => 'Personalizar Footer',
+        'description' => 'Opciones personalizadas',
+        'priority' => 2,
+    ));
+        /******* SECCIÓN PARA LINKEDIND FOOTER **********/
+        $wp_customize->add_section( 'LinkedIn', array(
+            'title' => __( 'LinkedIn', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 5,
+        ));
+            /** Setting Link Icono FOOTER **/
+            $wp_customize->add_setting( 'linkelogo', array (
+                'default'        => get_template_directory_uri() . '/img/linked-in.jpeg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'link', array(
+                'label'      => __( 'Icono LinkedIn', 'textdomain' ),
+                'section'    => 'LinkedIn',
+                'settings'   => 'linkelogo',
+                'priority'   => 1,
+            )));
+            /** Setting linkelogoURL FOOTER **/
+            $wp_customize->add_setting( 'linkurl', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('linkurl', array(
+                'label' => __( 'Perfil LinkedIn', 'textdomain' ),
+                'section' => 'LinkedIn',
+                'priority' => 2,
+                'type' => 'text',
+            ));
+        /******* SECCIÓN PARA FACEBOOK FOOTER **********/
+        $wp_customize->add_section( 'Facebook', array(
+            'title' => __( 'Facebook', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 3,
+        ));
+
+            /** Setting Face Icono FOOTER **/
+            $wp_customize->add_setting( 'facelogo', array (
+                'default'        => get_template_directory_uri() . '/img/facebook.jpeg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'face', array(
+                'label'      => __( 'Icono Facebook', 'textdomain' ),
+                'section'    => 'Facebook',
+                'settings'   => 'facelogo',
+                'priority'   => 1,
+            )));
+            /** Setting FaceURL FOOTER **/
+            $wp_customize->add_setting( 'faceaurl', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('faceaurl', array(
+                'label' => __( 'Perfil Facebook', 'textdomain' ),
+                'section' => 'Facebook',
+                'priority' => 2,
+                'type' => 'text',
+            ));
+        /******* SECCIÓN PARA RSS FOOTER **********/
+        $wp_customize->add_section( 'Rss', array(
+            'title' => __( 'Rss', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 2,
+        ));
+
+            /** Setting Rss Icono FOOTER **/
+            $wp_customize->add_setting( 'rsslogo', array (
+                'default'        => get_template_directory_uri() . '/img/rss.jpeg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'rss', array(
+                'label'      => __( 'Icono Rss', 'textdomain' ),
+                'section'    => 'Rss',
+                'settings'   => 'rsslogo',
+                'priority'   => 1,
+            )));
+            /** Setting RssURL FOOTER **/
+            $wp_customize->add_setting( 'rssurl', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('rssurl', array(
+                'label' => __( 'Perfil Rss', 'textdomain' ),
+                'section' => 'Rss',
+                'priority' => 2,
+                'type' => 'text',
+            ));
+        /******* SECCIÓN PARA GOOGLEPLUS FOOTER **********/
+        $wp_customize->add_section( 'Googleplus', array(
+            'title' => __( 'Googleplus', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 4,
+        ));
+
+            /** Setting Googleplus Icono FOOTER **/
+            $wp_customize->add_setting( 'goopluslogo', array (
+                'default'        => get_template_directory_uri() . '/img/gplus.jpeg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'gooplus', array(
+                'label'      => __( 'Icono GooglePlus', 'textdomain' ),
+                'section'    => 'Googleplus',
+                'settings'   => 'goopluslogo',
+                'priority'   => 1,
+            )));
+            /** Setting GooglePlusURL FOOTER **/
+            $wp_customize->add_setting( 'gooplusurl', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('gooplusurl', array(
+                'label' => __( 'Perfil GooglePlus', 'textdomain' ),
+                'section' => 'Googleplus',
+                'priority' => 2,
+                'type' => 'text',
+            ));
+        /******* SECCIÓN PARA PINTEREST FOOTER **********/
+        $wp_customize->add_section( 'Pinterest', array(
+            'title' => __( 'Pinterest', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 6,
+        ));
+
+            /** Setting Pinterest Icono FOOTER **/
+            $wp_customize->add_setting( 'pintlogo', array (
+                'default'        => get_template_directory_uri() . '/img/pinterest.jpeg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'pint', array(
+                'label'      => __( 'Icono Pinterest', 'textdomain' ),
+                'section'    => 'Pinterest',
+                'settings'   => 'pintlogo',
+                'priority'   => 1,
+            )));
+            /** Setting PinterestURL FOOTER **/
+            $wp_customize->add_setting( 'pinturl', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('pinturl', array(
+                'label' => __( 'Perfil Pinterest', 'textdomain' ),
+                'section' => 'Pinterest',
+                'priority' => 2,
+                'type' => 'text',
+            ));
+        /******* SECCIÓN PARA QUIÉNES SOMOS FOOTER **********/
+        $wp_customize->add_section( 'Quienes', array(
+            'title' => __( '¿Quiénes somos?', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 1,
+        ));
+            /** Setting ¿Quiénes somos? FOOTER **/
+            $wp_customize->add_setting( 'quienes', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('quienes', array(
+                'label' => __( 'Coloque el texto', 'textdomain' ),
+                'section' => 'Quienes',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
+        /******* SECCIÓN PARA DIRECCIÓN FOOTER **********/
+        $wp_customize->add_section( 'Direccion', array(
+            'title' => __( 'Dirección', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 7,
+        ));
+            /** Setting Dirección FOOTER **/
+            $wp_customize->add_setting( 'direccion', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('direccion', array(
+                'label' => __( 'Indique su dirección', 'textdomain' ),
+                'section' => 'Direccion',
                 'priority' => 1,
                 'type' => 'textarea',
+            ));
+        /******* SECCIÓN PARA TELÉFONO FOOTER **********/
+        $wp_customize->add_section( 'Telefono', array(
+            'title' => __( 'Teléfono', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 7,
+        ));
+            /** Setting Teléfono FOOTER **/
+            $wp_customize->add_setting( 'telefono', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('telefono', array(
+                'label' => __( 'Indique su telélefono', 'textdomain' ),
+                'section' => 'Telefono',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+        /******* SECCIÓN PARA CORREO FOOTER **********/
+        $wp_customize->add_section( 'Correo', array(
+            'title' => __( 'Dirección email', 'textdomain' ),
+            'panel' => 'smart building',
+            'priority' => 7,
+        ));
+            /** Setting Correo FOOTER **/
+            $wp_customize->add_setting( 'correo', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('correo', array(
+                'label' => __( 'Indique su email', 'textdomain' ),
+                'section' => 'Correo',
+                'priority' => 1,
+                'type' => 'text',
             ));
 }
 
