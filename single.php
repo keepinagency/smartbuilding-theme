@@ -5,6 +5,10 @@
             <div class="page-title col-12 text-center col-lg-12 pb-lg-2 pt-lg-4">
                 <h1><?php the_title(); ?></h1>
             </div>
+            <div class="col-12 col-lg-12 p-0 m-0" 
+            style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; width:100%; min-height:70vh;">
+                &nbsp;
+            </div>
         <?php
             while ( have_posts() ) : the_post();
                 ?>
@@ -13,14 +17,14 @@
                     <div class="pag-post col-12 p-0 m-0 d-flex-lg justify-content-lg-center text-justify col-lg-10 p-lg-0 m-lg-0 col-12 d-none d-sm-block">
                         <?php the_content(); ?>
                     </div>
-                    <div class="page-img col-12 d-flex justify-content-center p-0 m-0 
+                    <!--div class="page-img col-12 d-flex justify-content-center p-0 m-0 
                     col-lg-8 d-flex-lg justify-content-lg-end align-self-lg-center text-center d-none d-sm-block pb-lg-3">
                         <?php the_post_thumbnail('medium');?>
                     </div>
 
                     <div class="page-imgmob col-12 d-flex justify-content-center p-0 m-0 d-lg-none">
                         <?php the_post_thumbnail('medium');?>
-                    </div>
+                    </div-->
                     <div class="pag-post col-12 p-0 m-0 d-lg-none">
                         <?php the_content(); ?>
                     </div>

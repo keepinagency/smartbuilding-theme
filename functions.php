@@ -105,13 +105,13 @@ function custom_smartbuilding_register( $wp_customize ) {
     ***************************************************************
     ***************************************************************/
     $wp_customize->add_panel( 'smartbuilding', array(
-        'title' => 'Personalizar Page',
+        'title' => 'Personalizar Agua caliente',
         'description' => 'Opciones personalizadas',
         'priority' => 1,
     ));
-        /*SECCIÓN PARA AGUAS CALIENTES - INTERNAS**
+        /*SECCIÓN PARA SOLUCIONES RESIDENCIALES - INTERNAS**
         ******************************************/
-        $wp_customize->add_section( 'aguacaliente', array(
+        $wp_customize->add_section( 'residenciales', array(
             'title' => __( 'Soluciones residenciales', 'textdomain' ),
             'panel' => 'smartbuilding',
             'priority' => 1,
@@ -122,8 +122,8 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'capability' => 'edit_theme_options',
             ));
             $wp_customize->add_control('titulo-aguas', array(
-                'label' => __( 'Ingrese título', 'textdomain' ),
-                'section' => 'aguacaliente',
+                'label' => __( 'Ingrese nuevo título', 'textdomain' ),
+                'section' => 'residenciales',
                 'priority' => 1,
                 'type' => 'text',
             ));
@@ -133,11 +133,41 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'capability' => 'edit_theme_options',
             ));
             $wp_customize->add_control( 'contenido-aguas', array(
-                'label' => __( 'Ingrese contenido', 'textdomain' ),
-                'section' => 'aguacaliente',
+                'label' => __( 'Ingrese descripción', 'textdomain' ),
+                'section' => 'residenciales',
                 'priority' => 2,
                 'type' => 'textarea',
             ));
+        /*SECCIÓN PARA SOLUCIONES HOTELERAS - INTERNAS**
+        ******************************************/
+        $wp_customize->add_section( 'hoteleras', array(
+            'title' => __( 'Soluciones hoteleras', 'textdomain' ),
+            'panel' => 'smartbuilding',
+            'priority' => 1,
+        ));
+            /** Setting TEXT **********/
+            $wp_customize->add_setting( 'titulo_aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('titulo_aguas', array(
+                'label' => __( 'Ingrese nuevo título', 'textdomain' ),
+                'section' => 'hoteleras',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+            /** Setting TEXT-AREA *****/
+            $wp_customize->add_setting( 'contenido_aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control( 'contenido_aguas', array(
+                'label' => __( 'Ingrese descripción', 'textdomain' ),
+                'section' => 'hoteleras',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
+     
 
     /** Panel OPCIONES SMART BUILDING FOOTER para el personalizador **
     ****************************************************************
