@@ -48,28 +48,43 @@
 			<div class="col-12 p-0 d-flex justify-content-center">
 				<!-- RSS -->
 				<a href="" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'rss.jpeg'?>"/-->
-					<img src="<?= $rsslogo;?>"/>
+					<?php if(empty($rsslogo)) {
+                            echo '<img src="'.smartbuilding_IMG.'rss.jpeg' . '"'; }
+                        else{
+                            echo '<img src="' . esc_url( $rsslogo ) . '"'; }
+                    ?>
 				</a>
 				<!-- Facebook -->
 				<a href="" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'facebook.jpeg'?>"/-->
-					<img src="<?= $facelogo;?>"/>
+					<?php if(empty($facelogo)) {
+                            echo '<img src="'.smartbuilding_IMG.'facebook.jpeg' . '"'; }
+                        else{
+                            echo '<img src="' . esc_url( $facelogo ) . '"'; }
+                    ?>
 				</a>
 				<!-- Gplus -->
 				<a href="" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'gplus.jpeg'?>"/-->
-					<img src="<?= $goopluslogo;?>"/>
+					<?php if(empty($goopluslogo)) {
+                            echo '<img src="'.smartbuilding_IMG.'gplus.jpeg' . '"'; }
+                        else{
+                            echo '<img src="' . esc_url( $goopluslogo ) . '"'; }
+                    ?>
 				</a>
 				<!-- LinkedIn -->
 				<a href="" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'linked-in.jpeg'?>"/-->
-					<img src="<?= $linkelogo;?>"/>
+					<?php if(empty($linkelogo)) {
+                            echo '<img src="'.smartbuilding_IMG.'linked-in.jpeg' . '"'; }
+                        else{
+                            echo '<img src="' . esc_url( $linkelogo ) . '"'; }
+                    ?>
 				</a>
 				<!-- Pinterest -->
 				<a href="" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'pinterest.jpeg'?>"/-->
-					<img src="<?= $pintlogo;?>"/>
+					<?php if(empty($pintlogo)) {
+                            echo '<img src="'.smartbuilding_IMG.'pinterest.jpeg' . '"'; }
+                        else{
+                            echo '<img src="' . esc_url( $pintlogo ) . '"'; }
+                    ?>
 				</a>
 			</div>
 		</div>
