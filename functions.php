@@ -105,14 +105,18 @@ function custom_smartbuilding_register( $wp_customize ) {
     ***************************************************************
     ***************************************************************/
     $wp_customize->add_panel( 'smartbuilding', array(
-        'title' => 'Personalizar Agua caliente',
+        'title' => 'Soluciones residenciales',
         'description' => 'Opciones personalizadas',
         'priority' => 1,
     ));
-        /*SECCIÓN PARA SOLUCIONES RESIDENCIALES - INTERNAS**
-        ******************************************/
-        $wp_customize->add_section( 'residenciales', array(
-            'title' => __( 'Soluciones residenciales', 'textdomain' ),
+    /*SECCIÓN PARA SOLUCIONES RESIDENCIALES - INTERNAS**
+    ***************************************************/
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'residenciales_agua', array(
+            'title' => __( 'Agua caliente', 'textdomain' ),
             'panel' => 'smartbuilding',
             'priority' => 1,
         ));
@@ -123,7 +127,7 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
             $wp_customize->add_control('titulo-aguas', array(
                 'label' => __( 'Ingrese título', 'textdomain' ),
-                'section' => 'residenciales',
+                'section' => 'residenciales_agua',
                 'priority' => 1,
                 'type' => 'text',
             ));
@@ -134,10 +138,19 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
             $wp_customize->add_control( 'contenido-aguas', array(
                 'label' => __( 'Ingrese descripción', 'textdomain' ),
-                'section' => 'residenciales',
+                'section' => 'residenciales_agua',
                 'priority' => 2,
                 'type' => 'textarea',
             ));
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'residenciales_post', array(
+            'title' => __( 'Primer post', 'textdomain' ),
+            'panel' => 'smartbuilding',
+            'priority' => 2,
+        ));
             /** Setting TEXT TITULO POST**********/
             $wp_customize->add_setting( 'titulo-aguas-post', array(
                 'type' => 'option',
@@ -145,8 +158,8 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
             $wp_customize->add_control('titulo-aguas-post', array(
                 'label' => __( 'Ingrese título del post', 'textdomain' ),
-                'section' => 'residenciales',
-                'priority' => 3,
+                'section' => 'residenciales_post',
+                'priority' => 1,
                 'type' => 'text',
             ));
             /** Setting TEXT-AREA CONTENIDO POST*****/
@@ -156,8 +169,8 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
             $wp_customize->add_control( 'contenido-aguas-post', array(
                 'label' => __( 'Ingrese contenido del post', 'textdomain' ),
-                'section' => 'residenciales',
-                'priority' => 4,
+                'section' => 'residenciales_post',
+                'priority' => 2,
                 'type' => 'textarea',
             ));
             /** Setting Imagen para post **/
@@ -168,9 +181,9 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
             $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'img-aguas', array(
                 'label'      => __( 'Imagen para el post', 'textdomain' ),
-                'section'    => 'residenciales',
+                'section'    => 'residenciales_post',
                 'settings'   => 'img-aguas',
-                'priority'   => 5,
+                'priority'   => 3,
             )));
             /** Setting URL para el post **/
             $wp_customize->add_setting( 'url-aguas', array(
@@ -179,85 +192,318 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
             $wp_customize->add_control('url-aguas', array(
                 'label' => __( 'Url para el post', 'textdomain' ),
-                'section' => 'residenciales',
-                'priority' => 6,
+                'section' => 'residenciales_post',
+                'priority' => 4,
                 'type' => 'text',
             ));
-        /*SECCIÓN PARA SOLUCIONES HOTELERAS - INTERNAS**
-        ******************************************/
-        $wp_customize->add_section( 'hoteleras', array(
-            'title' => __( 'Soluciones hoteleras', 'textdomain' ),
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'residenciales-post', array(
+            'title' => __( 'Segundo post', 'textdomain' ),
             'panel' => 'smartbuilding',
-            'priority' => 1,
+            'priority' => 3,
         ));
-            /** Setting TEXT **********/
-            $wp_customize->add_setting( 'titulo_aguas', array(
+                /** Setting TEXT TITULO POST**********/
+                $wp_customize->add_setting( 'titulo-aguas-posts', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control('titulo_aguas', array(
-                'label' => __( 'Ingrese título', 'textdomain' ),
-                'section' => 'hoteleras',
+            $wp_customize->add_control('titulo-aguas-posts', array(
+                'label' => __( 'Título del post', 'textdomain' ),
+                'section' => 'residenciales-post',
                 'priority' => 1,
                 'type' => 'text',
             ));
-            /** Setting TEXT-AREA *****/
-            $wp_customize->add_setting( 'contenido_aguas', array(
+            /** Setting TEXT-AREA CONTENIDO POST*****/
+            $wp_customize->add_setting( 'contenido-aguas-posts', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control( 'contenido_aguas', array(
-                'label' => __( 'Ingrese descripción', 'textdomain' ),
-                'section' => 'hoteleras',
+            $wp_customize->add_control( 'contenido-aguas-posts', array(
+                'label' => __( 'Contenido del post', 'textdomain' ),
+                'section' => 'residenciales-post',
                 'priority' => 2,
                 'type' => 'textarea',
             ));
-            /** Setting TEXT TITULO POST**********/
-            $wp_customize->add_setting( 'titulo_aguas_post', array(
-                'type' => 'option',
-                'capability' => 'edit_theme_options',
-            ));
-            $wp_customize->add_control('titulo_aguas_post', array(
-                'label' => __( 'Ingrese título del post', 'textdomain' ),
-                'section' => 'hoteleras',
-                'priority' => 3,
-                'type' => 'text',
-            ));
-            /** Setting TEXT-AREA CONTENIDO POST*****/
-            $wp_customize->add_setting( 'contenido_aguas_post', array(
-                'type' => 'option',
-                'capability' => 'edit_theme_options',
-            ));
-            $wp_customize->add_control( 'contenido_aguas_post', array(
-                'label' => __( 'Ingrese contenido del post', 'textdomain' ),
-                'section' => 'hoteleras',
-                'priority' => 4,
-                'type' => 'textarea',
-            ));
             /** Setting Imagen para post **/
-            $wp_customize->add_setting( 'img_aguas', array (
-                'default'        => get_template_directory_uri() . '/img/linked-in.jpeg',
+            $wp_customize->add_setting( 'imge-aguas', array (
+                'default'        => get_template_directory_uri() . '/img/Soluciones/agua2.jpg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
             ));
-            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'img_aguas', array(
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'imge-aguas', array(
                 'label'      => __( 'Imagen para el post', 'textdomain' ),
-                'section'    => 'hoteleras',
-                'settings'   => 'img_aguas',
-                'priority'   => 5,
+                'section'    => 'residenciales-post',
+                'settings'   => 'imge-aguas',
+                'priority'   => 3,
             )));
             /** Setting URL para el post **/
-            $wp_customize->add_setting( 'url_aguas', array(
+            $wp_customize->add_setting( 'durl-aguas', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control('url_aguas', array(
-                'label' => __( 'Url para el post', 'textdomain' ),
-                'section' => 'hoteleras',
-                'priority' => 6,
+            $wp_customize->add_control('durl-aguas', array(
+                'label' => __( 'Url del post', 'textdomain' ),
+                'section' => 'residenciales-post',
+                'priority' => 4,
                 'type' => 'text',
             ));
-     
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'residenciales__post', array(
+            'title' => __( 'Tercer post', 'textdomain' ),
+            'panel' => 'smartbuilding',
+            'priority' => 4,
+        ));
+                /** Setting TEXT TITULO POST**********/
+                $wp_customize->add_setting( 'titulo-aguas__posts', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('titulo-aguas__posts', array(
+                'label' => __( 'Título del post', 'textdomain' ),
+                'section' => 'residenciales__post',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+            /** Setting TEXT-AREA CONTENIDO POST*****/
+            $wp_customize->add_setting( 'contenido-aguas__posts', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control( 'contenido-aguas__posts', array(
+                'label' => __( 'Contenido del post', 'textdomain' ),
+                'section' => 'residenciales__post',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
+            /** Setting Imagen para post **/
+            $wp_customize->add_setting( 'imge__aguas', array (
+                'default'        => get_template_directory_uri() . '/img/Soluciones/agua3.jpg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'imge__aguas', array(
+                'label'      => __( 'Imagen para el post', 'textdomain' ),
+                'section'    => 'residenciales__post',
+                'settings'   => 'imge__aguas',
+                'priority'   => 3,
+            )));
+            /** Setting URL para el post **/
+            $wp_customize->add_setting( 'durl__aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('durl__aguas', array(
+                'label' => __( 'Url del post', 'textdomain' ),
+                'section' => 'residenciales__post',
+                'priority' => 4,
+                'type' => 'text',
+            ));
+    $wp_customize->add_panel( 'SmartBuilding', array(
+        'title' => 'Soluciones hoteleras',
+        'description' => 'Opciones personalizadas',
+        'priority' => 2,
+    ));
+    /****SECCIÓN PARA SOLUCIONES HOTELERAS - INTERNAS****
+    ****************************************************/        
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'hoteleras_agua', array(
+            'title' => __( 'Agua caliente', 'textdomain' ),
+            'panel' => 'SmartBuilding',
+            'priority' => 1,
+        ));
+            /** Setting TEXT TITULO**********/
+            $wp_customize->add_setting( 'htitulo-aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('htitulo-aguas', array(
+                'label' => __( 'Ingrese título', 'textdomain' ),
+                'section' => 'hoteleras_agua',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+            /** Setting TEXT-AREA CONTENIDO*****/
+            $wp_customize->add_setting( 'hcontenido-aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control( 'hcontenido-aguas', array(
+                'label' => __( 'Ingrese descripción', 'textdomain' ),
+                'section' => 'hoteleras_agua',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'hoteleras_post', array(
+            'title' => __( 'Primer post', 'textdomain' ),
+            'panel' => 'SmartBuilding',
+            'priority' => 2,
+        ));
+            /** Setting TEXT TITULO POST**********/
+            $wp_customize->add_setting( 'htitulo-aguas-post', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('htitulo-aguas-post', array(
+                'label' => __( 'Ingrese título del post', 'textdomain' ),
+                'section' => 'hoteleras_post',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+            /** Setting TEXT-AREA CONTENIDO POST*****/
+            $wp_customize->add_setting( 'hcontenido-aguas-post', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control( 'hcontenido-aguas-post', array(
+                'label' => __( 'Ingrese contenido del post', 'textdomain' ),
+                'section' => 'hoteleras_post',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
+            /** Setting Imagen para post **/
+            $wp_customize->add_setting( 'himg-aguas', array (
+                'default'        => get_template_directory_uri() . '/img/Soluciones/agua1.jpg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'himg-aguas', array(
+                'label'      => __( 'Imagen para el post', 'textdomain' ),
+                'section'    => 'hoteleras_post',
+                'settings'   => 'himg-aguas',
+                'priority'   => 3,
+            )));
+            /** Setting URL para el post **/
+            $wp_customize->add_setting( 'hurl-aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('hurl-aguas', array(
+                'label' => __( 'Url para el post', 'textdomain' ),
+                'section' => 'hoteleras_post',
+                'priority' => 4,
+                'type' => 'text',
+            ));
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'hoteleras-post', array(
+            'title' => __( 'Segundo post', 'textdomain' ),
+            'panel' => 'SmartBuilding',
+            'priority' => 3,
+        ));
+                /** Setting TEXT TITULO POST**********/
+                $wp_customize->add_setting( 'htitulo-aguas-posts', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('htitulo-aguas-posts', array(
+                'label' => __( 'Título del post', 'textdomain' ),
+                'section' => 'hoteleras-post',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+            /** Setting TEXT-AREA CONTENIDO POST*****/
+            $wp_customize->add_setting( 'hcontenido-aguas-posts', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control( 'hcontenido-aguas-posts', array(
+                'label' => __( 'Contenido del post', 'textdomain' ),
+                'section' => 'hoteleras-post',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
+            /** Setting Imagen para post **/
+            $wp_customize->add_setting( 'himge-aguas', array (
+                'default'        => get_template_directory_uri() . '/img/Soluciones/agua2.jpg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'himge-aguas', array(
+                'label'      => __( 'Imagen para el post', 'textdomain' ),
+                'section'    => 'hoteleras-post',
+                'settings'   => 'himge-aguas',
+                'priority'   => 3,
+            )));
+            /** Setting URL para el post **/
+            $wp_customize->add_setting( 'hdurl-aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('hdurl-aguas', array(
+                'label' => __( 'Url del post', 'textdomain' ),
+                'section' => 'hoteleras-post',
+                'priority' => 4,
+                'type' => 'text',
+            ));
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'hoteleras__post', array(
+            'title' => __( 'Tercer post', 'textdomain' ),
+            'panel' => 'SmartBuilding',
+            'priority' => 4,
+        ));
+                /** Setting TEXT TITULO POST**********/
+                $wp_customize->add_setting( 'titulo-aguas__posts', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('titulo-aguas__posts', array(
+                'label' => __( 'Título del post', 'textdomain' ),
+                'section' => 'hoteleras__post',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+            /** Setting TEXT-AREA CONTENIDO POST*****/
+            $wp_customize->add_setting( 'contenido-aguas__posts', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control( 'contenido-aguas__posts', array(
+                'label' => __( 'Contenido del post', 'textdomain' ),
+                'section' => 'hoteleras__post',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
+            /** Setting Imagen para post **/
+            $wp_customize->add_setting( 'imge__aguas', array (
+                'default'        => get_template_directory_uri() . '/img/Soluciones/agua3.jpg',
+                'capability'     => 'edit_theme_options',
+                'type'           => 'option',
+            ));
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'imge__aguas', array(
+                'label'      => __( 'Imagen para el post', 'textdomain' ),
+                'section'    => 'hoteleras__post',
+                'settings'   => 'imge__aguas',
+                'priority'   => 3,
+            )));
+            /** Setting URL para el post **/
+            $wp_customize->add_setting( 'durl__aguas', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('durl__aguas', array(
+                'label' => __( 'Url del post', 'textdomain' ),
+                'section' => 'hoteleras__post',
+                'priority' => 4,
+                'type' => 'text',
+            ));
 
     /** Panel OPCIONES SMART BUILDING FOOTER para el personalizador **
     ****************************************************************
@@ -265,7 +511,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smart building', array(
         'title' => 'Personalizar Footer',
         'description' => 'Opciones personalizadas',
-        'priority' => 2,
+        'priority' => 3,
     ));
         /******* SECCIÓN PARA LINKEDIND FOOTER **********/
         $wp_customize->add_section( 'LinkedIn', array(

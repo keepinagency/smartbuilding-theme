@@ -15,10 +15,20 @@ $nuevo_arreglo = new WP_Query(array(
 $tit_agua = get_option( 'titulo-aguas', 'Agua Caliente' );
 $cont_agua = get_option( 'contenido-aguas', 'http://www.linkedin.com' );
 
-$titpost_agua = get_option( 'titulo-aguas-post', 'https://news.google.com/topstories?hl=es-419&gl=VE&ceid=VE:es-419' );
-$contpost_agua = get_option( 'contenido-aguas-post', 'https://myaccount.google.com/' );
-$url_agua = get_option( 'url-aguas', 'https://www.pinterest.com/' );
-$img_agua = get_option( 'img-aguas', '/img/facebook.jpeg' );
+$titpost_agua = get_option( 'titulo-aguas-post', '' );
+$contpost_agua = get_option( 'contenido-aguas-post', '' );
+$url_agua = get_option( 'url-aguas', '' );
+$img_agua = get_option( 'img-aguas', '' );
+
+$titpost_aguas = get_option( 'titulo-aguas-posts', '' );
+$contpost_aguas = get_option( 'contenido-aguas-posts', '' );
+$url_aguas = get_option( 'durl-aguas', '' );
+$img_aguas = get_option( 'imge-aguas', '' );
+
+$titpost_aguat = get_option( 'titulo-aguas__posts', '' );
+$contpost_aguat = get_option( 'contenido-aguas__posts', '' );
+$url_aguat = get_option( 'durl__aguas', '' );
+$img_aguat = get_option( 'imge__aguas', '' );
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
@@ -74,43 +84,63 @@ $img_agua = get_option( 'img-aguas', '/img/facebook.jpeg' );
                 else{
                     echo $cont_agua; } ?>
                 </p>
-        
+
+        <!--PRIMER POST-->
             <div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="#">
-                <?php if(empty( $img_agua)) {
-                                echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" 
-                                    style="max-width:100%;>';
-                            }else{
-                                echo '<img  
-                                        src="' . esc_url( $img_agua ) . '" 
-                                        style="max-width:100%;">';
-                            }
-                            ?>
-
-                    <!--img src="<?= smartbuilding_IMG. 'Soluciones/agua1.jpg'?>" alt="" style="max-width:100%;"><br><br-->
-                    <h4 class="text-center text-white"><strong><?php if(empty($tit_agua)){ echo "SmartHotWater"; } else { echo $titpost_agua; }?></strong></h4><br>
+                    <?php if(empty($img_agua)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $img_agua ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <h4 class="text-center text-white"><strong><?php if(empty($titpost_agua)){ echo "SmartHotWater"; } else { echo $titpost_agua; }?></strong></h4><br>
                 </a>
                 <p class="text-center">
                     <?php if(empty($contpost_agua)) {echo "Sistema de calentamiento eléctrico de agua sin estanque (calienta flujo), 
                         posee la mas alta tecnología permitiendo ahorro de energía a la vez de máximo confort, cero gasto en mantención y máxima seguridad en su utilización.";}
                         else {
-                            echo $contpost_agua;} ?> 
+                            echo $contpost_agua;} 
+                    ?> 
                 </p>
             </div>
+
+        <!--SEGUNDO POST-->
             <div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="#">
-                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua2.jpg'?>" alt="" style="max-width:100%"><br><br>
-                    <h4 class="text-center text-white"><strong>SmartPool</strong></h4><br>
+                    <?php if(empty($img_aguas)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $img_aguas ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <h4 class="text-center text-white"><strong><?php if(empty($titpost_aguas)){ echo "SmartPool"; } else { echo $titpost_aguas; }?></strong></h4><br>
                 </a>
-                <p class="text-center">Se trata del mejor sistema para calefacción de piscinas, con la mejor relación costo y eficiencia. Contamos con la tecnología para transformar una piscina en una Piscina del Caribe. </p>
+                <p class="text-center">
+                    <?php if(empty($contpost_aguas)) {echo "Se trata del mejor sistema para calefacción de piscinas, con la mejor relación costo y eficiencia. 
+                            Contamos con la tecnología para transformar una piscina en una Piscina del Caribe.";}
+                        else {
+                            echo $contpost_aguas;} 
+                    ?> 
+                </p>
             </div>
 
+        <!--TERCER POST-->
             <div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="#">
-                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua3.jpg'?>" alt="" style="max-width:100%"><br><br>
-                    <h4 class="text-center text-white"><strong>SmartTub</strong></h4><br>
+                    <?php if(empty( $img_aguat)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua3.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $img_aguat ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <!--img src="<?= smartbuilding_IMG. 'Soluciones/agua3.jpg'?>" alt="" style="max-width:100%"><br><br-->
+                    <h4 class="text-center text-white"><strong><?php if(empty($titpost_aguat)){ echo "SmartTub"; } else { echo $titpost_aguat; }?></strong></h4><br>
                 </a>
-                <p class="text-center">La más confortable y Ecológica Tina Caliente del Mercado. Disfrutar en el patio de tu casa o donde quieras, relajándote con agua caliente y el menor costo de mantención.</p><br><br><br><br>
+                <p class="text-center">
+                    <?php if(empty($contpost_aguas)) {echo "La más confortable y Ecológica Tina Caliente del Mercado. 
+                            Disfrutar en el patio de tu casa o donde quieras, relajándote con agua caliente y el menor costo de mantención.";}
+                        else {
+                            echo $contpost_aguas;} 
+                    ?> 
+                </p><br><br><br><br>
             </div>
         </div>
     <?php endif; ?>
