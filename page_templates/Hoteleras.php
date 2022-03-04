@@ -13,13 +13,23 @@ $nuevo_arreglo = new WP_Query(array(
 	'posts_per_page'=>3,
 	'paged'=>$paginacion_nueva 
 ));
-    $tit_agua = get_option( 'titulo-aguas', 'Agua Caliente' );
-	$cont_agua = get_option( 'contenido-aguas', 'http://www.linkedin.com' );
+$htit_agua = get_option( 'htitulo-aguas', 'Agua Caliente' );
+$hcont_agua = get_option( 'hcontenido-aguas', '' );
 
-	$titpost_agua = get_option( 'titulo-aguas-post', 'https://news.google.com/topstories?hl=es-419&gl=VE&ceid=VE:es-419' );
-	$contpost_agua = get_option( 'contenido-aguas-post', 'https://myaccount.google.com/' );
-    $url_agua = get_option( 'url-aguas', 'https://www.pinterest.com/' );
-    $img_agua = get_option( 'img-aguas', '/img/facebook.jpeg' );
+$htitpost_agua = get_option( 'htitulo-aguas-post', '' );
+$hcontpost_agua = get_option( 'hcontenido-aguas-post', '' );
+$hurl_agua = get_option( 'hurl-aguas', '' );
+$himg_agua = get_option( 'himg-aguas', '' );
+
+$htitpost_aguas = get_option( 'htitulo-aguas-posts', '' );
+$hcontpost_aguas = get_option( 'hcontenido-aguas-posts', '' );
+$hurl_aguas = get_option( 'hdurl-aguas', '' );
+$himg_aguas = get_option( 'himge-aguas', '' );
+
+$htitpost_aguat = get_option( 'htitulo-aguas__posts', '' );
+$hcontpost_aguat = get_option( 'hcontenido-aguas__posts', '' );
+$hurl_aguat = get_option( 'hdurl__aguas', '' );
+$himg_aguat = get_option( 'himge__aguas', '' );
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
@@ -36,42 +46,77 @@ $nuevo_arreglo = new WP_Query(array(
         </div>
         <div class="col-12 text-white row p-0 m-0" style="background: #32B2D0;">
             <h3 class="text-center py-3"> 
-                <?php if(empty($tit_agua)){ echo "Agua Caliente"; } else { echo $tit_agua; }?>
+                <?php if(empty($htit_agua)){ echo "Agua Caliente"; } else { echo $htit_agua; }?>
             </h3>
             <p class="px-5 pb-3 text-center">
-                <?php if(empty($cont_agua)) { 
+                <?php if(empty($hcont_agua)) { 
                     echo "En hotelería existen una enormidad de servicios y funciones donde el agua caliente juega un rol fundamental. 
                         Es por lo anterior, y de cara a optimizar el costo de operación de un Hotel, 
                         es muy importante el uso que se le dará al agua caliente para determinar la forma o los elementos que se utilizarán para generarla.
                         (Es muy diferente generar agua caliente para las duchas, que para calefacción, por ejemplo). 
                         Es por eso que las Bombas de Calor SmartPool, o el calefón SmartHotWater pueden jugar un rol muy importante en la matriz generadora de Agua Caliente en un Hotel.";} 
                     else{
-                        echo $cont_agua; } ?> 
+                        echo $hcont_agua; } ?> 
             </p>
-        
+
+         <!--PRIMER POST-->
             <div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="#">
-                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua1.jpg'?>" alt="" style="max-width:100%;"><br><br>
-                    <h4 class="text-center text-white"><strong><?php if(empty($tit_agua)){ echo "SmartHotWater"; } else { echo $titpost_agua; }?></strong></h4><br>
+                    <?php if(empty($himg_agua)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $himg_agua ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <h4 class="text-center text-white"><strong><?php if(empty($htitpost_agua)){ echo "SmartHotWater"; } else { echo $htitpost_agua; }?></strong></h4><br>
                 </a>
-                <p class="text-center">Sistema de calentamiento eléctrico de agua sin estanque (calienta flujo), posee la mas alta tecnología permitiendo ahorro de energía a la vez de máximo confort, cero gasto en mantención y máxima seguridad en su utilización. </p>
-            </div>
-            <div class="col-lg-4 col-12">
-                <a class="text-decoration-none"href="#">
-                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua2.jpg'?>" alt="" style="max-width:100%"><br><br>
-                    <h4 class="text-center text-white"><strong>SmartPool</strong></h4><br>
-                </a>
-                <p class="text-center">Se trata del mejor sistema para calefacción de piscinas, con la mejor relación costo y eficiencia. Contamos con la tecnología para transformar una piscina en una Piscina del Caribe. </p>
+                <p class="text-center">
+                    <?php if(empty($hcontpost_agua)) {echo "Sistema de calentamiento eléctrico de agua sin estanque (calienta flujo), 
+                            posee la mas alta tecnología permitiendo ahorro de energía a la vez de máximo confort, cero gasto en mantención y máxima seguridad en su utilización.";}
+                        else {
+                            echo $hcontpost_agua;} 
+                    ?>  
+                </p>
             </div>
 
+        <!--SEGUNDO POST-->
             <div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="#">
-                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua3.jpg'?>" alt="" style="max-width:100%"><br><br>
-                    <h4 class="text-center text-white"><strong>SmartTub</strong></h4><br>
+                    <?php if(empty($himg_aguas)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $himg_aguas ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <h4 class="text-center text-white"><strong><?php if(empty($htitpost_aguas)){ echo "SmartPool"; } else { echo $htitpost_aguas; }?></strong></h4><br>
                 </a>
-                <p class="text-center">La más confortable y Ecológica Tina Caliente del Mercado. Disfrutar en el patio de tu casa o donde quieras, relajándote con agua caliente y el menor costo de mantención.</p><br><br><br><br>
+                <p class="text-center">
+                    <?php if(empty($hcontpost_aguas)) {echo "Se trata del mejor sistema para calefacción de piscinas, con la mejor relación costo y eficiencia. 
+                            Contamos con la tecnología para transformar una piscina en una Piscina del Caribe.";}
+                        else {
+                            echo $hcontpost_aguas;} 
+                    ?> 
+                </p>
+            </div>
+
+        <!--TERCER POST-->
+            <div class="col-lg-4 col-12">
+                <a class="text-decoration-none"href="#">
+                    <?php if(empty( $himg_aguat)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua3.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $himg_aguat ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <h4 class="text-center text-white"><strong><?php if(empty($htitpost_aguat)){ echo "SmartTub"; } else { echo $htitpost_aguat; }?></strong></h4><br>
+                </a>
+                <p class="text-center">
+                    <?php if(empty($contpost_aguas)) {echo "La más confortable y Ecológica Tina Caliente del Mercado. 
+                            Disfrutar en el patio de tu casa o donde quieras, relajándote con agua caliente y el menor costo de mantención.";}
+                        else {
+                            echo $contpost_aguas;} 
+                    ?> 
+                </p><br><br><br><br>
             </div>
         </div>
+
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #2C5660;">
             <h3 class="text-center py-3">Climatización e Iluminación</h3>
             <p class="px-5 pb-3 text-center">Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: Primero, 

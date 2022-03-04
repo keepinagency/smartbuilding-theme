@@ -13,7 +13,7 @@ $nuevo_arreglo = new WP_Query(array(
 	'posts_per_page'=>4
 ));
 $tit_agua = get_option( 'titulo-aguas', 'Agua Caliente' );
-$cont_agua = get_option( 'contenido-aguas', 'http://www.linkedin.com' );
+$cont_agua = get_option( 'contenido-aguas', '' );
 
 $titpost_agua = get_option( 'titulo-aguas-post', '' );
 $contpost_agua = get_option( 'contenido-aguas-post', '' );

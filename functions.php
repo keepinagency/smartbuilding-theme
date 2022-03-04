@@ -460,45 +460,45 @@ function custom_smartbuilding_register( $wp_customize ) {
             'priority' => 4,
         ));
                 /** Setting TEXT TITULO POST**********/
-                $wp_customize->add_setting( 'titulo-aguas__posts', array(
+                $wp_customize->add_setting( 'htitulo-aguas__posts', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control('titulo-aguas__posts', array(
+            $wp_customize->add_control('htitulo-aguas__posts', array(
                 'label' => __( 'Título del post', 'textdomain' ),
                 'section' => 'hoteleras__post',
                 'priority' => 1,
                 'type' => 'text',
             ));
             /** Setting TEXT-AREA CONTENIDO POST*****/
-            $wp_customize->add_setting( 'contenido-aguas__posts', array(
+            $wp_customize->add_setting( 'hcontenido-aguas__posts', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control( 'contenido-aguas__posts', array(
+            $wp_customize->add_control( 'hcontenido-aguas__posts', array(
                 'label' => __( 'Contenido del post', 'textdomain' ),
                 'section' => 'hoteleras__post',
                 'priority' => 2,
                 'type' => 'textarea',
             ));
             /** Setting Imagen para post **/
-            $wp_customize->add_setting( 'imge__aguas', array (
+            $wp_customize->add_setting( 'himge__aguas', array (
                 'default'        => get_template_directory_uri() . '/img/Soluciones/agua3.jpg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
             ));
-            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'imge__aguas', array(
+            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'himge__aguas', array(
                 'label'      => __( 'Imagen para el post', 'textdomain' ),
                 'section'    => 'hoteleras__post',
-                'settings'   => 'imge__aguas',
+                'settings'   => 'himge__aguas',
                 'priority'   => 3,
             )));
             /** Setting URL para el post **/
-            $wp_customize->add_setting( 'durl__aguas', array(
+            $wp_customize->add_setting( 'hdurl__aguas', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control('durl__aguas', array(
+            $wp_customize->add_control('hdurl__aguas', array(
                 'label' => __( 'Url del post', 'textdomain' ),
                 'section' => 'hoteleras__post',
                 'priority' => 4,
