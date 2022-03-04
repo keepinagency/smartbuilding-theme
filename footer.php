@@ -35,10 +35,10 @@
 			<b class="titulo-negrita">¿Quiénes Somos?</b> 
 				<?php if (empty($quienes)) {
 					echo "Queremos ser referentes en la industria de la Construcción Sustentable y la eficiencia energética, con aplicaciones residenciales y Comerciales. 
-					Líderes en ofrecer tecnologías y soluciones para las personas que buscan no sólo ahorros en sus consumos energéticos sino que también su impacto en el entorno y el planeta.";
+					Líderes en ofrecer tecnologías y soluciones para las personas que buscan no sólo ahorros en sus consumos energéticos sino que también su impacto en el entorno y el planeta";
 				}else{
 					echo $quienes;
-				} ?>
+				} ?>.
 			</p>
 		</div>
 		<div class="col-12 col-lg-3">
@@ -48,43 +48,28 @@
 			<div class="col-12 p-0 d-flex justify-content-center">
 				<!-- RSS -->
 				<a href="" class="text-decoration-none me-2">
-					<?php if(empty($rsslogo)) {
-                            echo '<img src="'.smartbuilding_IMG.'rss.jpeg' . '"'; }
-                        else{
-                            echo '<img src="' . esc_url( $rsslogo ) . '"'; }
-                    ?>
+					<!--img src="<?= smartbuilding_IMG. 'rss.jpeg'?>"/-->
+					<img src="<?= $rsslogo;?>"/>
 				</a>
 				<!-- Facebook -->
 				<a href="" class="text-decoration-none me-2">
-					<?php if(empty($facelogo)) {
-                            echo '<img src="'.smartbuilding_IMG.'facebook.jpeg' . '"'; }
-                        else{
-                            echo '<img src="' . esc_url( $facelogo ) . '"'; }
-                    ?>
+					<!--img src="<?= smartbuilding_IMG. 'facebook.jpeg'?>"/-->
+					<img src="<?= $facelogo;?>"/>
 				</a>
 				<!-- Gplus -->
 				<a href="" class="text-decoration-none me-2">
-					<?php if(empty($goopluslogo)) {
-                            echo '<img src="'.smartbuilding_IMG.'gplus.jpeg' . '"'; }
-                        else{
-                            echo '<img src="' . esc_url( $goopluslogo ) . '"'; }
-                    ?>
+					<!--img src="<?= smartbuilding_IMG. 'gplus.jpeg'?>"/-->
+					<img src="<?= $goopluslogo;?>"/>
 				</a>
 				<!-- LinkedIn -->
 				<a href="" class="text-decoration-none me-2">
-					<?php if(empty($linkelogo)) {
-                            echo '<img src="'.smartbuilding_IMG.'linked-in.jpeg' . '"'; }
-                        else{
-                            echo '<img src="' . esc_url( $linkelogo ) . '"'; }
-                    ?>
+					<!--img src="<?= smartbuilding_IMG. 'linked-in.jpeg'?>"/-->
+					<img src="<?= $linkelogo;?>"/>
 				</a>
 				<!-- Pinterest -->
 				<a href="" class="text-decoration-none me-2">
-					<?php if(empty($pintlogo)) {
-                            echo '<img src="'.smartbuilding_IMG.'pinterest.jpeg' . '"'; }
-                        else{
-                            echo '<img src="' . esc_url( $pintlogo ) . '"'; }
-                    ?>
+					<!--img src="<?= smartbuilding_IMG. 'pinterest.jpeg'?>"/-->
+					<img src="<?= $pintlogo;?>"/>
 				</a>
 			</div>
 		</div>
