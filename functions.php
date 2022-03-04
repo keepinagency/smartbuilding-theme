@@ -162,7 +162,7 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
             /** Setting Imagen para post **/
             $wp_customize->add_setting( 'img-aguas', array (
-                'default'        => get_template_directory_uri() . '/img/linked-in.jpeg',
+                'default'        => get_template_directory_uri() . '/img/Soluciones/agua1.jpg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
             ));

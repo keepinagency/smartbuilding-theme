@@ -25,9 +25,9 @@
                     <div class="page-imgmob col-12 d-flex justify-content-center p-0 m-0 d-lg-none">
                         <?php the_post_thumbnail('medium');?>
                     </div-->
-                    <div class="pag-post col-12 p-0 m-0 d-lg-none">
+                    <!--div class="pag-post col-12 p-0 m-0 d-lg-none">
                         <?php the_content(); ?>
-                    </div>
+                    </div-->
                 </div><!-- /.blog-post -->
                 <?php
             endwhile;

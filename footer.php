@@ -35,10 +35,10 @@
 			<b class="titulo-negrita">¿Quiénes Somos?</b> 
 				<?php if (empty($quienes)) {
 					echo "Queremos ser referentes en la industria de la Construcción Sustentable y la eficiencia energética, con aplicaciones residenciales y Comerciales. 
-					Líderes en ofrecer tecnologías y soluciones para las personas que buscan no sólo ahorros en sus consumos energéticos sino que también su impacto en el entorno y el planeta";
+					Líderes en ofrecer tecnologías y soluciones para las personas que buscan no sólo ahorros en sus consumos energéticos sino que también su impacto en el entorno y el planeta.";
 				}else{
 					echo $quienes;
-				} ?>.
+				} ?>
 			</p>
 		</div>
 		<div class="col-12 col-lg-3">
