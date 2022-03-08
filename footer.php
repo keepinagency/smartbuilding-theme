@@ -26,10 +26,7 @@
 <!-- Footer -->
  <!-- Redes Sociales -->
 <footer class="footer text-center">
-    <!--div class="titulo-redes col-lg-6 col-12 text-uppercase">
-        <p>Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales</p>
-    <div-->
-	<div class="row col-12 conten-social p-0 m-0 py-2">
+    <div class="row col-12 conten-social p-0 m-0 py-2">
 		<div class="col-lg-5 align-self-center">
 			<p class="parrafo-info ps-2">
 			<b class="titulo-negrita">¿Quiénes Somos?</b> 
