@@ -2,55 +2,37 @@
 /*** 
  *  Testimonios, categoría de entradas    
  *  Categoría: testimonios   
- ***/    
-$arreglo_testimonio = new WP_Query(array(
+ ***/ 
+$arreglo_testimonios = new WP_Query(array(
 	'post_type'=>'post', 
     'category_name' => 'testimonios',
-    'order'=>'DESC',
+    'orderby'=>'Rand',
 	'posts_per_page'=>3
 ));
 ?>
-<div class="home-testimonio my-5">
-    <div class="d-flex justify-content-center">
-        <div class="titulo-clientes text-uppercase d-flex align-items-center justify-content-center">
+<div class="testimonials-clean py-3">
+    <div class="row col-12 d-flex justify-content-center p-0 m-0">
+        <div class="titulo-clientes text-uppercase d-flex align-items-center justify-content-center p-0 m-0">
             <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Clientes</p>
         </div>
-        <!--div class="col-md-12 d-flex justify-content-center">
-            <h2>Explore la experiencia de nuestros clientes</h2>
-        </div-->
+        <div class="intro p-0 m-0">
+            <p class="text-center">Explore la experiancia de nuestros clientes</p>
+        </div>
     </div> 
-    <div class="col-12 d-flex flex-column flex-lg-row p-0 m-0">
-        <?php 
-        $i=1;
-        if ($arreglo_testimonio->have_posts()){
-            while ($arreglo_testimonio->have_posts()) : $arreglo_testimonio->the_post();
-            if ($i==2){
-                    $direccion   = "-reverse";
-                    $justifytext = "text-left text-lg-center";
-                    $classmiddle = "middle_aboutus_home";
-                }else{
-                    $direccion="";
-                    $justifytext = "text-right text-lg-center";
-                    $classmiddle = "";
-                }?>
-                    <div class="aboutus_home <?=$classmiddle?> col-12 col-lg-4 d-flex flex-row<?=$direccion?> flex-lg-column p-0 m-0 p-lg-2 align-self-lg-start pr-lg-5 pl-lg-5 row">
-                        <div class="post-clientes col-6 col-lg-12 d-flex justify-content-start d-lg-flex justify-content-lg-center py-2">
-                            <?php the_title(); ?>
-                        </div>
-                        <div class="col-6 d-block d-lg-none">
-                            &nbsp;
-                        </div>
-                        <div class="col-4 col-lg-12 d-flex justify-content-center d-lg-flex justify-content-lg-center pb-3">
-                            <?php the_post_thumbnail('full'); ?>  
-                        </div>
-                        <div class="col-8 col-lg-12 p-0 d-lg-flex justify-content-lg-center text-center px-3 cont-clientes fst-italic">
-                            <?php the_content();?>
-                        </div>
+    <?php if ($arreglo_testimonios->have_posts()) : ?>
+        <div class="row col-lg-12 m-lg-0 people d-flex justify-content-center">
+            <?php while ($arreglo_testimonios->have_posts()) : $arreglo_testimonios->the_post();?>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box fst-italic p-3 m-0">
+                        <p class="description"><?php the_content();?></p>
                     </div>
-
-                    
-                <?php $i++; endwhile; wp_reset_postdata();
-        }
-        ?>
-    </div>
+                    <div class="author">
+                        <img src="<?= the_post_thumbnail_url('Thumbnail');?>" class="rounded-circle">
+                        <h5 class="name"><?php the_title(); ?></h5>
+                        <p class="title">Cliente</p>
+                    </div>
+                </div>
+            <?php endwhile;?>
+        </div>
+    <?php endif;?>  
 </div>
