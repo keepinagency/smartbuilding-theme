@@ -13,7 +13,7 @@ $arreglo_testimonios = new WP_Query(array(
 <div class="testimonials-clean py-3">
     <div class="row col-12 d-flex justify-content-center p-0 m-0">
         <div class="titulo-clientes text-uppercase d-flex align-items-center justify-content-center p-0 m-0">
-            <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Clientes</p>
+            <p class="border-2 border-bottom border-success text-dark"><b class="titulo-negrita">Nuestros</b>&nbsp;Clientes</p>
         </div>
         <div class="intro p-0 m-0">
             <p class="text-center">Explore la experiancia de nuestros clientes</p>

@@ -74,7 +74,7 @@
 			<div class="contact-details row p-lg-0 m-lg-0 mt-3">
 				<div class="col-lg-6">
 					<span>
-						<img src="<?= smartbuilding_IMG. 'direccion.png'?>"/>DIRECCIÓN
+						<i class="fa-solid fa-house"></i> DIRECCIÓN
 					</span>
 					<p><?php if (empty($dir)) {
 						echo "El Juncal #901, Bodega3, Quilicura";
@@ -84,7 +84,7 @@
 				</div>
 				<div class="col-lg-6">
 					<span>
-						<img src="<?= smartbuilding_IMG. 'phone.png'?>"/>TELÉFONO
+						<i class="fa-solid fa-square-phone"></i> TELÉFONO
 					</span>
 					<p><?php if (empty($tel)) {
 						echo "+56 22 9480016";
@@ -94,7 +94,7 @@
 				</div>
 				<div class="col-lg-6">
 					<span>
-						<img src="<?= smartbuilding_IMG. 'email.png'?>"/>CORREO
+					<i class="fa-solid fa-envelope"></i> CORREO
 					</span>
 					<p><?php if (empty($correo)) {
 						echo "contacto@smartbuilding.cl";
@@ -104,7 +104,7 @@
 				</div>
 				<div class="col-lg-6">
 					<span>
-						<img src="<?= smartbuilding_IMG. 'enlace.png'?>"/>SITIO WEB
+					<i class="fa-solid fa-globe"></i> SITIO WEB
 					</span>
 					<p>http://smartbuilding.cl/</p>
 				</div>
