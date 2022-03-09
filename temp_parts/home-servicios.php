@@ -10,7 +10,7 @@ $arreglo_servicios = new WP_Query(array(
 	'posts_per_page'=>6
 ));
 ?>
-<div id="servicios" class="col-12 row p-0 m-0 py-3 my-2" style="background-color: rgba(0, 0, 0, 0.05);">
+<div id="servicios" class="col-12 row p-0 m-0 py-3" style="background-color: rgba(0, 0, 0, 0.05);">
     <?php if ($arreglo_servicios->have_posts()) : ?>
         <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center p-4">
             <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Servicios</p>

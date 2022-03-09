@@ -6,7 +6,7 @@
 ?>
 <div class="row p-0 m-0 my-3">
     <div class="titulo-producto col-12 text-uppercase d-flex align-items-center justify-content-center p-4">
-        <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Contác</b>tanos</p>
+        <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Contáctanos</b></p>
     </div>
     <div class="col-lg-6 col-12">
         <iframe class="col-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.633604320769!2d-70.71369228546772!3d-33.32839308080909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c755d1b047e7%3A0x1c6d417b7a147c12!2sEl%20Juncal%20901%2C%20Quilicura%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses-419!2sve!4v1645625104184!5m2!1ses-419!2sve" 

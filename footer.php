@@ -1,21 +1,24 @@
 <?php 
-/*** 
- *  Contáctonos, categoría de entradas    
- *  Categoría: ""   
- ***/  
 
-	/*$url_int = get_option( 'instaurl', 'http://www.instagram.com' );
 	$url_fbk = get_option( 'faceurl', 'http://www.facebook.com' );
 	$url_lik = get_option( 'linkeurl', 'http://www.linkedin.com' );
-	$url_git = get_option( 'giturl', 'http://www.github.com' );
+	$url_rss = get_option( 'rssurl', 'https://news.google.com/topstories?hl=es-419&gl=VE&ceid=VE:es-419' );
+	$url_gooplus = get_option( 'gooplusurl', 'https://myaccount.google.com/' );
+	$url_pint = get_option( 'pinturl', 'https://www.pinterest.com/' );
 
-	$instalogo = get_option( 'instalogo', '/img/ico-instagram.png' );
-	$facelogo = get_option( 'facelogo', '/img/ico-facebook.png' );
-	$linkelogo = get_option( 'linkelogo', '/img/ico-linkedin.png' );
-	$gitlogo = get_option( 'gitlogo', '' );
-	
-	$informa = get_option('informacion');
-	$placeh = get_option('placeholder');*/
+	$facelogo = get_option( 'facelogo', '/img/facebook.jpeg' );
+	$linkelogo = get_option( 'linkelogo', '/img/linked-in.jpeg' );
+	$rsslogo = get_option( 'rsslogo', '/img/rss.jpeg' );
+	$goopluslogo = get_option( 'goopluslogo', '/img/gplus.jpeg' );
+	$pintlogo = get_option( 'pintlogo', '/img/pinterest.jpeg' );
+
+	$dir = get_option( 'direccion', 'El Juncal #901, Bodega3, Quilicura' );
+	$tel = get_option( 'telefono', '+56 22 9480016' );
+	$correo = get_option( 'correo', 'contacto@smartbuilding.cl' );
+	$web = get_option( 'web', 'http://smartbuilding.cl/' );
+		
+	$quienes = get_option('quienes', '');
+	/*$placeh = get_option('placeholder');*/
 
 ?>
 </div--><!-- /.row -->
@@ -23,15 +26,16 @@
 <!-- Footer -->
  <!-- Redes Sociales -->
 <footer class="footer text-center">
-    <!--div class="titulo-redes col-lg-6 col-12 text-uppercase">
-        <p>Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales</p>
-    <div-->
-	<div class="row col-12 conten-social p-0 m-0 py-2">
+    <div class="row col-12 conten-social p-0 m-0 py-2">
 		<div class="col-lg-5 align-self-center">
 			<p class="parrafo-info ps-2">
-			<b class="titulo-negrita">¿Quienes Somos?</b> Queremos ser referentes en la industria de la Construcción Sustentable y la eficiencia energética, con aplicaciones 
-				residenciales y Comerciales. Líderes en ofrecer tecnologías y soluciones para las personas que buscan no sólo ahorros en sus consumos 
-				energéticos sino que también su impacto en el entorno y el planeta.
+			<b class="titulo-negrita">¿Quiénes Somos?</b> 
+				<?php if (empty($quienes)) {
+					echo "Queremos ser referentes en la industria de la Construcción Sustentable y la eficiencia energética, con aplicaciones residenciales y Comerciales. 
+					Líderes en ofrecer tecnologías y soluciones para las personas que buscan no sólo ahorros en sus consumos energéticos sino que también su impacto en el entorno y el planeta";
+				}else{
+					echo $quienes;
+				} ?>.
 			</p>
 		</div>
 		<div class="col-12 col-lg-3">
@@ -41,23 +45,28 @@
 			<div class="col-12 p-0 d-flex justify-content-center">
 				<!-- RSS -->
 				<a href="" class="text-decoration-none me-2">
-					<img src="<?= smartbuilding_IMG. 'rss.jpeg'?>"/>
+					<!--img src="<?= smartbuilding_IMG. 'rss.jpeg'?>"/-->
+					<img src="<?= $rsslogo;?>"/>
 				</a>
 				<!-- Facebook -->
 				<a href="" class="text-decoration-none me-2">
-					<img src="<?= smartbuilding_IMG. 'facebook.jpeg'?>"/>
+					<!--img src="<?= smartbuilding_IMG. 'facebook.jpeg'?>"/-->
+					<img src="<?= $facelogo;?>"/>
 				</a>
 				<!-- Gplus -->
 				<a href="" class="text-decoration-none me-2">
-					<img src="<?= smartbuilding_IMG. 'gplus.jpeg'?>"/>
+					<!--img src="<?= smartbuilding_IMG. 'gplus.jpeg'?>"/-->
+					<img src="<?= $goopluslogo;?>"/>
 				</a>
 				<!-- LinkedIn -->
 				<a href="" class="text-decoration-none me-2">
-					<img src="<?= smartbuilding_IMG. 'linked-in.jpeg'?>"/>
+					<!--img src="<?= smartbuilding_IMG. 'linked-in.jpeg'?>"/-->
+					<img src="<?= $linkelogo;?>"/>
 				</a>
 				<!-- Pinterest -->
 				<a href="" class="text-decoration-none me-2">
-					<img src="<?= smartbuilding_IMG. 'pinterest.jpeg'?>"/>
+					<!--img src="<?= smartbuilding_IMG. 'pinterest.jpeg'?>"/-->
+					<img src="<?= $pintlogo;?>"/>
 				</a>
 			</div>
 		</div>
@@ -65,25 +74,37 @@
 			<div class="contact-details row p-lg-0 m-lg-0 mt-3">
 				<div class="col-lg-6">
 					<span>
-						<img src="<?= smartbuilding_IMG. 'direccion.png'?>"/>DIRECCIÓN
+						<i class="fa-solid fa-house"></i> DIRECCIÓN
 					</span>
-					<p>El Juncal #901, Bodega3, Quilicura</p>
+					<p><?php if (empty($dir)) {
+						echo "El Juncal #901, Bodega3, Quilicura";
+					}else {
+						echo $dir;
+						}?></p>
 				</div>
 				<div class="col-lg-6">
 					<span>
-						<img src="<?= smartbuilding_IMG. 'phone.png'?>"/>TELÉFONO
+						<i class="fa-solid fa-square-phone"></i> TELÉFONO
 					</span>
-					<p>+56 22 9480016</p>
+					<p><?php if (empty($tel)) {
+						echo "+56 22 9480016";
+					}else {
+						echo $tel;
+						}?></p>
 				</div>
 				<div class="col-lg-6">
 					<span>
-						<img src="<?= smartbuilding_IMG. 'email.png'?>"/>CORREO
+					<i class="fa-solid fa-envelope"></i> CORREO
 					</span>
-					<p>contacto@smartbuilding.cl</p>
+					<p><?php if (empty($correo)) {
+						echo "contacto@smartbuilding.cl";
+					}else {
+						echo $correo;
+						}?></p>
 				</div>
 				<div class="col-lg-6">
 					<span>
-						<img src="<?= smartbuilding_IMG. 'enlace.png'?>"/>SITIO WEB
+					<i class="fa-solid fa-globe"></i> SITIO WEB
 					</span>
 					<p>http://smartbuilding.cl/</p>
 				</div>

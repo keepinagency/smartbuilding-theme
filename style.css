@@ -35,7 +35,7 @@ WordPress Available:  yes
 }*/
 .menu-item {
   font-size: 1.2rem !important;
-  text-align: center !important;
+  text-align: left !important;
   color: #413a4d;
   margin-left: 2%;
   /*padding: 0%;
@@ -237,6 +237,11 @@ WordPress Available:  yes
     font-size: 0.8em;
     color: #000000;
   }
+  .cont-testimonial{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+  }
   .form-nom{
     font-size: 0.8em !important;
   }
@@ -251,4 +256,80 @@ WordPress Available:  yes
     color:#CADBF2;
     font-size: 0.7em;
   }
+}
+
+
+.testimonials-clean {
+  color:#313437;
+  background-color:rgba(134,170,53, 0.3);
+}
+
+.testimonials-clean p {
+  color:#7d8285;
+}
+
+.testimonials-clean h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+}
+
+@media (max-width:767px) {
+  .testimonials-clean h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+.testimonials-clean .intro {
+  font-size:1.1em;
+  /*max-width:500px;*/
+  margin:0 auto;
+}
+.testimonials-clean .people {
+  padding:50px 0 20px;
+}
+
+.testimonials-clean .item {
+  margin-bottom:32px;
+}
+
+@media (min-width:768px) {
+  .testimonials-clean .item {
+    height:220px;
+  }
+}
+
+.testimonials-clean .item .box {
+  background-color:#fff;
+  position:relative;
+  font-size: 1em;
+}
+
+.testimonials-clean .item .box:after {
+  content:'';
+  position:absolute;
+  left:2.5em;
+  bottom:-1.5em;
+  border:15px solid transparent;
+  border-width:12px 15px;
+  border-top-color:#fff;
+}
+
+.testimonials-clean .item .author {
+  margin-top:28px;
+  padding-left:25px;
+}
+
+.testimonials-clean .item img {
+  max-width:4em;
+  float:left;
+  margin-right:12px;
+  /*margin-top:-5px;*/
+}
+
+.border-success {
+  border-color:#86AA35 !important; 
 }

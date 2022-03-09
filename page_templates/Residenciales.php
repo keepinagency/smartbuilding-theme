@@ -7,23 +7,38 @@ Esta es la plantilla para el Bog del menu
 get_header();
 $sub = get_post_meta($post->ID, 'subtitulo', true);
 $sub_ = get_post_meta($post->ID, 'sub_titulo', true);
-$paginacion_nueva = get_query_var('paged');
 $nuevo_arreglo = new WP_Query(array(
 	'post_type'=>'post', 
     'category_name' => 'calefaccion',
-	'posts_per_page'=>4,
-	'paged'=>$paginacion_nueva 
+	'posts_per_page'=>4
 ));
+$tit_agua = get_option( 'titulo-aguas', 'Agua Caliente' );
+$cont_agua = get_option( 'contenido-aguas', '' );
+
+$titpost_agua = get_option( 'titulo-aguas-post', '' );
+$contpost_agua = get_option( 'contenido-aguas-post', '' );
+$url_agua = get_option( 'url-aguas', '' );
+$img_agua = get_option( 'img-aguas', '' );
+
+$titpost_aguas = get_option( 'titulo-aguas-posts', '' );
+$contpost_aguas = get_option( 'contenido-aguas-posts', '' );
+$url_aguas = get_option( 'durl-aguas', '' );
+$img_aguas = get_option( 'imge-aguas', '' );
+
+$titpost_aguat = get_option( 'titulo-aguas__posts', '' );
+$contpost_aguat = get_option( 'contenido-aguas__posts', '' );
+$url_aguat = get_option( 'durl__aguas', '' );
+$img_aguat = get_option( 'imge__aguas', '' );
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
         <div class="col-12 col-lg-12 p-0 m-0" 
             style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; width:100%; min-height:70vh;">
-            <div class="col-12 text-center col-lg-12 text-lg-center pt-5">
+            <div class="col-12 text-center col-lg-12 text-lg-center pt-5 p-0 m-0">
                 <h1><?php echo $sub.' '.$sub_; ?></h1>
             </div>
         </div>
-        <div class="col-12 text-center m-5">
+        <div class="col-12 text-center my-5">
             <h3>Sector Residencial</h3>
             <p>El 67% del consumo energético de un hogar promedio en Chile (Casa o Departamento) es en Calefacción y Agua Caliente.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-residencial.png'?>" style="width:50%;"/>
@@ -45,7 +60,7 @@ $nuevo_arreglo = new WP_Query(array(
                             <?php the_post_thumbnail('') ;?>
                         </a>
                     </div> 
-                    <div class="row cont-corpotel col-12 m-0 p-0 text-center">
+                    <div class="cont-corpotel col-12 m-0 p-0 text-center">
                         <div class="col-10 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class=" p-0 m-0" href="<?php the_permalink(); ?>">
                                 <div class="p-2 m-0 text-white">
@@ -61,32 +76,71 @@ $nuevo_arreglo = new WP_Query(array(
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
         <div class="col-12 text-white row p-0 m-0" style="background: #32B2D0;">
-            <h3 class="text-center py-3">Agua Caliente</h3>
-            <p class="px-5 pb-3 text-center">Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
-            Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de Calor que sea eficiente 
-            tanto en los Consumos como en la transmisión del calor que genera al ambiente.</p>
-        
+            <h3 class="text-center py-3"><?php if(empty($tit_agua)){ echo "Agua Caliente"; } else { echo $tit_agua; }?></h3>
+            <p class="px-5 pb-3 text-center">
+                <?php if(empty($cont_agua)) {echo "Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
+                    Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de Calor que sea eficiente 
+                    tanto en los Consumos como en la transmisión del calor que genera al ambiente.";}
+                else{
+                    echo $cont_agua; } ?>
+                </p>
+
+        <!--PRIMER POST-->
             <div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="#">
-                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua1.jpg'?>" alt="" style="max-width:100%;"><br><br>
-                    <h4 class="text-center text-white"><strong>SmartHotWater</strong></h4><br>
+                    <?php if(empty($img_agua)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $img_agua ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <h4 class="text-center text-white"><strong><?php if(empty($titpost_agua)){ echo "SmartHotWater"; } else { echo $titpost_agua; }?></strong></h4><br>
                 </a>
-                <p class="text-center">Sistema de calentamiento eléctrico de agua sin estanque (calienta flujo), posee la mas alta tecnología permitiendo ahorro de energía a la vez de máximo confort, cero gasto en mantención y máxima seguridad en su utilización. </p>
-            </div>
-            <div class="col-lg-4 col-12">
-                <a class="text-decoration-none"href="#">
-                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua2.jpg'?>" alt="" style="max-width:100%"><br><br>
-                    <h4 class="text-center text-white"><strong>SmartPool</strong></h4><br>
-                </a>
-                <p class="text-center">Se trata del mejor sistema para calefacción de piscinas, con la mejor relación costo y eficiencia. Contamos con la tecnología para transformar una piscina en una Piscina del Caribe. </p>
+                <p class="text-center">
+                    <?php if(empty($contpost_agua)) {echo "Sistema de calentamiento eléctrico de agua sin estanque (calienta flujo), 
+                        posee la mas alta tecnología permitiendo ahorro de energía a la vez de máximo confort, cero gasto en mantención y máxima seguridad en su utilización.";}
+                        else {
+                            echo $contpost_agua;} 
+                    ?> 
+                </p>
             </div>
 
+        <!--SEGUNDO POST-->
             <div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="#">
-                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua3.jpg'?>" alt="" style="max-width:100%"><br><br>
-                    <h4 class="text-center text-white"><strong>SmartTub</strong></h4><br>
+                    <?php if(empty($img_aguas)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $img_aguas ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <h4 class="text-center text-white"><strong><?php if(empty($titpost_aguas)){ echo "SmartPool"; } else { echo $titpost_aguas; }?></strong></h4><br>
                 </a>
-                <p class="text-center">La más confortable y Ecológica Tina Caliente del Mercado. Disfrutar en el patio de tu casa o donde quieras, relajándote con agua caliente y el menor costo de mantención.</p><br><br><br><br>
+                <p class="text-center">
+                    <?php if(empty($contpost_aguas)) {echo "Se trata del mejor sistema para calefacción de piscinas, con la mejor relación costo y eficiencia. 
+                            Contamos con la tecnología para transformar una piscina en una Piscina del Caribe.";}
+                        else {
+                            echo $contpost_aguas;} 
+                    ?> 
+                </p>
+            </div>
+
+        <!--TERCER POST-->
+            <div class="col-lg-4 col-12">
+                <a class="text-decoration-none"href="#">
+                    <?php if(empty( $img_aguat)) {
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua3.jpg' . '" style="max-width:100%;><br><br>'; }
+                        else{
+                            echo '<img src="' . esc_url( $img_aguat ) . '" style="max-width:100%;"><br><br>'; }
+                    ?>
+                    <!--img src="<?= smartbuilding_IMG. 'Soluciones/agua3.jpg'?>" alt="" style="max-width:100%"><br><br-->
+                    <h4 class="text-center text-white"><strong><?php if(empty($titpost_aguat)){ echo "SmartTub"; } else { echo $titpost_aguat; }?></strong></h4><br>
+                </a>
+                <p class="text-center">
+                    <?php if(empty($contpost_aguas)) {echo "La más confortable y Ecológica Tina Caliente del Mercado. 
+                            Disfrutar en el patio de tu casa o donde quieras, relajándote con agua caliente y el menor costo de mantención.";}
+                        else {
+                            echo $contpost_aguas;} 
+                    ?> 
+                </p><br><br><br><br>
             </div>
         </div>
     <?php endif; ?>
