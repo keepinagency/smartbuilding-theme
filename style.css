@@ -50,6 +50,13 @@ WordPress Available:  yes
   border: thin solid white;
   border-bottom: #86AA35 thin solid;
 }
+.menu-item-has-children > a:after {
+  display:none;
+
+  /*color:#CADBF2;
+  margin-top: 5px;
+  border: 2px solid #86AA35;*/
+}
 
   /***HOME - PRESENTACIÓN***
   **************************/
