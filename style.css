@@ -35,7 +35,7 @@ WordPress Available:  yes
 }*/
 .menu-item {
   font-size: 1.2rem !important;
-  text-align: center !important;
+  text-align: left !important;
   color: #413a4d;
   margin-left: 2%;
   /*padding: 0%;
@@ -318,3 +318,6 @@ WordPress Available:  yes
   /*margin-top:-5px;*/
 }
 
+.border-success {
+  border-color:#86AA35 !important; 
+}
