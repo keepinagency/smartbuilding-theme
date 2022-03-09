@@ -32,15 +32,35 @@ $arreglo_productos = new WP_Query(array(
                 }
                 ?>
                  
-                    <div class="miniatura-producto d-flex align-items-end p-0 m-0 flex-lg-grow-1 me-lg-1" 
-                                style="background-image: url('<?php echo the_post_thumbnail_url('');?>'); background-size: cover;"> 
-                        <a class="titulo-post w-100 d-flex align-items-center text-center" href="<?php the_permalink(); ?>" >      
-                            <h4 class="enlace-post text-uppercase text-center text-white w-100">
-                                <?php the_title(); ?>
-                            </h4>
-                        </a>
+                    <div class="miniatura-producto d-flex flex-column align-items-end p-0 m-0 
+                                flex-lg-grow-1 me-lg-1" 
+                         style="background-image: url('<?php echo the_post_thumbnail_url('');?>'); 
+                                background-size: cover;"> 
+
+                        
+
+                        <div class="col-12 ">
+                            <!-- href="<?php the_permalink(); ?>" -->
+                            
+                            <a class="titulo-post d-flex align-items-center text-center" 
+                                data-toggle="collapse" href="#producto<?=$i?>" 
+                                role="button" aria-expanded="false" aria-controls="producto<?=$i?>"
+                                onclick="let wact = jQuery(this).parent().parent().width();
+                                         jQuery(this).parent().parent().css('max-width',wact);">      
+                                <h4 class="enlace-post text-uppercase text-center text-white w-100">
+                                    <?php the_title(); ?>
+                                </h4>
+                            </a>
+                            
+                        </div>
+
+                        <div  class="contenido-producto p-2 h-75 collapse multi-collapse" id="producto<?=$i?>">
+                            <?php the_excerpt(); ?>
+                        </div>
+                        
+                        
                     </div> 
-                    <!--div class="contenido-producto p-2"><?php the_excerpt(); ?></div-->
+                    
             <?php 
                 $i++; 
                 endwhile;?>

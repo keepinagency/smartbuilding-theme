@@ -46,8 +46,20 @@ function smartbuilding_register_menu() {
 }
 /****************FUNCION PARA EXTRACTO***********************/
 function custom_excerpt_length( $length){
-	return 25;
+	return 40;
 }
+
+function wpdocs_excerpt_more( $more ) {
+    if ( ! is_single() ) {
+        $more = sprintf( '<br><div class="col-12 read-more "><a href="%1$s">%2$s</a></div>',
+            get_permalink( get_the_ID() ),
+            __( 'Leer mas ->', 'textdomain' )
+        );
+    }
+ 
+    return $more;
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 /************** METABOXES PARA EL TITULO ****************
 ********************************************************/

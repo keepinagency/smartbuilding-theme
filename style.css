@@ -78,6 +78,8 @@ WordPress Available:  yes
 .miniatura-producto{
     background-position: center;
     min-height: 40vh;
+    /*max-width: 30vw;*/
+    flex-grow: 1 !important;
 }
 .miniatura-producto:hover{
     background-position: center;
@@ -95,8 +97,18 @@ WordPress Available:  yes
 }
 
 .contenido-producto{
-  background: rgba(134,170,53, 0.65) !important;
+  background: rgba(255,255,255, 0.65) !important;
   text-align: justify;
+  color:#3F4F6B;
+  max-width: 100%;
+}
+
+.read-more{
+  text-align: end;
+}
+.read-more a{
+  color: #86AA35;
+  text-align: end;
 }
 
   /*****HOME - SERVICIOS*****
