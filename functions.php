@@ -33,8 +33,6 @@ function smartbuilding_enqueue_scripts() {
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', $dependencies, '', true );
     wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', $dependencies, '', true );
     wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', $dependencies, '', true );
-    //wp_enqueue_script('wow', get_template_directory_uri() . '/js/wow.min.js', $dependencies, '', true );
-    //wp_enqueue_script('smartbuildingjs', get_template_directory_uri() . '/js/smartbuilding.js', '', '', true );
 
 }
 
@@ -42,7 +40,6 @@ function smartbuilding_enqueue_scripts() {
 function smartbuilding_register_menu() {
 	register_nav_menu( 'header-menu', __('Header Menu'));
     register_nav_menu( 'footer-menu', __('Footer Menu'));
-    /*register_nav_menu( 'softfree-menu', __('Soft Free'));*/
 }
 /****************FUNCION PARA EXTRACTO***********************/
 function custom_excerpt_length( $length){
@@ -53,13 +50,18 @@ function custom_excerpt_length( $length){
 ********************************************************/
 
 function descrip() { 
-	add_meta_box( 'descrip','Indique la Descripción a ser usado para esta página.','la_descripcion','post','normal','high' );  
+	add_meta_box( 'descrip','Configuración adicional para el Post.','la_descripcion','post','normal','high' );  
 }
 function la_descripcion() {
     global $wpdb, $post;
     $descrip  = get_post_meta($post->ID, 'descripcion', true);
-    echo '<label"><strong>Descripci&oacute;n:</strong></label>
-    <textarea type="text" name="descripcion" id="descripcion" value="'.htmlspecialchars($descrip).' "rows="5" cols="50"   /></textarea></br>';
+    $icono  = get_post_meta($post->ID, 'icono', true);
+
+    echo '<label><strong>Icono para el post</strong></label></br>
+    <input type="text" name="icono" id="icono" value="'.htmlspecialchars($icono).'" style="width: 300px;" /></br></br>';
+
+    echo '<label><strong>Descripci&oacute;n:</strong></label></br>
+    <textarea name="descripcion" id="descripcion" value="'.htmlspecialchars($descrip).'" cols="50" rows="5"></textarea>';
 }
 function guardar_descripcion() {
     global $wpdb, $post;
@@ -67,6 +69,13 @@ function guardar_descripcion() {
     if (!$post_id) return $post;
     $price= $_POST['descripcion'];
     update_post_meta($post_id, 'descripcion', $price);
+}
+function guardar_icono(){
+    global $wpdb, $post;
+    if (!$post_id) $post_id = $_POST['post_ID'];
+    if (!$post_id) return $post;
+    $price = $_POST['icono'];
+    update_post_meta($post_id, 'icono', $price);
 }
 
 function subtitulo() { 
@@ -76,10 +85,9 @@ function el_subtitulo() {
     global $wpdb, $post;
     $subfirst  = get_post_meta($post->ID, 'subtitulo', true);
     $subsecond = get_post_meta($post->ID, 'sub_titulo', true);
-
-    echo '<label"><strong>Titulo:</strong></label>
+    echo '<label><strong>Titulo:</strong></label>
     <input type="text" name="subtitulo" id="subtitulo" value="'.htmlspecialchars($subfirst).'" style="width: 300px;" /></br>';
-    echo '<label"><strong>Sub Titulo:</strong></label>
+    echo '<label><strong>Sub Titulo:</strong></label>
     <input type="text" name="sub_titulo" id="sub_titulo" value="'.htmlspecialchars($subsecond).'" style="width: 300px;" /></br>';
 }
 function guardar_subtitulo() {
@@ -743,6 +751,8 @@ add_action( 'excerpt_length' , 'custom_excerpt_length', 999 );	            // Ex
 add_action( 'add_meta_boxes', 'descrip' );                                  //Metaboxes para POST
 add_action('save_post', 'guardar_descripcion');
 add_action('publish_post', 'guardar_descripcion');
+add_action('save_post', 'guardar_icono');
+add_action('publish_post', 'guardar_icono');
 
 add_action( 'add_meta_boxes', 'subtitulo' );                    //Metaboxes para PAGE
 add_action( 'save_post', 'guardar_subtitulo' );                 //guardar subtitulo metabox en PAGE

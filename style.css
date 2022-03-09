@@ -109,6 +109,16 @@ WordPress Available:  yes
   color: #413a4d;
   font-size: 1em;
 }
+.icono-servicios i{
+  text-align: center;
+  padding-top: 28%;
+  width: 100%;
+  font-size: 3rem;
+  color: #fff;
+}
+.icono-servicios i:hover{
+  color: #86AA35;
+}
 
   /*****HOME - TESTIMONIOS*****
   **************************/
@@ -209,6 +219,13 @@ WordPress Available:  yes
   }
   .post-servicios{
     font-size: 0.8em;
+  }
+  .icono-servicios i{
+    text-align: center;
+    padding-top: 28%;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #fff;
   }
    .middle_aboutus_home{
     border-left: none;
