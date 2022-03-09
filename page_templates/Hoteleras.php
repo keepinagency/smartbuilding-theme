@@ -33,9 +33,9 @@ $himg_aguat = get_option( 'himge__aguas', '' );
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
-        <div class="col-12 col-lg-12 p-0 m-0" 
+        <div class="col-12 col-lg-12 p-0 m-0 d-flex justify-content-center" 
             style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; width:100%; min-height:70vh;">
-            <div class="col-12 text-center col-lg-12 text-lg-center pt-5">
+            <div class="col-12 text-center col-lg-6 text-lg-center pt-5 titulo-page">
                 <h1><?php echo $sub.' '.$sub_; ?></h1>
             </div>
         </div>
@@ -61,13 +61,17 @@ $himg_aguat = get_option( 'himge__aguas', '' );
 
          <!--PRIMER POST-->
             <div class="col-lg-4 col-12">
-                <a class="text-decoration-none"href="#">
+                <a class="text-decoration-none"href="<?php echo $hurl_agua; ?>">
                     <?php if(empty($himg_agua)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $himg_agua ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
-                    <h4 class="text-center text-white"><strong><?php if(empty($htitpost_agua)){ echo "SmartHotWater"; } else { echo $htitpost_agua; }?></strong></h4><br>
+                    <h4 class="text-center text-white">
+                        <strong>
+                            <?php if(empty($htitpost_agua)){ echo "SmartHotWater"; } else { echo $htitpost_agua; }?>
+                        </strong>
+                    </h4><br>
                 </a>
                 <p class="text-center">
                     <?php if(empty($hcontpost_agua)) {echo "Sistema de calentamiento eléctrico de agua sin estanque (calienta flujo), 
@@ -80,7 +84,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );
 
         <!--SEGUNDO POST-->
             <div class="col-lg-4 col-12">
-                <a class="text-decoration-none"href="#">
+                <a class="text-decoration-none"href="<?php echo $hurl_aguas; ?>">
                     <?php if(empty($himg_aguas)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
@@ -99,7 +103,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );
 
         <!--TERCER POST-->
             <div class="col-lg-4 col-12">
-                <a class="text-decoration-none"href="#">
+                <a class="text-decoration-none"href="<?php echo $hurl_aguat; ?>">
                     <?php if(empty( $himg_aguat)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua3.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
@@ -143,10 +147,10 @@ $himg_aguat = get_option( 'himge__aguas', '' );
                                 <div class="p-2 m-0 text-white">
                                     <h3><?php the_title();?></h3>
                                 </div>
-                                <div class="p-2 m-0 text-lg-justify text-white">
-                                    <?php the_excerpt();?>
-                                </div>
                             </a>
+                            <div class="p-2 m-0 text-lg-justify text-white">
+                                <?php the_excerpt();?>
+                            </div>
                         </div>
                     </div>
                 </div>

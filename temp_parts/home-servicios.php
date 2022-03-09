@@ -23,8 +23,8 @@ $arreglo_servicios = new WP_Query(array(
                     <div class="ratio ratio-1x1 rounded-circle bg-secondary icono-servicios">
                         <div class="">
                             <?php $icono = get_post_meta($post->ID, 'icono', true);
-                            echo $icono;
-                        ?>
+                                echo $icono;
+                            ?>
                         </div>
                         
                     </div>

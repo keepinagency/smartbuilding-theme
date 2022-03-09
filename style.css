@@ -69,6 +69,12 @@ WordPress Available:  yes
   font-size: 1.5em;
   color: #fff;
 }
+.titulo-page h1{
+  /*font-weight: bold;*/
+  background-color: rgba(139, 139, 137, 0.70);
+  font-size: 2.2em;
+  color: #fff;
+}
 
   /*****HOME - PRODUCTO*****
   **************************/
@@ -238,9 +244,9 @@ WordPress Available:  yes
   }
   .icono-servicios i{
     text-align: center;
-    padding-top: 28%;
     width: 100%;
-    font-size: 1.5rem;
+    padding-top: 1em;
+    font-size: 1.8rem;
     color: #fff;
   }
    .middle_aboutus_home{

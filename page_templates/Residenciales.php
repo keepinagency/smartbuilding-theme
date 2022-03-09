@@ -32,9 +32,9 @@ $img_aguat = get_option( 'imge__aguas', '' );
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
-        <div class="col-12 col-lg-12 p-0 m-0" 
+        <div class="col-12 col-lg-12 p-0 m-0 d-flex justify-content-center" 
             style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; width:100%; min-height:70vh;">
-            <div class="col-12 text-center col-lg-12 text-lg-center pt-5 p-0 m-0">
+            <div class="col-12 text-center col-lg-6 text-lg-center pt-5 p-0 m-0 titulo-page">
                 <h1><?php echo $sub.' '.$sub_; ?></h1>
             </div>
         </div>
@@ -66,10 +66,10 @@ $img_aguat = get_option( 'imge__aguas', '' );
                                 <div class="p-2 m-0 text-white">
                                     <h3><?php the_title();?></h3>
                                 </div>
-                                <div class="p-2 m-0 text-lg-justify text-white">
-                                    <?php the_excerpt();?>
-                                </div>
                             </a>
+                            <div class="p-2 m-0 text-lg-justify text-white">
+                                <?php the_excerpt();?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ $img_aguat = get_option( 'imge__aguas', '' );
 
         <!--PRIMER POST-->
             <div class="col-lg-4 col-12">
-                <a class="text-decoration-none"href="#">
+                <a class="text-decoration-none"href="<?= $url_agua ?>">
                     <?php if(empty($img_agua)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
@@ -106,7 +106,7 @@ $img_aguat = get_option( 'imge__aguas', '' );
 
         <!--SEGUNDO POST-->
             <div class="col-lg-4 col-12">
-                <a class="text-decoration-none"href="#">
+                <a class="text-decoration-none"href="<?= $url_aguas ?>">
                     <?php if(empty($img_aguas)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
@@ -125,7 +125,7 @@ $img_aguat = get_option( 'imge__aguas', '' );
 
         <!--TERCER POST-->
             <div class="col-lg-4 col-12">
-                <a class="text-decoration-none"href="#">
+                <a class="text-decoration-none"href="<?= $url_aguat ?>">
                     <?php if(empty( $img_aguat)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua3.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
