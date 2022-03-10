@@ -14,9 +14,6 @@
         </iframe>
     </div>
     <div class="col-lg-6" id="form-contacto">
-        <div class="titulo-producto col-12 mt-2 text-uppercase d-flex align-items-center justify-content-center p-lg-4 d-block d-lg-none">
-            <p class="border-2 border-bottom border-success"><b class="titulo-negrita_con">Formulario de contacto</b></p>
-        </div>
         <form action="<?php echo get_template_directory_uri().'/temp_parts/contactanos.php'; ?>" method="post">
             <div class="row">
                 <div class="form-group col-lg-12 p-2">
