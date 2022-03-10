@@ -10,29 +10,6 @@ Text Domain: SmartBuilding
 WordPress Available:  yes
 */
 
-/*@font-face {
-  font-family: 'Gotham-Bold';
-  src: url('fonts/Gotham/Gotham-Bold.eot'); /* IE9 Compat Modes ---*/
-  /*src: url('fonts/Gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 ---- */
-    /* url('fonts/Gotham/Gotham-Bold.woff') format('woff'), /* Modern Browsers ----- */
-     /*url('fonts/Gotham/Gotham-Bold.ttf')  format('truetype'), /* Safari, Android, iOS  LISTO */
-     /*url('fonts/Gotham/Gotham-Bold.svg#svgFontName') format('svg'); /* Legacy iOS ---- */
-/*     ;
-   font-weight: 700;
-   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gotham-Book';
-  src: url('fonts/Gotham/Gotham-Book.eot'); /* IE9 Compat Modes ---*/
-  /*src: url('fonts/Gotham/Gotham-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 ---- */
-    /* url('fonts/Gotham/Gotham-Book.woff') format('woff'), /* Modern Browsers ----- */
-     /*url('fonts/Gotham/Gotham-Book.ttf')  format('truetype'), /* Safari, Android, iOS  LISTO */
-     /*url('fonts/Gotham/Gotham-Book.svg#svgFontName') format('svg'); /* Legacy iOS ---- */
-     /*;
-   font-weight: 400;
-   font-style: normal;
-}*/
 .menu-item {
   font-size: 1.2rem !important;
   text-align: left !important;
@@ -50,7 +27,6 @@ WordPress Available:  yes
   border: thin solid white;
   border-bottom: #86AA35 thin solid;
 }
-
 .menu-item-has-children > a:after {
   color:#CADBF2;
 }
