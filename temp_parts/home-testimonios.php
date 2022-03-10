@@ -12,7 +12,7 @@ $arreglo_testimonios = new WP_Query(array(
 ?>
 <div class="testimonials-clean py-3">
     <div class="row col-12 d-flex justify-content-center p-0 m-0">
-        <div class="titulo-clientes text-uppercase d-flex align-items-center justify-content-center p-0 m-0">
+        <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center p-0 m-0">
             <p class="border-2 border-bottom border-success text-dark"><b class="titulo-negrita">Nuestros</b>&nbsp;Clientes</p>
         </div>
         <div class="intro p-0 m-0">
@@ -23,7 +23,7 @@ $arreglo_testimonios = new WP_Query(array(
         <div class="row col-lg-12 m-lg-0 people d-flex justify-content-center">
             <?php while ($arreglo_testimonios->have_posts()) : $arreglo_testimonios->the_post();?>
                 <div class="col-md-6 col-lg-4 item">
-                    <div class="box fst-italic p-3 m-0">
+                    <div class="box fst-italic p-lg-3 p-2 m-0">
                         <p class="description"><?php the_content();?></p>
                     </div>
                     <div class="author">

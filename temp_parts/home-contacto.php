@@ -10,7 +10,7 @@
     </div>
     <div class="col-lg-6 col-12">
         <iframe class="col-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.633604320769!2d-70.71369228546772!3d-33.32839308080909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c755d1b047e7%3A0x1c6d417b7a147c12!2sEl%20Juncal%20901%2C%20Quilicura%2C%20Regi%C3%B3n%20Metropolitana%2C%20Chile!5e0!3m2!1ses-419!2sve!4v1645625104184!5m2!1ses-419!2sve" 
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
     </div>
     <div class="col-lg-6" id="form-contacto">
