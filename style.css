@@ -140,7 +140,7 @@ WordPress Available:  yes
   padding-top: 100%; 
 }
 .icono-servicios i{
-  font-size: 2rem;
+  font-size: 3.5vw;
   color: #fff;
   position: absolute;
   top: 50%;
@@ -289,6 +289,9 @@ WordPress Available:  yes
   .titulo-negrita_con{
     font-size: 0.8em;
     color:#86AA35;
+  }
+  .icono-servicios i{
+    font-size: 7vw;
   }
 }
 
