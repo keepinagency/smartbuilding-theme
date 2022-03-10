@@ -13,9 +13,9 @@
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
     </div>
-    <div class="col-lg-6">
-        <div class="titulo-producto col-12 text-uppercase d-flex align-items-center justify-content-center p-lg-4 d-block d-lg-none">
-            <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Formulario de cont</b>acto</p>
+    <div class="col-lg-6" id="form-contacto">
+        <div class="titulo-producto col-12 mt-2 text-uppercase d-flex align-items-center justify-content-center p-lg-4 d-block d-lg-none">
+            <p class="border-2 border-bottom border-success"><b class="titulo-negrita_con">Formulario de contacto</b></p>
         </div>
         <form action="<?php echo get_template_directory_uri().'/temp_parts/contactanos.php'; ?>" method="post">
             <div class="row">
