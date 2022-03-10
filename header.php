@@ -41,8 +41,7 @@
                     */
                     wp_nav_menu( array(
                         'container'       => 'div',
-                        'container_class' => 'collapse navbar-collapse  
-                                            p-0 m-0 pt-2 d-lg-block ',
+                        'container_class' => 'collapse navbar-collapse p-0 m-0 pt-2 d-lg-block ',
                         'container_id'    => 'menusmartbuilding',
                         'items_wrap'      => '<ul id="%1$s" class="%2$s navbar-nav w-100 
                                                                 mt-0 mt-lg-0 pe-lg-5

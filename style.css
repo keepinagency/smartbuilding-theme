@@ -85,6 +85,7 @@ WordPress Available:  yes
 .titulo-negrita {
   color:#86AA35;
 }
+
 .miniatura-producto{
     background-position: center;
     min-height: 40vh;
@@ -285,8 +286,11 @@ WordPress Available:  yes
     color:#CADBF2;
     font-size: 0.7em;
   }
+  .titulo-negrita_con{
+    font-size: 0.8em;
+    color:#86AA35;
+  }
 }
-
 
 .testimonials-clean {
   color:#313437;

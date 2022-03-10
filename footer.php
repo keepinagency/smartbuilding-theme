@@ -44,27 +44,27 @@
 			</div>
 			<div class="col-12 p-0 d-flex justify-content-center">
 				<!-- RSS -->
-				<a href="" class="text-decoration-none me-2">
+				<a href="<?=$url_rss?>" class="text-decoration-none me-2">
 					<!--img src="<?= smartbuilding_IMG. 'rss.jpeg'?>"/-->
 					<img src="<?= $rsslogo;?>"/>
 				</a>
 				<!-- Facebook -->
-				<a href="" class="text-decoration-none me-2">
+				<a href="<?=$url_fbk?>" class="text-decoration-none me-2">
 					<!--img src="<?= smartbuilding_IMG. 'facebook.jpeg'?>"/-->
 					<img src="<?= $facelogo;?>"/>
 				</a>
 				<!-- Gplus -->
-				<a href="" class="text-decoration-none me-2">
+				<a href="<?=$url_gooplus?>" class="text-decoration-none me-2">
 					<!--img src="<?= smartbuilding_IMG. 'gplus.jpeg'?>"/-->
 					<img src="<?= $goopluslogo;?>"/>
 				</a>
 				<!-- LinkedIn -->
-				<a href="" class="text-decoration-none me-2">
+				<a href="<?=$url_lik?>" class="text-decoration-none me-2">
 					<!--img src="<?= smartbuilding_IMG. 'linked-in.jpeg'?>"/-->
 					<img src="<?= $linkelogo;?>"/>
 				</a>
 				<!-- Pinterest -->
-				<a href="" class="text-decoration-none me-2">
+				<a href="<?=$url_pint?>" class="text-decoration-none me-2">
 					<!--img src="<?= smartbuilding_IMG. 'pinterest.jpeg'?>"/-->
 					<img src="<?= $pintlogo;?>"/>
 				</a>
