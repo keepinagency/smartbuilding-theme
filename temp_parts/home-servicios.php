@@ -23,9 +23,8 @@ $arreglo_servicios = new WP_Query(array(
                     <div class="icono-servicios">
                         <div class="rounded-circle bg-secondary">
                             <?php $icono = get_post_meta($post->ID, 'icono', true);
-                                //echo $icono;
+                                echo $icono;
                             ?>
-                            <i class="fa-solid fa-cloud"></i>
                         </div>
                     </div>
                </div>
