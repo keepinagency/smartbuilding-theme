@@ -20,13 +20,13 @@ $arreglo_servicios = new WP_Query(array(
         <?php while ($arreglo_servicios->have_posts()) : $arreglo_servicios->the_post();?>
             <div class="pt-2 col-12 p-0 m-0 col-lg-6 p-lg-0 m-lg-0 d-flex justify-content-center justify-content-lg-center row">
                 <div class="col-lg-3 p-lg-4 m-lg-0 col-3 cont-servicios d-flex justify-content-center"> 
-                    <div class="ratio ratio-1x1 rounded-circle bg-secondary icono-servicios">
-                        <div class="">
+                    <div class="icono-servicios">
+                        <div class="rounded-circle bg-secondary">
                             <?php $icono = get_post_meta($post->ID, 'icono', true);
-                                echo $icono;
+                                //echo $icono;
                             ?>
+                            <i class="fa-solid fa-cloud"></i>
                         </div>
-                        
                     </div>
                </div>
                <div class="row col-lg-6 col-8 p-lg-0 m-lg-0 p-0 m-0">

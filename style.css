@@ -131,12 +131,20 @@ WordPress Available:  yes
   color: #413a4d;
   font-size: 1em;
 }
-.icono-servicios i{
-  text-align: center;
-  padding-top: 28%;
+.icono-servicios{
+  background-color: #3F4F6B;
+  border-radius: 100%;
+  position: relative;
   width: 100%;
-  font-size: 3rem;
+  padding-top: 100%; 
+}
+.icono-servicios i{
+  font-size: 2rem;
   color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .icono-servicios i:hover{
   color: #86AA35;
@@ -242,13 +250,7 @@ WordPress Available:  yes
   .post-servicios{
     font-size: 0.8em;
   }
-  .icono-servicios i{
-    text-align: center;
-    width: 100%;
-    padding-top: 1em;
-    font-size: 1.8rem;
-    color: #fff;
-  }
+  
    .middle_aboutus_home{
     border-left: none;
     border-right: none;
