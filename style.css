@@ -10,6 +10,32 @@ Text Domain: SmartBuilding
 WordPress Available:  yes
 */
 
+/*@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('fonts/Gotham/Gotham-Bold.eot'); /* IE9 Compat Modes ---*/
+  /*src: url('fonts/Gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 ---- */
+    /* url('fonts/Gotham/Gotham-Bold.woff') format('woff'), /* Modern Browsers ----- */
+     /*url('fonts/Gotham/Gotham-Bold.ttf')  format('truetype'), /* Safari, Android, iOS  LISTO */
+     /*url('fonts/Gotham/Gotham-Bold.svg#svgFontName') format('svg'); /* Legacy iOS ---- */
+/*     ;
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('fonts/Gotham/Gotham-Book.eot'); /* IE9 Compat Modes ---*/
+  /*src: url('fonts/Gotham/Gotham-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 ---- */
+    /* url('fonts/Gotham/Gotham-Book.woff') format('woff'), /* Modern Browsers ----- */
+     /*url('fonts/Gotham/Gotham-Book.ttf')  format('truetype'), /* Safari, Android, iOS  LISTO */
+     /*url('fonts/Gotham/Gotham-Book.svg#svgFontName') format('svg'); /* Legacy iOS ---- */
+     /*;
+   font-weight: 400;
+   font-style: normal;
+}*/
+html{
+  font-size: 1.5vw;
+}
 .menu-item {
   font-size: 1.2rem !important;
   text-align: left !important;
@@ -129,31 +155,59 @@ WordPress Available:  yes
 
   /*****HOME - TESTIMONIOS*****
   **************************/
-/*.home-testimonio {
-  background-color: rgba(134,170,53, 0.40) !important;
-}*/
-.titulo-clientes{
-  color: #000;
-  font-size: 1.8em;
-}
-.post-clientes {
-  font-size: 1.2em;
-  color: #000000;
-  font-weight: bold;
-}
-.cont-clientes{
-  font-size: 0.8em;
-  color: #000000;
-}
-  .middle_aboutus_home{
-    border-left: solid 2px #86AA35;
-    border-right: solid 2px #86AA35;
+  .testimonials-clean {
+    color:#313437;
+    background-color:rgba(134,170,53, 0.3);
+    min-height: 90vh;
   }
-
-.cont-corpotel a{
-  text-decoration: none;
-}
-
+  .testimonials-clean p {
+    color:#7d8285;
+  }
+  .testimonials-clean h2 {
+    font-weight:bold;
+    margin-bottom:40px;
+    padding-top:40px;
+    color:inherit;
+  }
+  .testimonials-clean .intro {
+    font-size:1.1em;
+    /*max-width:500px;*/
+    margin:0 auto;
+  }
+  .testimonials-clean .people {
+    padding:50px 0 20px;
+  }
+  
+  .testimonials-clean .item {
+    margin-bottom:32px;
+  }
+  .testimonials-clean .item .box {
+    background-color:#fff;
+    position:relative;
+    font-size: 1em;
+  }
+  
+  .testimonials-clean .item .box:after {
+    content:'';
+    position:absolute;
+    left:2.5em;
+    bottom:-1.2em;
+    border:15px solid transparent;
+    border-width:12px 15px;
+    border-top-color:#fff;
+  }
+  
+  .testimonials-clean .item .author {
+    margin-top:28px;
+    padding-left:25px;
+  }
+  
+  .testimonials-clean .item img {
+    max-width:4em;
+    float:left;
+    margin-right:12px;
+    /*margin-top:-5px;*/
+  }
  /*****HOME - CONTÁCTANOS*****
   **************************/
 .btn-submit:hover{
@@ -197,7 +251,10 @@ WordPress Available:  yes
   color:#CADBF2;
   font-size: 0.8em;
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px){
+  html{
+    font-size: 4vw;
+  }
   .menu-item {
     text-align: center !important;
   }
@@ -205,13 +262,13 @@ WordPress Available:  yes
     color: #86AA35 !important;
   }
   .carousel-caption h3{
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: bold;
     color: #86AA35;
     background-color: rgba(0, 0, 0, 0.5);
   }
   .carousel-caption p{
-    font-size: 0.5em;
+    font-size: 0.8em;
     font-weight: bold;
     background-color: rgba(139, 139, 137, 0.65);
   }
@@ -234,12 +291,13 @@ WordPress Available:  yes
   .post-servicios{
     font-size: 0.8em;
   }
-  
-   .middle_aboutus_home{
-    border-left: none;
-    border-right: none;
-    border-top: solid 2px #86AA35;
-    border-bottom: solid 2px #86AA35;
+  .testimonials-clean h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+  .testimonials-clean .item {
+    height:220px;
   }
   .post-clientes {
     font-size: 1em;
@@ -276,77 +334,6 @@ WordPress Available:  yes
   .icono-servicios i{
     font-size: 7vw;
   }
-}
-
-.testimonials-clean {
-  color:#313437;
-  background-color:rgba(134,170,53, 0.3);
-}
-
-.testimonials-clean p {
-  color:#7d8285;
-}
-
-.testimonials-clean h2 {
-  font-weight:bold;
-  margin-bottom:40px;
-  padding-top:40px;
-  color:inherit;
-}
-
-@media (max-width:767px) {
-  .testimonials-clean h2 {
-    margin-bottom:25px;
-    padding-top:25px;
-    font-size:24px;
-  }
-}
-
-.testimonials-clean .intro {
-  font-size:1.1em;
-  /*max-width:500px;*/
-  margin:0 auto;
-}
-.testimonials-clean .people {
-  padding:50px 0 20px;
-}
-
-.testimonials-clean .item {
-  margin-bottom:32px;
-}
-
-@media (min-width:768px) {
-  .testimonials-clean .item {
-    height:220px;
-  }
-}
-
-.testimonials-clean .item .box {
-  background-color:#fff;
-  position:relative;
-  font-size: 1em;
-}
-
-.testimonials-clean .item .box:after {
-  content:'';
-  position:absolute;
-  left:2.5em;
-  bottom:-1.5em;
-  border:15px solid transparent;
-  border-width:12px 15px;
-  border-top-color:#fff;
-}
-
-.testimonials-clean .item .author {
-  margin-top:28px;
-  padding-left:25px;
-}
-
-.testimonials-clean .item img {
-  max-width:4em;
-  float:left;
-  margin-right:12px;
-  /*margin-top:-5px;*/
 }
 
 .border-success {
