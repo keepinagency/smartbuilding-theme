@@ -14,7 +14,7 @@
         </iframe>
     </div>
     <div class="col-lg-6" id="form-contacto">
-        <form action="<?php echo get_template_directory_uri().'/temp_parts/contactanos.php'; ?>" method="post">
+        <form action="<?php echo get_template_directory_uri().'/temp_parts/contacto.php'; ?>" method="post">
             <div class="row">
                 <div class="form-group col-lg-12 p-2">
                     <label class="text-capitalize form-nom">nombre:</label>
