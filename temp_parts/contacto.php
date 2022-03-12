@@ -32,8 +32,8 @@ if (isset($_POST['mensaje'])){
             Nueva solicitud de más información desde formulario de contáctanos en www.smartbuilding.cl<br><br>
             
             Solicitud de: <b>".$from."</b><br>
-            correo: <b>".$ciudad."</b><br>
-            País: <b>".$telefono."</b><br>
+            correo: <b>".$correo."</b><br>
+            telefono: <b>".$telefono."</b><br>
             Mensaje: <b>".$mensaje."</b><br>
 
             www.smartbuilding.cl <br>
