@@ -21,7 +21,7 @@ if (isset($_POST['mensaje'])){
     echo "Por favor debe colocar un mensaje" . "<br>";
 }
     $from = $_POST['nombre'];
-    $to = "kmestizo@gmail.com";
+    $to = "contacto@smartbuilding.cl";
     $subject = "SmartBuilding - Email de contáctanos";
     $message =" <html>
         <head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
