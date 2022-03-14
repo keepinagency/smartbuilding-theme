@@ -43,31 +43,26 @@
 				<p class="titulo-redes">Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales</p>
 			</div>
 			<div class="col-12 p-0 d-flex justify-content-center">
-				<!-- RSS -->
+				<!-- Red social - 1 -->
 				<a href="<?=$url_rss?>" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'rss.jpeg'?>"/-->
 					<img src="<?= $rsslogo;?>"/>
 				</a>
-				<!-- Facebook -->
+				<!-- Red Social - 2 -->
 				<a href="<?=$url_fbk?>" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'facebook.jpeg'?>"/-->
 					<img src="<?= $facelogo;?>"/>
 				</a>
-				<!-- Gplus -->
+				<!-- Red Social - 3 -->
 				<a href="<?=$url_gooplus?>" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'gplus.jpeg'?>"/-->
 					<img src="<?= $goopluslogo;?>"/>
 				</a>
-				<!-- LinkedIn -->
+				<!-- LinkedIn >
 				<a href="<?=$url_lik?>" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'linked-in.jpeg'?>"/-->
 					<img src="<?= $linkelogo;?>"/>
 				</a>
-				<!-- Pinterest -->
+				< Pinterest >
 				<a href="<?=$url_pint?>" class="text-decoration-none me-2">
-					<!--img src="<?= smartbuilding_IMG. 'pinterest.jpeg'?>"/-->
 					<img src="<?= $pintlogo;?>"/>
-				</a>
+				</a-->
 			</div>
 		</div>
 		<div class="col-lg-4 p-0 m-0 col-12">

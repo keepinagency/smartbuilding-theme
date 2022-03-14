@@ -17,24 +17,23 @@ html{
   font-size: 1.2rem !important;
   text-align: left !important;
   color: #413a4d;
-  margin-left: 2%;
-  /*padding: 0%;
+  /*margin-left: 2%;
+  padding: 0%;
   padding-bottom: 2px;*/
   border: thin solid white;
 }
-
 .dropdown-menu{
   display: none;
   position: absolute;
-}*/
-.dropdown-menu a {
+}
+/*.dropdown-menu a {
   color: black;
-  padding: 12px 16px;
+  padding: 0px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
-.dropdown-menu a:hover {background-color: #f1f1f1}
+.dropdown-menu a:hover {background-color: #f1f1f1}*/
 
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -46,7 +45,7 @@ html{
   border-bottom: #86AA35 thin solid;
 }
 .menu-item-has-children > a:after {
-  color:#CADBF2;
+  color:#86AA35;
 }
 @media (min-width: 768px) {
   .menu-item-has-children > a:after {

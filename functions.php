@@ -535,9 +535,9 @@ function custom_smartbuilding_register( $wp_customize ) {
     ));
         /******* SECCIÓN PARA LINKEDIND FOOTER **********/
         $wp_customize->add_section( 'LinkedIn', array(
-            'title' => __( 'LinkedIn', 'textdomain' ),
+            'title' => __( 'Red Social - 1', 'textdomain' ),
             'panel' => 'smart building',
-            'priority' => 5,
+            'priority' => 2,
         ));
             /** Setting Link Icono FOOTER **/
             $wp_customize->add_setting( 'linkelogo', array (
@@ -564,7 +564,7 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
         /******* SECCIÓN PARA FACEBOOK FOOTER **********/
         $wp_customize->add_section( 'Facebook', array(
-            'title' => __( 'Facebook', 'textdomain' ),
+            'title' => __( 'Red Social - 2', 'textdomain' ),
             'panel' => 'smart building',
             'priority' => 3,
         ));
@@ -594,9 +594,9 @@ function custom_smartbuilding_register( $wp_customize ) {
             ));
         /******* SECCIÓN PARA RSS FOOTER **********/
         $wp_customize->add_section( 'Rss', array(
-            'title' => __( 'Rss', 'textdomain' ),
+            'title' => __( 'Red Social - 3', 'textdomain' ),
             'panel' => 'smart building',
-            'priority' => 2,
+            'priority' => 4,
         ));
 
             /** Setting Rss Icono FOOTER **/
@@ -623,14 +623,14 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'type' => 'text',
             ));
         /******* SECCIÓN PARA GOOGLEPLUS FOOTER **********/
-        $wp_customize->add_section( 'Googleplus', array(
+        /*$wp_customize->add_section( 'Googleplus', array(
             'title' => __( 'Googleplus', 'textdomain' ),
             'panel' => 'smart building',
-            'priority' => 4,
+            'priority' => 5,
         ));
 
             /** Setting Googleplus Icono FOOTER **/
-            $wp_customize->add_setting( 'goopluslogo', array (
+            /*$wp_customize->add_setting( 'goopluslogo', array (
                 'default'        => get_template_directory_uri() . '/img/gplus.jpeg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
@@ -642,7 +642,7 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'priority'   => 1,
             )));
             /** Setting GooglePlusURL FOOTER **/
-            $wp_customize->add_setting( 'gooplusurl', array(
+            /*$wp_customize->add_setting( 'gooplusurl', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
@@ -653,14 +653,14 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'type' => 'text',
             ));
         /******* SECCIÓN PARA PINTEREST FOOTER **********/
-        $wp_customize->add_section( 'Pinterest', array(
+        /*$wp_customize->add_section( 'Pinterest', array(
             'title' => __( 'Pinterest', 'textdomain' ),
             'panel' => 'smart building',
             'priority' => 6,
         ));
 
             /** Setting Pinterest Icono FOOTER **/
-            $wp_customize->add_setting( 'pintlogo', array (
+            /*$wp_customize->add_setting( 'pintlogo', array (
                 'default'        => get_template_directory_uri() . '/img/pinterest.jpeg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
@@ -672,7 +672,7 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'priority'   => 1,
             )));
             /** Setting PinterestURL FOOTER **/
-            $wp_customize->add_setting( 'pinturl', array(
+            /*$wp_customize->add_setting( 'pinturl', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
@@ -683,13 +683,13 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'type' => 'text',
             ));
         /******* SECCIÓN PARA QUIÉNES SOMOS FOOTER **********/
-        $wp_customize->add_section( 'Quienes', array(
+        /*$wp_customize->add_section( 'Quienes', array(
             'title' => __( '¿Quiénes somos?', 'textdomain' ),
             'panel' => 'smart building',
             'priority' => 1,
         ));
             /** Setting ¿Quiénes somos? FOOTER **/
-            $wp_customize->add_setting( 'quienes', array(
+            /*$wp_customize->add_setting( 'quienes', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
@@ -720,7 +720,7 @@ function custom_smartbuilding_register( $wp_customize ) {
         $wp_customize->add_section( 'Telefono', array(
             'title' => __( 'Teléfono', 'textdomain' ),
             'panel' => 'smart building',
-            'priority' => 7,
+            'priority' => 8,
         ));
             /** Setting Teléfono FOOTER **/
             $wp_customize->add_setting( 'telefono', array(
@@ -737,7 +737,7 @@ function custom_smartbuilding_register( $wp_customize ) {
         $wp_customize->add_section( 'Correo', array(
             'title' => __( 'Dirección email', 'textdomain' ),
             'panel' => 'smart building',
-            'priority' => 7,
+            'priority' => 9,
         ));
             /** Setting Correo FOOTER **/
             $wp_customize->add_setting( 'correo', array(
