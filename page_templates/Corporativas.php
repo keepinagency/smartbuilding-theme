@@ -49,13 +49,13 @@ $nuevo_arreglo = new WP_Query(array(
                         </a>
                     </div> 
                     <div class="row cont-corpotel col-12 m-0 p-0 text-center">
-                        <div class="col-10 col-lg-12 m-0 p-0 cont_tit_blog">
-                            <a class=" p-0 m-0" href="<?php the_permalink(); ?>">
-                                <div class="p-2 m-0 text-white">
+                        <div class="col-12 col-lg-12 m-0 p-0 cont_tit_blog">
+                            <a class="text-decoration-none p-0 m-0" href="<?php the_permalink(); ?>">
+                                <div class="p-2 m-0 text-white text-center">
                                     <h3><?php the_title();?></h3>
                                 </div>
                             </a>
-                            <div class="p-2 m-0 text-lg-justify text-white">
+                            <div class="p-2 m-0 text-lg-justify text-white text-center">
                                 <?php the_excerpt();?>
                             </div>
                             
