@@ -10,7 +10,7 @@ $arreglo_testimonios = new WP_Query(array(
 	'posts_per_page'=>3
 ));
 ?>
-<div class="testimonials-clean py-3">
+<div class="testimonials-clean py-3 p-12 p-0 m-0">
     <div class="row col-12 d-flex justify-content-center p-0 m-0">
         <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center p-0 m-0">
             <p class="border-2 border-bottom border-success text-dark"><b class="titulo-negrita">Nuestros</b>&nbsp;Clientes</p>
