@@ -1,24 +1,23 @@
 <?php 
+	$url_1 = get_option( 'urlred1', '' );
+	$logored1 = get_option( 'logored1', '' );
 
-	$url_fbk = get_option( 'faceurl', 'http://www.facebook.com' );
-	$url_lik = get_option( 'linkeurl', 'http://www.linkedin.com' );
-	$url_rss = get_option( 'rssurl', 'https://news.google.com/topstories?hl=es-419&gl=VE&ceid=VE:es-419' );
-	$url_gooplus = get_option( 'gooplusurl', 'https://myaccount.google.com/' );
-	$url_pint = get_option( 'pinturl', 'https://www.pinterest.com/' );
+	$url_2 = get_option( 'urlred2', '' );
+	$logored2 = get_option( 'logored2', '' );	
 
-	$facelogo = get_option( 'facelogo', '/img/facebook.jpeg' );
-	$linkelogo = get_option( 'linkelogo', '/img/linked-in.jpeg' );
-	$rsslogo = get_option( 'rsslogo', '/img/rss.jpeg' );
-	$goopluslogo = get_option( 'goopluslogo', '/img/gplus.jpeg' );
-	$pintlogo = get_option( 'pintlogo', '/img/pinterest.jpeg' );
+	$url_3 = get_option( 'urlred3', '' );
+	$logored3 = get_option( 'logored3', '' );
 
 	$dir = get_option( 'direccion', 'El Juncal #901, Bodega3, Quilicura' );
 	$tel = get_option( 'telefono', '+56 22 9480016' );
 	$correo = get_option( 'correo', 'contacto@smartbuilding.cl' );
-	$web = get_option( 'web', 'http://smartbuilding.cl/' );
-		
+	$web = get_option( 'web', 'http://smartbuilding.cl/' );	
 	$quienes = get_option('quienes', '');
-	/*$placeh = get_option('placeholder');*/
+
+	/*$url_pint = get_option( 'pinturl', 'https://www.pinterest.com/' );
+	$url_lik = get_option( 'linkeurl', 'http://www.linkedin.com' );
+	$pintlogo = get_option( 'pintlogo', '/img/pinterest.jpeg' );
+	$linkelogo = get_option( 'linkelogo', '/img/linked-in.jpeg' );*/
 
 ?>
 </div--><!-- /.row -->
@@ -44,16 +43,16 @@
 			</div>
 			<div class="col-12 p-0 d-flex justify-content-center">
 				<!-- Red social - 1 -->
-				<a href="<?=$url_rss?>" class="text-decoration-none me-2">
-					<img src="<?= $rsslogo;?>"/>
+				<a href="<?=$url_1?>" target="_blank" class="text-decoration-none me-2">
+					<img src="<?= $logored1;?>"/>
 				</a>
 				<!-- Red Social - 2 -->
-				<a href="<?=$url_fbk?>" class="text-decoration-none me-2">
-					<img src="<?= $facelogo;?>"/>
+				<a href="<?=$url_2?>" target="_blank" class="text-decoration-none me-2">
+					<img src="<?= $logored2;?>"/>
 				</a>
 				<!-- Red Social - 3 -->
-				<a href="<?=$url_gooplus?>" class="text-decoration-none me-2">
-					<img src="<?= $goopluslogo;?>"/>
+				<a href="<?=$url_3?>" target="_blank" class="text-decoration-none me-2">
+					<img src="<?= $logored3;?>"/>
 				</a>
 				<!-- LinkedIn >
 				<a href="<?=$url_lik?>" class="text-decoration-none me-2">
@@ -115,28 +114,6 @@
 		</a>
 	  </p>
   </div>
-  <!-- Copyright -->
-
-	<!--div class="col-12 d-lg-flex flex-lg-row-reverse pl-lg-5">
-		<!--SOCIAL MEDIA-->
-		<!--div class="col-12 p-0 pt-3 pb-3 d-flex flex-row align-items-center col-lg-6 pl-lg-4 justify-content-lg-center">
-
-			<a href="<?php echo $url_int; ?>" target="_blank" class="pl-4">
-				<img src="<?php echo $instalogo; ?>" alt="" id="">
-			</a>
-			<a href="<?php echo $url_fbk; ?>" target="_blank" class="pl-4">
-				<img src="<?php echo $facelogo;?>" alt="" id="">
-			</a>
-			<a href="<?php echo $url_lik;?> " target="_blank" class="pl-4">
-				<img src="<?php echo $linkelogo;?>" alt="" id="">
-			</a>
-			<a href="<?php echo $url_git;?>" target="_blank" class="pl-4">
-				<img src="<?php echo $gitlogo;?>" alt="" id="">
-			</a>
-
-		</div>
-	</div-->
-
 	<!--MENÚ-->
 	<div class="col-12 d-md-flex flex-md-row p-0 justify-content-center">
 		<nav class="navbar navbar-ligth col-12 p-0 m-0">

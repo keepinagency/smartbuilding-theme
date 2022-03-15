@@ -533,92 +533,92 @@ function custom_smartbuilding_register( $wp_customize ) {
         'description' => 'Opciones personalizadas',
         'priority' => 3,
     ));
-        /******* SECCIÓN PARA LINKEDIND FOOTER **********/
-        $wp_customize->add_section( 'LinkedIn', array(
+        /******* SECCIÓN PARA RED SOCIAL - 1 FOOTER **********/
+        $wp_customize->add_section( 'Red social - 1', array(
             'title' => __( 'Red Social - 1', 'textdomain' ),
             'panel' => 'smart building',
             'priority' => 2,
         ));
-            /** Setting Link Icono FOOTER **/
-            $wp_customize->add_setting( 'linkelogo', array (
+            /** Setting red social - 1 -> Icono FOOTER **/
+            $wp_customize->add_setting( 'logored1', array (
                 'default'        => get_template_directory_uri() . '/img/linked-in.jpeg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
             ));
             $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'link', array(
-                'label'      => __( 'Icono LinkedIn', 'textdomain' ),
-                'section'    => 'LinkedIn',
-                'settings'   => 'linkelogo',
+                'label'      => __( 'Icono Red social - 1', 'textdomain' ),
+                'section'    => 'Red social - 1',
+                'settings'   => 'logored1',
                 'priority'   => 1,
             )));
-            /** Setting linkelogoURL FOOTER **/
-            $wp_customize->add_setting( 'linkurl', array(
+            /** Setting red social - 1 -> Url FOOTER **/
+            $wp_customize->add_setting( 'urlred1', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control('linkurl', array(
-                'label' => __( 'Perfil LinkedIn', 'textdomain' ),
-                'section' => 'LinkedIn',
+            $wp_customize->add_control('urlred1', array(
+                'label' => __( 'Perfil red social - 1', 'textdomain' ),
+                'section' => 'Red social - 1',
                 'priority' => 2,
                 'type' => 'text',
             ));
         /******* SECCIÓN PARA FACEBOOK FOOTER **********/
-        $wp_customize->add_section( 'Facebook', array(
+        $wp_customize->add_section( 'Red social - 2', array(
             'title' => __( 'Red Social - 2', 'textdomain' ),
             'panel' => 'smart building',
             'priority' => 3,
         ));
 
             /** Setting Face Icono FOOTER **/
-            $wp_customize->add_setting( 'facelogo', array (
+            $wp_customize->add_setting( 'logored2', array (
                 'default'        => get_template_directory_uri() . '/img/facebook.jpeg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
             ));
             $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'face', array(
-                'label'      => __( 'Icono Facebook', 'textdomain' ),
-                'section'    => 'Facebook',
-                'settings'   => 'facelogo',
+                'label'      => __( 'Icono Red social - 2', 'textdomain' ),
+                'section'    => 'Red social - 2',
+                'settings'   => 'logored2',
                 'priority'   => 1,
             )));
             /** Setting FaceURL FOOTER **/
-            $wp_customize->add_setting( 'faceaurl', array(
+            $wp_customize->add_setting( 'urlred2', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control('faceaurl', array(
-                'label' => __( 'Perfil Facebook', 'textdomain' ),
-                'section' => 'Facebook',
+            $wp_customize->add_control('urlred2', array(
+                'label' => __( 'Perfil Red social - 2', 'textdomain' ),
+                'section' => 'Red social - 2',
                 'priority' => 2,
                 'type' => 'text',
             ));
         /******* SECCIÓN PARA RSS FOOTER **********/
-        $wp_customize->add_section( 'Rss', array(
+        $wp_customize->add_section( 'Red social - 3', array(
             'title' => __( 'Red Social - 3', 'textdomain' ),
             'panel' => 'smart building',
             'priority' => 4,
         ));
 
             /** Setting Rss Icono FOOTER **/
-            $wp_customize->add_setting( 'rsslogo', array (
+            $wp_customize->add_setting( 'logored3', array (
                 'default'        => get_template_directory_uri() . '/img/rss.jpeg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
             ));
             $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'rss', array(
-                'label'      => __( 'Icono Rss', 'textdomain' ),
-                'section'    => 'Rss',
-                'settings'   => 'rsslogo',
+                'label'      => __( 'Icono Red social - 3', 'textdomain' ),
+                'section'    => 'Red social - 3',
+                'settings'   => 'logored3',
                 'priority'   => 1,
             )));
             /** Setting RssURL FOOTER **/
-            $wp_customize->add_setting( 'rssurl', array(
+            $wp_customize->add_setting( 'urlred3', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
-            $wp_customize->add_control('rssurl', array(
-                'label' => __( 'Perfil Rss', 'textdomain' ),
-                'section' => 'Rss',
+            $wp_customize->add_control('urlred3', array(
+                'label' => __( 'Perfil Red social - 3', 'textdomain' ),
+                'section' => 'Red social - 3',
                 'priority' => 2,
                 'type' => 'text',
             ));
