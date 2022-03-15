@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<script type="text/javascript" src="https://clientify.net/web-marketing/webforms/script/72198.js"></script>
 <script src="https://kit.fontawesome.com/485d462403.js" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> class="p-0 m-0">
+<body
+<script type="text/javascript" src="https://clientify.net/web-marketing/webforms/script/72198.js"></script>
+ <?php body_class(); ?> class="p-0 m-0">
 <div class="container-fluid p-0 m-0 h-100">
     <div class="header p-0 m-0 row">
 
