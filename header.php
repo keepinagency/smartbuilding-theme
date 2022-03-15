@@ -7,8 +7,8 @@
 </head>
 
 <body
-<script type="text/javascript" src="https://clientify.net/web-marketing/webforms/script/72198.js"></script>
  <?php body_class(); ?> class="p-0 m-0">
+ <script type="text/javascript" src="https://clientify.net/web-marketing/webforms/script/72198.js"></script>
 <div class="container-fluid p-0 m-0 h-100">
     <div class="header p-0 m-0 row">
 
