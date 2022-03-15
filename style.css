@@ -178,6 +178,7 @@ html{
       background-color:#fff;
       position:relative;
       font-size: 0.75em;
+      min-height: 50vh;
     }
     .testimonials-clean .item .box:after {
       content:'';
