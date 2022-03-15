@@ -173,12 +173,16 @@ html{
     position:relative;
     font-size: 0.75em;
   }
-  @media (min-width: 1800px) {
+  @media (min-width: 1300px) {
+    .testimonials-clean {
+      color:#313437;
+      background-color:rgba(134,170,53, 0.3);
+      min-height: 10vh;
+    }
     .testimonials-clean .item .box {
       background-color:#fff;
       position:relative;
       font-size: 0.75em;
-      min-height: 50vh;
     }
     .testimonials-clean .item .box:after {
       content:'';
