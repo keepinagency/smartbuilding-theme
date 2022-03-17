@@ -8,10 +8,10 @@
 	$url_3 = get_option( 'urlred3', '' );
 	$logored3 = get_option( 'logored3', '' );
 
-	$dir = get_option( 'direccion', 'El Juncal #901, Bodega3, Quilicura' );
-	$tel = get_option( 'telefono', '+56 22 9480016' );
+	$dir = get_option( 'direccion', 'Andes 3723, Quinta Normal' );
+	$tel = get_option( 'telefono', '+ 56 22 938 0016' );
 	$correo = get_option( 'correo', 'contacto@smartbuilding.cl' );
-	$web = get_option( 'web', 'http://smartbuilding.cl/' );	
+	$web = get_option( 'web', 'https://www.smartbuilding.cl' );	
 	$quienes = get_option('quienes', '');
 
 	/*$url_pint = get_option( 'pinturl', 'https://www.pinterest.com/' );
@@ -71,7 +71,7 @@
 						<i class="fa-solid fa-house"></i> DIRECCIÓN
 					</span>
 					<p><?php if (empty($dir)) {
-						echo "El Juncal #901, Bodega3, Quilicura";
+						echo "Andes 3723, Quinta Normal";
 					}else {
 						echo $dir;
 						}?></p>
@@ -81,7 +81,7 @@
 						<i class="fa-solid fa-square-phone"></i> TELÉFONO
 					</span>
 					<p><?php if (empty($tel)) {
-						echo "+56 22 9480016";
+						echo "+ 56 22 938 0016";
 					}else {
 						echo $tel;
 						}?></p>
@@ -100,7 +100,7 @@
 					<span>
 					<i class="fa-solid fa-globe"></i> SITIO WEB
 					</span>
-					<p>http://smartbuilding.cl/</p>
+					<p>https://www.smartbuilding.cl</p>
 				</div>
 			</div>
 		</div><!-- Contact Us Widget -->
