@@ -121,16 +121,56 @@ function guardar_sub_titulo() {
 *****************************************************/
 function custom_smartbuilding_register( $wp_customize ) {
 
-	/** Panel OPCIONES SMARTBUILDING PAGE para el personalizador **
+	/** Panel OPCIONES SMARTBUILDING para el personalizador **
     ***************************************************************
     ***************************************************************/
-    $wp_customize->add_panel( 'smartbuilding', array(
-        'title' => 'Soluciones residenciales',
+
+    /*SSECCIÓN PARA CONTÁCTANOS HOME**
+    ***************************************************/
+    $wp_customize->add_panel( 'smartbuildingContacto', array(
+        'title' => 'Contátanos home',
         'description' => 'Opciones personalizadas',
         'priority' => 1,
     ));
+        /*INICIO SECCION*
+        *****************
+        *****************
+        ****************/
+        $wp_customize->add_section( 'Parrafo', array(
+            'title' => __( 'Información en contáctanos', 'textdomain' ),
+            'panel' => 'smartbuildingContacto',
+            'priority' => 1,
+        ));
+            /** Setting Parrafos en contáctanos - 1er parrafo **/
+            $wp_customize->add_setting( 'parrafo1', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('parrafo1', array(
+                'label' => __( 'Texto para el Primer parrafo', 'textdomain' ),
+                'section' => 'Parrafo',
+                'priority' => 1,
+                'type' => 'textarea',
+            ));
+            /** Setting ¿Quiénes somos? FOOTER **/
+            $wp_customize->add_setting( 'parrafo2', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('parrafo2', array(
+                'label' => __( 'Texto para el Segundo parrafo', 'textdomain' ),
+                'section' => 'Parrafo',
+                'priority' => 2,
+                'type' => 'textarea',
+            ));
     /*SECCIÓN PARA SOLUCIONES RESIDENCIALES - INTERNAS**
     ***************************************************/
+    $wp_customize->add_panel( 'smartbuilding', array(
+        'title' => 'Soluciones residenciales',
+        'description' => 'Opciones personalizadas',
+        'priority' => 2,
+    ));
+    
         /*INICIO SECCION*
         *****************
         *****************
@@ -327,7 +367,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'SmartBuilding', array(
         'title' => 'Soluciones hoteleras',
         'description' => 'Opciones personalizadas',
-        'priority' => 2,
+        'priority' => 3,
     ));
     /****SECCIÓN PARA SOLUCIONES HOTELERAS - INTERNAS****
     ****************************************************/        
@@ -531,7 +571,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smart building', array(
         'title' => 'Personalizar Footer',
         'description' => 'Opciones personalizadas',
-        'priority' => 3,
+        'priority' => 4,
     ));
         /******* SECCIÓN PARA RED SOCIAL - 1 FOOTER **********/
         $wp_customize->add_section( 'Red social - 1', array(
@@ -681,15 +721,15 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'section' => 'Pinterest',
                 'priority' => 2,
                 'type' => 'text',
-            ));
+            ));*/
         /******* SECCIÓN PARA QUIÉNES SOMOS FOOTER **********/
-        /*$wp_customize->add_section( 'Quienes', array(
+        $wp_customize->add_section( 'Quienes', array(
             'title' => __( '¿Quiénes somos?', 'textdomain' ),
             'panel' => 'smart building',
             'priority' => 1,
         ));
             /** Setting ¿Quiénes somos? FOOTER **/
-            /*$wp_customize->add_setting( 'quienes', array(
+            $wp_customize->add_setting( 'quienes', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));

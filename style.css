@@ -256,6 +256,10 @@ html{
 .contact fieldset > div > div > input {
   background-color: rgba(134,170,53, 0.3) !important;
 }
+.texto-contacto{
+  font-size: 0.8em;
+  text-align: justify;
+}
 .copyright{
   color: #3F4F6B;
   font-size: 0.8em;
