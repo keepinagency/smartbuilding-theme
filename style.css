@@ -229,7 +229,6 @@ html{
   font-size: 0.8em;
   text-align: justify;
 }
-
 .footer{
   background: #323131;
 }
@@ -250,6 +249,12 @@ html{
 .contact-details{
   font-size: 0.7em;
   color: #fff;
+}
+.contact > div > div{
+  background-color: rgba(134,170,53, 0.3) !important;
+}
+.contact fieldset > div > div > input {
+  background-color: rgba(134,170,53, 0.3) !important;
 }
 .copyright{
   color: #3F4F6B;
@@ -336,6 +341,10 @@ html{
     background-color:#fff;
     position:relative;
     font-size: 1em;
+  }
+  .contact > div > div{
+    width: 100% !important;
+    background-color: rgba(134,170,53, 0.3) !important;
   }
 }
 
