@@ -12,14 +12,15 @@ $arreglo_servicios = new WP_Query(array(
 	'posts_per_page'=>6
 ));
 ?>
-<div id="servicios" class="col-12 row p-0 m-0 py-3" style="background-color: rgba(0, 0, 0, 0.05);">
+<div id="servicios" class="col-12 row p-0 m-0 py-3">
     <?php if ($arreglo_servicios->have_posts()) : ?>
-        <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center p-4">
+        <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
             <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Servicios</p>
-        </div>        
+        </div>
+        <div class="col-12 row p-0 m-0" style="background-color: rgba(0, 0, 0, 0.05);">
         <?php while ($arreglo_servicios->have_posts()) : $arreglo_servicios->the_post();?>
             <div class="pt-2 col-12 p-0 m-0 col-lg-6 p-lg-0 m-lg-0 d-flex justify-content-center justify-content-lg-center row">
-                <div class="col-lg-3 p-lg-4 m-lg-0 col-3 cont-servicios"> 
+                <div class="col-lg-3 p-5 m-lg-0 col-3 cont-servicios"> 
                     <div class="icono-servicios">
                         <div class="rounded-circle bg-secondary">
                             <?php $icono = get_post_meta($post->ID, 'icono', true);
@@ -39,6 +40,7 @@ $arreglo_servicios = new WP_Query(array(
 
             </div>
         <?php endwhile;?>
+        </div>
     <?php endif;?>
 </div>
 

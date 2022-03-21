@@ -51,16 +51,19 @@ html{
   /***HOME - PRESENTACIÓN***
   **************************/
 .carousel-caption h3{
-  font-weight: bold;
-  color: #86AA35;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 2em;
+  /*font-weight:lighter;*/
+  color: #E9E135;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 1.8rem;
 }
 .carousel-caption p{
-  /*font-weight: bold;*/
+  /*font-weight: bold;
   background-color: rgba(139, 139, 137, 0.65);
+  */
+  background-color: #E9E135;
   font-size: 1.5em;
-  color: #fff;
+  text-shadow: 1px 1px #666;
+  color: #FFF;
 }
 .titulo-page h1{
   /*font-weight: bold;*/
@@ -72,8 +75,8 @@ html{
   /*****HOME - PRODUCTO*****
   **************************/
 .titulo-producto{
-    font-size: 1.8em;
-    color: #000;
+  font-size: 1.5em;
+  color: #000;
 }
 .titulo-negrita {
   color:#86AA35;
@@ -84,24 +87,30 @@ html{
     min-height: 40vh;
     /*max-width: 30vw;*/
     flex-grow: 1 !important;
+    
 }
 .miniatura-producto:hover{
     background-position: center;
     min-height: 40vh;
 }
 .titulo-post {
-    background: rgba(134,170,53, 0.65) !important;
+    background: rgba(134,170,53, 0.8) !important;
+    border-bottom:  2px solid rgba(255,255,255, 0.8);
     text-decoration: none !important;
     min-height: 5em;
+    font-size: 1em !important;
 }
 .titulo-post:hover {
   background: rgb(134,170,53) !important;
   text-decoration: none !important;
-  min-height: 5em;
+  /*min-height: 5em;*/
+}
+.enlace-post{
+  font-size: 1.2em;
 }
 
 .contenido-producto{
-  background: rgba(255,255,255, 0.65) !important;
+  background: rgba(255,255,255, 0.8) !important;
   text-align: justify;
   color:#3F4F6B;
   max-width: 100%;
@@ -119,22 +128,23 @@ html{
   **************************/
 .titulo-servicios{
   color: #86AA35;
-  font-size: 1.4em;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 .post-servicios{
   color: #413a4d;
   font-size: 1em;
 }
 .icono-servicios{
-  background-color: #3F4F6B;
+  background-color: #fff;
   border-radius: 100%;
   position: relative;
   width: 100%;
   padding-top: 100%; 
 }
 .icono-servicios i{
-  font-size: 3.5vw;
-  color: #fff;
+  font-size: 2.2vw;
+  color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -286,10 +296,9 @@ html{
     color: #86AA35 !important;
   }
   .carousel-caption h3{
-    font-size: 1em;
-    font-weight: bold;
-    color: #86AA35;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: #E9E135;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1.8rem;
   }
   .carousel-caption p{
     font-size: 0.8em;
@@ -303,7 +312,7 @@ html{
   .titulo-post {
       background: rgba(134,170,53, 0.65) !important;
       text-decoration: none !important;
-      min-height: 10em;
+      /*min-height: 10em;*/
   }
   .enlace-post{
     font-size: 1.5em;
