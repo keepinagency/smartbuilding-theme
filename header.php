@@ -15,8 +15,16 @@
         <nav class="navbar navbar-expand-lg navbar-light col-12 p-0 m-0">
 
             <div class="container-fluid p-0 m-0 pb-2">
-                
-                <a class="navbar-brand p-2 ps-lg-5 p-0 m-0 py-lg-2 col-8 col-lg-5"  
+                <?php 
+                    $imgreconocimiento = get_option( 'img-reconocimiento', '/img/revista.png' );
+                    $urlreconocimiento = get_option( 'url-reconocimiento', 'https://build-review.com/issues/construction-and-engineering-awards-2021/72/' );
+                ?>
+                <a class="navbar-brand p-2 ps-lg-5 p-0 m-0 py-lg-2 col-4 col-lg-2" href="<?php echo $urlreconocimiento; ?>" target="_blank"
+                     <img class=""
+                            src="<?=esc_url( $imgreconocimiento )?>" 
+                            alt="Galardon ">
+                </a>
+                <a class="navbar-brand p-2 ps-lg-5 p-0 m-0 py-lg-2 col-4 col-lg-4"  
                     href="<?php echo get_home_url(); ?>">
                     <?php
                         $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -26,7 +34,6 @@
                             src="<?=esc_url( $custom_logo_url )?>" 
                             alt="Logo ">
                 </a>
-
                 <button class="navbar-toggler h-100 me-3" type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#menusmartbuilding" 
