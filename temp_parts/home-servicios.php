@@ -20,7 +20,7 @@ $arreglo_servicios = new WP_Query(array(
         <div class="col-12 row p-0 m-0" style="background-color: rgba(0, 0, 0, 0.05);">
         <?php while ($arreglo_servicios->have_posts()) : $arreglo_servicios->the_post();?>
             <div class="pt-2 col-12 p-0 m-0 col-lg-6 p-lg-0 m-lg-0 d-flex justify-content-center justify-content-lg-center row">
-                <div class="col-lg-3 p-5 m-lg-0 col-3 cont-servicios"> 
+                <div class="col-lg-3 p-3 p-lg-5 m-lg-0 col-3 cont-servicios"> 
                     <div class="icono-servicios">
                         <div class="rounded-circle bg-secondary">
                             <?php $icono = get_post_meta($post->ID, 'icono', true);
