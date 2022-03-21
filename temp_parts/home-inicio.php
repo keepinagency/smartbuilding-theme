@@ -15,8 +15,8 @@ $arreglo_slides = new WP_Query(array (
             <?php $i=1; while($arreglo_slides->have_posts()) : $arreglo_slides->the_post();?>
                 <div class="carousel-item <?php if ($i == 1) echo 'active'; ?>" > 
                     <img class="img-carousel w-100 h-100 img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                    <div class="carousel-caption visible-lg">
-                        <h3><?php the_title(); ?></h3>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="py-2"><?php the_title(); ?></h3>
                         <p><?php the_content(); ?></p>
                     </div>
                 </div>

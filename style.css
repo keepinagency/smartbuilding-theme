@@ -51,16 +51,19 @@ html{
   /***HOME - PRESENTACIÓN***
   **************************/
 .carousel-caption h3{
-  font-weight: bold;
-  color: #86AA35;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 2em;
+  /*font-weight:lighter;*/
+  color: #E9E135;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 1.8rem;
 }
 .carousel-caption p{
-  /*font-weight: bold;*/
+  /*font-weight: bold;
   background-color: rgba(139, 139, 137, 0.65);
+  */
+  background-color: #E9E135;
   font-size: 1.5em;
-  color: #fff;
+  text-shadow: 1px 1px #666;
+  color: #FFF;
 }
 .titulo-page h1{
   /*font-weight: bold;*/
@@ -286,10 +289,9 @@ html{
     color: #86AA35 !important;
   }
   .carousel-caption h3{
-    font-size: 1em;
-    font-weight: bold;
-    color: #86AA35;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: #E9E135;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1.8rem;
   }
   .carousel-caption p{
     font-size: 0.8em;
