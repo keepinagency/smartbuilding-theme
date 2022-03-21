@@ -124,51 +124,12 @@ function custom_smartbuilding_register( $wp_customize ) {
 	/** Panel OPCIONES SMARTBUILDING para el personalizador **
     ***************************************************************
     ***************************************************************/
-    /*SSECCIÓN PARA LOGO REVISTA HEADER**
-    ***************************************************/
-    $wp_customize->add_panel( 'smartbuildingHeader', array(
-        'title' => 'Galardon recibido',
-        'description' => 'Opciones personalizadas',
-        'priority' => 1,
-    ));
-        /*INICIO SECCION*
-        *****************
-        *****************
-        ****************/
-        $wp_customize->add_section( 'reconocimiento', array(
-            'title' => __( 'Reconocimiento', 'textdomain' ),
-            'panel' => 'smartbuildingHeader',
-            'priority' => 1,
-        ));
-            /** Setting para logo de revista **/
-            $wp_customize->add_setting( 'img-reconocimiento', array (
-                'default'        => get_template_directory_uri() . '/img/revista.png',
-                'capability'     => 'edit_theme_options',
-                'type'           => 'option',
-            ));
-            $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'img-reconocimiento', array(
-                'label'      => __( 'Imagen del reconocimiento', 'textdomain' ),
-                'section'    => 'reconocimiento',
-                'settings'   => 'img-reconocimiento',
-                'priority'   => 1,
-            )));
-             /** Setting URL para el logo
-              *  **/
-             $wp_customize->add_setting( 'url-reconocimiento', array(
-                'type' => 'option',
-                'capability' => 'edit_theme_options',
-            ));
-            $wp_customize->add_control('url-reconocimiento', array(
-                'label' => __( 'Enalce a la revista', 'textdomain' ),
-                'section' => 'reconocimiento',
-                'priority' => 2,
-                'type' => 'text',
-            ));
+    
 
     /*SSECCIÓN PARA CONTÁCTANOS HOME**
     ***************************************************/
     $wp_customize->add_panel( 'smartbuildingContacto', array(
-        'title' => 'Contátanos home',
+        'title' => 'Contáctanos home',
         'description' => 'Opciones personalizadas',
         'priority' => 1,
     ));

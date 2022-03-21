@@ -15,22 +15,16 @@
         <nav class="navbar navbar-expand-lg navbar-light col-12 p-0 m-0">
 
             <div class="container-fluid p-0 m-0 pb-2">
-                <?php 
-                    $imgreconocimiento = get_option( 'img-reconocimiento', '/img/revista.png' );
-                    $urlreconocimiento = get_option( 'url-reconocimiento', 'https://build-review.com/issues/construction-and-engineering-awards-2021/72/' );
-                ?>
-                <a class="navbar-brand p-2 ps-lg-5 p-0 m-0 py-lg-2 col-4 col-lg-2" href="<?php echo $urlreconocimiento; ?>" target="_blank"
-                     <img class=""
-                            src="<?=esc_url( $imgreconocimiento )?>" 
-                            alt="Galardon ">
+                <a class="navbar-brand col-lg-2 ps-lg-5 py-lg-2 col-3 ps-2" href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" target="_blank">
+                    <img src="<?= smartbuilding_IMG. 'revista.png'?>"/>
                 </a>
-                <a class="navbar-brand p-2 ps-lg-5 p-0 m-0 py-lg-2 col-4 col-lg-4"  
+                <a class="navbar-brand col-lg-4 ps-lg-5 py-lg-2 col-5 p-0 m-0"  
                     href="<?php echo get_home_url(); ?>">
                     <?php
                         $custom_logo_id = get_theme_mod( 'custom_logo' );
                         $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
                     ?>
-                    <img class=""
+                    <img class="logo ms-2 py-3"
                             src="<?=esc_url( $custom_logo_url )?>" 
                             alt="Logo ">
                 </a>
@@ -50,7 +44,7 @@
                     */
                     wp_nav_menu( array(
                         'container'       => 'div',
-                        'container_class' => 'collapse navbar-collapse p-0 m-0 pt-2 d-lg-block ',
+                        'container_class' => 'collapse navbar-collapse p-0 m-0 pt-3 d-lg-block ',
                         'container_id'    => 'menusmartbuilding',
                         'depth' => 2,
                         'items_wrap'      => '<ul id="%1$s" class="%2$s navbar-nav w-100 
