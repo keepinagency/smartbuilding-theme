@@ -97,9 +97,11 @@ function el_subtitulo() {
     global $wpdb, $post;
     $subfirst  = get_post_meta($post->ID, 'subtitulo', true);
     $subsecond = get_post_meta($post->ID, 'sub_titulo', true);
-    echo '<label><strong>Titulo:</strong></label>
-    <input type="text" name="subtitulo" id="subtitulo" value="'.htmlspecialchars($subfirst).'" style="width: 300px;" /></br>';
-    echo '<label><strong>Sub Titulo:</strong></label>
+
+    echo '<label><strong>Titulo:</strong></label></br>
+    <input type="text" name="subtitulo" id="subtitulo" value="'.htmlspecialchars($subfirst).'" style="width: 300px;" /></br></br>';
+
+    echo '<label><strong>Sub Titulo:</strong></label></br>
     <input type="text" name="sub_titulo" id="sub_titulo" value="'.htmlspecialchars($subsecond).'" style="width: 300px;" /></br>';
 }
 function guardar_subtitulo() {

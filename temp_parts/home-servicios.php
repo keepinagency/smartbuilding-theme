@@ -12,10 +12,10 @@ $arreglo_servicios = new WP_Query(array(
 	'posts_per_page'=>6
 ));
 ?>
-<div id="servicios" class="col-12 row p-0 m-0 py-3">
+<div id="servicios" class="col-12 row p-0 m-0 py-lg-3 px-lg-4">
     <?php if ($arreglo_servicios->have_posts()) : ?>
         <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
-            <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Servicios</p>
+            <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Principios</p>
         </div>
         <div class="col-12 row p-0 m-0" style="background-color: rgba(0, 0, 0, 0.05);">
         <?php while ($arreglo_servicios->have_posts()) : $arreglo_servicios->the_post();?>

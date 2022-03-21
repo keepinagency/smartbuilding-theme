@@ -11,10 +11,10 @@ $dos = get_option('parrafo2', '');
         <p class="border-2 border-bottom border-success" id="form-contacto"><b class="titulo-negrita">Contáctanos</b></p>
     </div>
     <div class="contact col-lg-6 col-12 p-3 m-0">
-        <p class="text-center">
-            <b class="titulo-negrita">Información de Contacto</b>
+        <p class="text-center titulo-contact">
+            <b>Información de Contacto</b>
         </p>
-        <p class="texto-contacto lh-lg"> 
+        <p class="texto-contacto px-lg-5 py-lg-3 p-1"> 
             <?php if (empty($uno)) {
                 echo "Smartbuilding es una empresa creada con el objetivo de ofrecer la mejor tecnología del mundo en Eficiencia Energética y Construcción Sustentable. 
                 Nuestra experiencia nacional e internacional y respaldo técnico, nos permite ofrecer soluciones de vanguardia y con la mejor relación calidad - precio.</br></br>";
@@ -27,7 +27,6 @@ $dos = get_option('parrafo2', '');
             }else{
                 echo $dos;
             } ?>
-            
         </p>
         
     </div>
