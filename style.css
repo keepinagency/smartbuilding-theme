@@ -11,14 +11,22 @@ WordPress Available:  yes
 */
 
 html{
-  font-size: 1.5vw;
+  font-size: 1.1vw;
+  font-family:'Roboto',sans-serif;
+}
+.logo{
+  margin: thin red solid;
+  width:20vw;
+  /*margin-left: 10%;
+  padding-top: 3%;
+  padd*/
 }
 .menu-item {
-  font-size: 1.2rem !important;
+  font-size: 1.3rem !important;
   text-align: left !important;
   color: #413a4d;
-  /*margin-left: 2%;
-  padding: 0%;
+  margin-left: 2%;
+  /*padding: 0%;
   padding-bottom: 2px;*/
   border: thin solid white;
 }
@@ -30,7 +38,7 @@ html{
     display: block;
 }
 .menu-item:hover{
-  font-size: 1.2rem !important;
+  font-size: 1.3rem !important;
   margin-top: 0px;
   border: thin solid white;
   border-bottom: #86AA35 thin solid;
