@@ -29,7 +29,7 @@ $logored3 = get_option( 'logored3', '' );
         <!--p class="text-center titulo-contact">
             <b>Información de Contacto</b>
         </p-->
-        <div class="row col-12 m-0 p-0 p-4"> 
+        <div class="row col-12 m-0 p-0 p-3 p-lg-4"> 
             <div class="texto-contacto pb-4">
                 <?php if (empty($uno)) {
                     echo "Smartbuilding es una empresa creada con el objetivo de ofrecer la mejor tecnología del mundo en Eficiencia Energética y Construcción Sustentable. 
@@ -44,7 +44,7 @@ $logored3 = get_option( 'logored3', '' );
                     echo $dos;
                 } ?>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-lg-6 text-sm-center">
                 <span class="text-secondary">
                     <i class="fa-solid fa-house pt-4 pe-2"></i> Dirección:
                 </span>
