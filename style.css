@@ -18,7 +18,7 @@ html{
   width:20vw;
 }
 .menu-item {
-  font-size: 1.3rem !important;
+  font-size: 1.2rem !important;
   text-align: left !important;
   color: #413a4d;
   margin-left: 2%;
@@ -32,9 +32,6 @@ html{
     display: block;
 }
 .menu-item:hover{
-  font-size: 1.3rem !important;
-  margin-top: 0px;
-  border: thin solid white;
   border-bottom: #86AA35 thin solid;
 }
 .menu-item-has-children > a:after {
