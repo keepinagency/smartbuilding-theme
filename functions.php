@@ -13,7 +13,7 @@ function smartbuilding_setup(){
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'custom-logo', array(
 		'height'      => 100,
-		'width'       => 400,
+		'width'       => 434,
 		'flex-height' => false,
 		'flex-width'  => false,
 		'header-text' => array( 'site-title', 'site-description'),
