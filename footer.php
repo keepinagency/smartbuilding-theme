@@ -20,12 +20,12 @@
 	$linkelogo = get_option( 'linkelogo', '/img/linked-in.jpeg' );*/
 
 ?>
-</div--><!-- /.row -->
+<!-- /.row -->
 </div><!-- /.container -->
 <!-- Footer -->
  <!-- Redes Sociales -->
-<footer class="footer text-center">
-    <div class="row col-12 conten-social p-0 m-0 py-2">
+<footer class="footer text-center p-0 m-0 ">
+    <div class="row col-12 conten-social p-0 m-0 py-2 d-none">
 		<div class="col-lg-5 align-self-center">
 			<p class="parrafo-info ps-2">
 			<b class="titulo-negrita">¿Quiénes Somos?</b> 
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 		<div class="col-lg-4 p-0 m-0 col-12">
-			<div class="contact-details row p-lg-0 m-lg-0 mt-3">
+			<div class="contact-details row p-lg-0 m-lg-0 mt-3 d-none">
 				<div class="col-lg-6">
 					<span>
 						<i class="fa-solid fa-house"></i> DIRECCIÓN
@@ -106,16 +106,14 @@
 		</div><!-- Contact Us Widget -->
 	</div>
 	
-  <!-- Copyright -->
-  <div class="col-12 p-2 d-flex justify-content-center">
-	  <p class="copyright">© 2022 Copyright SmartBuilding. <b class="copy-url">Otro sitio web desarrollado, a medida por.</b> 
-		<a class="text-reset fw-bold" href="https://www.keepinagency.com/" target="blank">
-			Keepin Agency
-		</a>
-	  </p>
-  </div>
+	<!-- Copyright -->
+	<div class="col-12 p-2 m-0 d-flex justify-content-center">
+		<p class="copyright">© 2022 Copyright SmartBuilding. <br><span class="copy-url">Desarrollado a medida por:</span> 
+			<a class="text-reset fw-bold" href="https://www.keepinagency.com/" target="blank">Keepin Agency</a>
+		</p>
+	</div>
 	<!--MENÚ-->
-	<div class="col-12 d-md-flex flex-md-row p-0 justify-content-center">
+	<!---div class="col-12 d-md-flex flex-md-row p-0 justify-content-center">
 		<nav class="navbar navbar-ligth col-12 p-0 m-0">
 			<div class="col-12 p-0 pb-lg-0 pt-lg-0 h-100">
 				<?php
@@ -131,7 +129,7 @@
 				?>
 			</div>
 		</nav>
-	</div>
+	</div-->
 </footer>
 <!-- Footer -->
 

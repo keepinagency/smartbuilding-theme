@@ -14,8 +14,14 @@ html{
   font-size: 1.1vw;
   font-family:'Roboto',sans-serif;
 }
+a{
+  text-decoration: none;
+}
 .logo{
   width:20vw;
+}
+.img-award{
+  width:12vw;
 }
 .menu-item {
   font-size: 1.2rem !important;
@@ -36,6 +42,24 @@ html{
 }
 .menu-item-has-children > a:after {
   color:#86AA35;
+}
+.dropdown-menu{
+  padding: 0px;
+  margin: 2%;
+}
+.dropdown-menu .menu-item {
+  padding: 0px;
+  margin: 2px;
+  
+}
+.dropdown-menu .menu-item:hover {
+  border: thin solid white;
+  border-bottom: none;
+  
+}
+.dropdown-item:hover{
+  background-color:rgb(133, 170, 53);
+  color: white;
 }
 @media (min-width: 768px) {
   .menu-item-has-children > a:after {
@@ -258,6 +282,7 @@ html{
 }
 .contact > div > div{
   background-color: rgba(134,170,53, 0.3) !important;
+  width: 100% !important;
 }
 .contact > div > div > div > div > form > div > fieldset > div > label > span{
   font-family: 'Roboto',sans-serif !important;
@@ -270,12 +295,11 @@ html{
   font-family: 'Roboto',sans-serif !important;
 }
 .copyright{
-  color: #3F4F6B;
+  color: #b8b8b8;
   font-size: 0.8em;
 }
 .copy-url{
   color:#CADBF2;
-  font-size: 0.8em;
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px){
   html{
@@ -337,14 +361,12 @@ html{
   .contact-details p{
     font-size: 1em;
   }
-  .copyright{
-    color: #3F4F6B;
+  /*.copyright{
     font-size: 0.6em;
   }
   .copy-url{
-    color:#CADBF2;
     font-size: 0.7em;
-  }
+  }*/
   .titulo-negrita_con{
     font-size: 0.8em;
     color:#86AA35;
