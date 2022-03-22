@@ -44,7 +44,7 @@ $logored3 = get_option( 'logored3', '' );
                     echo $dos;
                 } ?>
             </div>
-            <div class="col-12 col-lg-6 text-sm-center">
+            <div class="col-12 col-lg-6">
                 <span class="text-secondary">
                     <i class="fa-solid fa-house pt-4 pe-2"></i> Dirección:
                 </span>
