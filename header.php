@@ -15,24 +15,24 @@
         <nav class="navbar navbar-expand-lg navbar-light col-12 p-0 m-0">
 
             <div class="container-fluid p-0 m-0 pb-2">
-                <div class="col-3 p-1 col-lg-1 mt-lg-1 ms-lg-2  border-end ">
+                <div class="col-3 p-1 col-lg-1 mt-lg-1 ms-lg-2 border-end">
                     <a class=""
                        href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" 
                        target="_blank">
                         <img class="p-0 m-0 img-fluid" src="<?= smartbuilding_IMG. 'logo-awards80.png'?>"/>
                     </a>
                 </div>
-                <a class="navbar-brand col-5 p-0 m-0 col-lg-4 ps-lg-0 py-lg-2"  
+                <a class="navbar-brand col-5 p-0 m-0 col-lg-4 ps-lg-0 py-lg-2 "  
                     href="<?php echo get_home_url(); ?>">
                     <?php
                         $custom_logo_id = get_theme_mod( 'custom_logo' );
                         $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
                     ?>
-                    <img class="logo ms-2 py-3"
+                    <img class="logo m-0 p-0 ms-lg-2 py-3"
                             src="<?=esc_url( $custom_logo_url )?>" 
                             alt="Logo ">
                 </a>
-                <button class="navbar-toggler h-100 me-3" type="button" 
+                <button class="navbar-toggler h-100 me-2" type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#menusmartbuilding" 
                         aria-controls="menusmartbuilding" 
