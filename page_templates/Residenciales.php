@@ -8,7 +8,7 @@ get_header();
 $sub = get_post_meta($post->ID, 'subtitulo', true);
 $sub_ = get_post_meta($post->ID, 'sub_titulo', true);
 $nuevo_arreglo = new WP_Query(array(
-	'post_type'=>'post', 
+	'post_type'=>'post',
     'category_name' => 'calefaccion',
 	'posts_per_page'=>4
 ));
@@ -25,10 +25,10 @@ $contpost_aguas = get_option( 'contenido-aguas-posts', '' );
 $url_aguas = get_option( 'durl-aguas', '' );
 $img_aguas = get_option( 'imge-aguas', '' );
 
-$titpost_aguat = get_option( 'titulo-aguas__posts', '' );
+/*$titpost_aguat = get_option( 'titulo-aguas__posts', '' );
 $contpost_aguat = get_option( 'contenido-aguas__posts', '' );
 $url_aguat = get_option( 'durl__aguas', '' );
-$img_aguat = get_option( 'imge__aguas', '' );
+$img_aguat = get_option( 'imge__aguas', '' );*/
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
@@ -44,7 +44,7 @@ $img_aguat = get_option( 'imge__aguas', '' );
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-residencial.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #FF8900;">
-            <h3 class="text-center py-3">Calefacción</h3>
+            <h3 class="text-center py-3 text-uppercase">Calefacción y/o Climatización</h3>
             <p class="px-5 pb-3 text-center">Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
                 Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de Calor que sea eficiente 
                 tanto en los Consumos como en la transmisión del calor que genera al ambiente.</p>
@@ -54,7 +54,7 @@ $img_aguat = get_option( 'imge__aguas', '' );
                         echo '<h3>' . get_cat_name($current_cat_id) . '</h3>';
                     ?>
                 </div-->
-                <div class="row d-flex flex-lg-row col-12 p-0 m-0 col-lg-6 px-lg-5 pb-lg-3">
+                <div class="row d-flex d-lg-flex justify-content-center flex-lg-row col-12 p-0 m-0 col-lg-4 px-lg-5 pb-lg-3">
                     <div class="col-12 col-lg-12 cont-img text-center">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('') ;?>
@@ -63,8 +63,8 @@ $img_aguat = get_option( 'imge__aguas', '' );
                     <div class="cont-corpotel col-12 m-0 p-0 text-center">
                         <div class="col-12 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class="p-0 m-0 text-decoration-none" href="<?php the_permalink(); ?>">
-                                <div class="p-2 m-0 text-white text-center">
-                                    <h3><?php the_title();?></h3>
+                                <div class="p-2 m-0 text-white text-center text-uppercase">
+                                    <h3 class=""><?php the_title();?></h3>
                                 </div>
                             </a>
                             <div class="p-2 m-0 text-lg-justify text-white text-center">
@@ -75,7 +75,7 @@ $img_aguat = get_option( 'imge__aguas', '' );
                 </div>
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
-        <div class="col-12 text-white row p-0 m-0" style="background: #32B2D0;">
+        <div class="col-12 text-white row p-0 m-0 d-lg-flex justify-content-lg-center" style="background: #32B2D0;">
             <h3 class="text-center py-3"><?php if(empty($tit_agua)){ echo "Agua Caliente"; } else { echo $tit_agua; }?></h3>
             <p class="px-5 pb-3 text-center">
                 <?php if(empty($cont_agua)) {echo "Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
@@ -86,14 +86,14 @@ $img_aguat = get_option( 'imge__aguas', '' );
                 </p>
 
         <!--PRIMER POST-->
-            <div class="col-lg-4 col-12">
+            <div class="col-lg-4 col-12 m-lg-5">
                 <a class="text-decoration-none"href="<?= $url_agua ?>">
                     <?php if(empty($img_agua)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $img_agua ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
-                    <h4 class="text-center text-white"><strong><?php if(empty($titpost_agua)){ echo "SmartHotWater"; } else { echo $titpost_agua; }?></strong></h4><br>
+                    <h4 class="text-center text-white text-uppercase"><strong><?php if(empty($titpost_agua)){ echo "SmartHotWater"; } else { echo $titpost_agua; }?></strong></h4><br>
                 </a>
                 <p class="text-center">
                     <?php if(empty($contpost_agua)) {echo "Sistema de calentamiento eléctrico de agua sin estanque (calienta flujo), 
@@ -105,14 +105,14 @@ $img_aguat = get_option( 'imge__aguas', '' );
             </div>
 
         <!--SEGUNDO POST-->
-            <div class="col-lg-4 col-12">
+            <div class="col-lg-4 col-12 m-lg-5">
                 <a class="text-decoration-none"href="<?= $url_aguas ?>">
                     <?php if(empty($img_aguas)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $img_aguas ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
-                    <h4 class="text-center text-white"><strong><?php if(empty($titpost_aguas)){ echo "SmartPool"; } else { echo $titpost_aguas; }?></strong></h4><br>
+                    <h4 class="text-center text-white text-uppercase"><strong><?php if(empty($titpost_aguas)){ echo "SmartPool"; } else { echo $titpost_aguas; }?></strong></h4><br>
                 </a>
                 <p class="text-center">
                     <?php if(empty($contpost_aguas)) {echo "Se trata del mejor sistema para calefacción de piscinas, con la mejor relación costo y eficiencia. 
@@ -124,14 +124,14 @@ $img_aguat = get_option( 'imge__aguas', '' );
             </div>
 
         <!--TERCER POST-->
-            <div class="col-lg-4 col-12">
+            <!--div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="<?= $url_aguat ?>">
                     <?php if(empty( $img_aguat)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua3.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $img_aguat ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
-                    <!--img src="<?= smartbuilding_IMG. 'Soluciones/agua3.jpg'?>" alt="" style="max-width:100%"><br><br-->
+                    <img src="<?= smartbuilding_IMG. 'Soluciones/agua3.jpg'?>" alt="" style="max-width:100%"><br><br>
                     <h4 class="text-center text-white"><strong><?php if(empty($titpost_aguat)){ echo "SmartTub"; } else { echo $titpost_aguat; }?></strong></h4><br>
                 </a>
                 <p class="text-center">
@@ -141,7 +141,7 @@ $img_aguat = get_option( 'imge__aguas', '' );
                             echo $contpost_aguas;} 
                     ?> 
                 </p><br><br><br><br>
-            </div>
+            </div-->
         </div>
     <?php endif; ?>
         
