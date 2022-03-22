@@ -22,8 +22,6 @@ html{
   text-align: left !important;
   color: #413a4d;
   margin-left: 2%;
-  /*padding: 0%;
-  padding-bottom: 2px;*/
   border: thin solid white;
 }
 .dropdown-menu{
@@ -69,22 +67,17 @@ html{
   /***HOME - PRESENTACIÓN***
   **************************/
 .carousel-caption h3{
-  /*font-weight:lighter;*/
   color: #E9E135;
   background-color: rgba(0, 0, 0, 0.8);
   font-size: 1.8rem;
 }
 .carousel-caption p{
-  /*font-weight: bold;
-  background-color: rgba(139, 139, 137, 0.65);
-  */
   background-color: #E9E135;
   font-size: 1.5em;
   text-shadow: 1px 1px #666;
   color: #FFF;
 }
 .titulo-page h1{
-  /*font-weight: bold;*/
   background-color: rgba(139, 139, 137, 0.70);
   font-size: 2.2em;
   color: #fff;
@@ -103,7 +96,6 @@ html{
 .miniatura-producto{
     background-position: center;
     min-height: 40vh;
-    /*max-width: 30vw;*/
     flex-grow: 1 !important;
     
 }
@@ -121,7 +113,6 @@ html{
 .titulo-post:hover {
   background: rgb(134,170,53) !important;
   text-decoration: none !important;
-  /*min-height: 5em;*/
 }
 .enlace-post{
   font-size: 1.2em;
@@ -278,6 +269,10 @@ html{
 .conten-social{
   background-color: rgba(31,31,31, 0.50);
 }
+.titulo-contact {
+  font-size: 1.3em;
+  color: #86AA35;
+}
 .contact-details{
   font-size: 0.7em;
   color: #fff;
@@ -285,12 +280,15 @@ html{
 .contact > div > div{
   background-color: rgba(134,170,53, 0.3) !important;
 }
-.contact fieldset > div > div > input {
-  background-color: rgba(134,170,53, 0.3) !important;
+.contact > div > div > div > div > form > div > fieldset > div > label > span{
+  font-family: 'Roboto',sans-serif !important;
+  font-size: 1em !important;
+
 }
 .texto-contacto{
-  font-size: 0.8em;
+  font-size: 1em;
   text-align: justify;
+  font-family: 'Roboto',sans-serif !important;
 }
 .copyright{
   color: #3F4F6B;

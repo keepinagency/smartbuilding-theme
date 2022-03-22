@@ -15,8 +15,10 @@
         <nav class="navbar navbar-expand-lg navbar-light col-12 p-0 m-0">
 
             <div class="container-fluid p-0 m-0 pb-2">
-                
-                <a class="navbar-brandss p-2 ps-lg-5 p-0 m-0 py-lg-2 col-8 col-lg-5"  
+                <a class="navbar-brand col-lg-2 ps-lg-5 py-lg-2 col-3 ps-2" href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" target="_blank">
+                    <img src="<?= smartbuilding_IMG. 'revista.png'?>"/>
+                </a>
+                <a class="navbar-brand col-lg-4 ps-lg-5 py-lg-2 col-5 p-0 m-0"  
                     href="<?php echo get_home_url(); ?>">
                     <?php
                         $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -26,7 +28,6 @@
                             src="<?=esc_url( $custom_logo_url )?>" 
                             alt="Logo ">
                 </a>
-
                 <button class="navbar-toggler h-100 me-3" type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#menusmartbuilding" 
