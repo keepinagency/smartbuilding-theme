@@ -364,14 +364,12 @@ a{
   .contact-details p{
     font-size: 1em;
   }
-  .copyright{
-    color: #3F4F6B;
+  /*.copyright{
     font-size: 0.6em;
   }
   .copy-url{
-    color:#CADBF2;
     font-size: 0.7em;
-  }
+  }*/
   .titulo-negrita_con{
     font-size: 0.8em;
     color:#86AA35;

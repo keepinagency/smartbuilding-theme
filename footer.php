@@ -108,10 +108,8 @@
 	
 	<!-- Copyright -->
 	<div class="col-12 p-2 m-0 d-flex justify-content-center">
-		<p class="copyright">© 2022 Copyright SmartBuilding. <span class="copy-url">Desarrollado a medida por:</span> 
-			<a class="text-reset fw-bold" href="https://www.keepinagency.com/" target="blank">
-				Keepin Agency
-			</a>
+		<p class="copyright">© 2022 Copyright SmartBuilding. <br><span class="copy-url">Desarrollado a medida por:</span> 
+			<a class="text-reset fw-bold" href="https://www.keepinagency.com/" target="blank">Keepin Agency</a>
 		</p>
 	</div>
 	<!--MENÚ-->
