@@ -15,7 +15,7 @@
         <nav class="navbar navbar-expand-lg navbar-light col-12 p-0 m-0">
 
             <div class="container-fluid p-0 m-0 pb-2">
-                <div class="col-3 p-1 col-lg-1 mt-lg-1 ms-lg-2 border-end">
+                <div class="col-3 p-1 col-lg-1 mt-lg-1 ms-lg-3 border-end">
                     <a class=""
                        href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" 
                        target="_blank">
