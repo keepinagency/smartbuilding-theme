@@ -43,7 +43,7 @@ function smartbuilding_register_menu() {
 }
 /****************FUNCION PARA EXTRACTO***********************/
 function custom_excerpt_length( $length){
-	return 40;
+	return 32;
 }
 
 function wpdocs_excerpt_more( $more ) {

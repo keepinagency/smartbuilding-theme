@@ -11,7 +11,9 @@ $nuevo_arreglo = new WP_Query(array(
 	'post_type'=>'post', 
     'category_name' => 'industrial',
 	'posts_per_page'=>4,
-	'paged'=>$paginacion_nueva 
+	'paged'=>$paginacion_nueva,
+    'orderby' => 'post__in',
+    'post__in' => array(43, 55, 58 ) 
 ));
 ?>
 <div class="row container-fluid col-12 p-0 m-0">

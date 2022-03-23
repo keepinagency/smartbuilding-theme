@@ -11,9 +11,8 @@ $nuevo_arreglo = new WP_Query(array(
 	'post_type'=>'post',
     'category_name' => 'calefaccion',
 	'posts_per_page'=>4,
-    'orderby' => array (
-        'ID' => array( 58, 43, 55 )
-    )
+    'orderby' => 'post__in',
+    'post__in' => array(43, 55, 58 )
     
 ));
 
@@ -50,8 +49,8 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #FF8900;">
             <h3 class="text-center py-3 text-uppercase">Calefacción y/o Climatización</h3>
-            <p class="px-5 pb-3 text-center">Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
-                Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de Calor que sea eficiente 
+            <p class="px-5 pb-3 text-center">Para climatizar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
+                Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de energía que sea eficiente 
                 tanto en los Consumos como en la transmisión del calor que genera al ambiente.</p>
             <?php while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">
