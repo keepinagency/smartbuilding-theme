@@ -13,7 +13,8 @@ $nuevo_arreglo = new WP_Query(array(
 	'posts_per_page'=>4,
 	'paged'=>$paginacion_nueva,
     'orderby' => 'post__in',
-    'post__in' => array(43, 55, 58 ) 
+    /*'post__in' => array(43, 55, 58 )---> Local */ 
+    'post__in' => array(58, 45, 62 )/*Ambiente DEV*/
 ));
 ?>
 <div class="row container-fluid col-12 p-0 m-0">

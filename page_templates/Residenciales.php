@@ -12,7 +12,8 @@ $nuevo_arreglo = new WP_Query(array(
     'category_name' => 'calefaccion',
 	'posts_per_page'=>4,
     'orderby' => 'post__in',
-    'post__in' => array(43, 55, 58 )
+    /*'post__in' => array(43, 55, 58 )---> Local */ 
+    'post__in' => array(58, 45, 62 )/*Ambiente DEV*/
     
 ));
 
