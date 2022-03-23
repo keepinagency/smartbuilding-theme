@@ -10,8 +10,13 @@ $sub_ = get_post_meta($post->ID, 'sub_titulo', true);
 $nuevo_arreglo = new WP_Query(array(
 	'post_type'=>'post',
     'category_name' => 'calefaccion',
-	'posts_per_page'=>4
+	'posts_per_page'=>4,
+    'orderby' => array (
+        'ID' => array( 58, 43, 55 )
+    )
+    
 ));
+
 $tit_agua = get_option( 'titulo-aguas', 'Agua Caliente' );
 $cont_agua = get_option( 'contenido-aguas', '' );
 
