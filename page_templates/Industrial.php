@@ -28,7 +28,7 @@ $nuevo_arreglo = new WP_Query(array(
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-comercio-industria.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #2C5660;">
-            <h3 class="text-center py-3">Climatización e Iluminación</h3>
+            <h3 class="text-center py-3 text-uppercase">Calefacción y/o Climatización</h3>
             <p class="px-5 pb-3 text-center">Para la climatización de grandes espacios necesarios para desarrollar las operaciones tanto en el comercio como de la industria con el 
                 menor tiempo con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: Primero, incorporar elementos de aislación térmica al recinto a climatizar y segundo, 
                 proveer de una fuente de Calor o frío que sea eficiente tanto en los Consumos como en la transmisión de la energía que genera al ambiente.
@@ -39,7 +39,7 @@ $nuevo_arreglo = new WP_Query(array(
                         echo '<h3>' . get_cat_name($current_cat_id) . '</h3>';
                     ?>
                 </div-->
-                <div class="row d-flex justify-content-center flex-lg-row col-12 p-0 m-0 col-lg-3 px-lg-2 pb-lg-3">
+                <div class="row d-flex justify-content-center flex-lg-row col-12 p-0 m-0 col-lg-4 px-lg-5 pb-lg-3">
                     <div class="col-12 col-lg-12 cont-img text-center">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('') ;?>

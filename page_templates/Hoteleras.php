@@ -26,10 +26,10 @@ $hcontpost_aguas = get_option( 'hcontenido-aguas-posts', '' );
 $hurl_aguas = get_option( 'hdurl-aguas', '' );
 $himg_aguas = get_option( 'himge-aguas', '' );
 
-$htitpost_aguat = get_option( 'htitulo-aguas__posts', '' );
+/*$htitpost_aguat = get_option( 'htitulo-aguas__posts', '' );
 $hcontpost_aguat = get_option( 'hcontenido-aguas__posts', '' );
 $hurl_aguat = get_option( 'hdurl__aguas', '' );
-$himg_aguat = get_option( 'himge__aguas', '' );
+$himg_aguat = get_option( 'himge__aguas', '' );*/
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
@@ -44,7 +44,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );
             <p>El 84% del consumo energético en hoteles promedio en Chile es en Agua Caliente, Climatización e Iluminación.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-hotelero.png'?>" style="width:50%;"/>
         </div>
-        <div class="col-12 text-white row p-0 m-0" style="background: #32B2D0;">
+        <div class="col-12 text-white row p-0 m-0 d-lg-flex justify-content-lg-center" style="background: #32B2D0;">
             <h3 class="text-center py-3"> 
                 <?php if(empty($htit_agua)){ echo "Agua Caliente"; } else { echo $htit_agua; }?>
             </h3>
@@ -60,14 +60,14 @@ $himg_aguat = get_option( 'himge__aguas', '' );
             </p>
 
          <!--PRIMER POST-->
-            <div class="col-lg-4 col-12">
+            <div class="col-lg-4 col-12 m-lg-5">
                 <a class="text-decoration-none"href="<?php echo $hurl_agua; ?>">
                     <?php if(empty($himg_agua)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $himg_agua ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
-                    <h4 class="text-center text-white">
+                    <h4 class="text-center text-white text-uppercase">
                         <strong>
                             <?php if(empty($htitpost_agua)){ echo "SmartHotWater"; } else { echo $htitpost_agua; }?>
                         </strong>
@@ -83,14 +83,14 @@ $himg_aguat = get_option( 'himge__aguas', '' );
             </div>
 
         <!--SEGUNDO POST-->
-            <div class="col-lg-4 col-12">
+            <div class="col-lg-4 col-12 m-lg-5">
                 <a class="text-decoration-none"href="<?php echo $hurl_aguas; ?>">
                     <?php if(empty($himg_aguas)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" style="max-width:100%;><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $himg_aguas ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
-                    <h4 class="text-center text-white"><strong><?php if(empty($htitpost_aguas)){ echo "SmartPool"; } else { echo $htitpost_aguas; }?></strong></h4><br>
+                    <h4 class="text-center text-white text-uppercase"><strong><?php if(empty($htitpost_aguas)){ echo "SmartPool"; } else { echo $htitpost_aguas; }?></strong></h4><br>
                 </a>
                 <p class="text-center">
                     <?php if(empty($hcontpost_aguas)) {echo "Se trata del mejor sistema para calefacción de piscinas, con la mejor relación costo y eficiencia. 
@@ -102,7 +102,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );
             </div>
 
         <!--TERCER POST-->
-            <div class="col-lg-4 col-12">
+            <!--div class="col-lg-4 col-12">
                 <a class="text-decoration-none"href="<?php echo $hurl_aguat; ?>">
                     <?php if(empty( $himg_aguat)) {
                             echo '<img src="'.smartbuilding_IMG.'Soluciones/agua3.jpg' . '" style="max-width:100%;><br><br>'; }
@@ -118,11 +118,11 @@ $himg_aguat = get_option( 'himge__aguas', '' );
                             echo $contpost_aguas;} 
                     ?> 
                 </p><br><br><br><br>
-            </div>
+            </div-->
         </div>
 
-        <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #2C5660;">
-            <h3 class="text-center py-3">Climatización e Iluminación</h3>
+        <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white d-lg-flex justify-content-lg-center" style="background: #2C5660;">
+            <h3 class="text-center py-3">Calefacción y/o Climatización</h3>
             <p class="px-5 pb-3 text-center">Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: Primero, 
             incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de Calor que sea eficiente tanto en los Consumos 
             como en la transmisión del calor que genera al ambiente.</p>
@@ -135,7 +135,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );
                         echo category_description( $catID[0] );
                     ?>
                 </div-->
-                <div class="row d-flex flex-lg-row col-12 p-0 m-0 col-lg-4">
+                <div class="row d-flex flex-lg-row col-12 p-0 m-0 col-lg-5 p-lg-5">
                     <div class="col-12 col-lg-12 cont-img text-center">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('') ;?>
@@ -144,7 +144,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );
                     <div class="row cont-corpotel col-12 m-0 p-0 text-center">
                         <div class="col-12 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class="text-decoration-none p-0 m-0" href="<?php the_permalink(); ?>">
-                                <div class="p-2 m-0 text-white text-center">
+                                <div class="p-2 m-0 text-white text-center text-uppercase">
                                     <h3><?php the_title();?></h3>
                                 </div>
                             </a>

@@ -317,24 +317,24 @@ function custom_smartbuilding_register( $wp_customize ) {
         *****************
         *****************
         ****************/
-        $wp_customize->add_section( 'residenciales__post', array(
+        /*$wp_customize->add_section( 'residenciales__post', array(
             'title' => __( 'Tercer post', 'textdomain' ),
             'panel' => 'smartbuilding',
             'priority' => 4,
-        ));
+        ));*/
                 /** Setting TEXT TITULO POST**********/
-                $wp_customize->add_setting( 'titulo-aguas__posts', array(
-                'type' => 'option',
-                'capability' => 'edit_theme_options',
+            /*$wp_customize->add_setting( 'titulo-aguas__posts', array(
+            'type' => 'option',
+            'capability' => 'edit_theme_options',
             ));
             $wp_customize->add_control('titulo-aguas__posts', array(
                 'label' => __( 'Título del post', 'textdomain' ),
                 'section' => 'residenciales__post',
                 'priority' => 1,
                 'type' => 'text',
-            ));
+            ));*/
             /** Setting TEXT-AREA CONTENIDO POST*****/
-            $wp_customize->add_setting( 'contenido-aguas__posts', array(
+            /*$wp_customize->add_setting( 'contenido-aguas__posts', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
@@ -343,9 +343,9 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'section' => 'residenciales__post',
                 'priority' => 2,
                 'type' => 'textarea',
-            ));
+            ));*/
             /** Setting Imagen para post **/
-            $wp_customize->add_setting( 'imge__aguas', array (
+            /*$wp_customize->add_setting( 'imge__aguas', array (
                 'default'        => get_template_directory_uri() . '/img/Soluciones/agua3.jpg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
@@ -355,9 +355,9 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'section'    => 'residenciales__post',
                 'settings'   => 'imge__aguas',
                 'priority'   => 3,
-            )));
+            )));*/
             /** Setting URL para el post **/
-            $wp_customize->add_setting( 'durl__aguas', array(
+            /*$wp_customize->add_setting( 'durl__aguas', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
@@ -366,7 +366,7 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'section' => 'residenciales__post',
                 'priority' => 4,
                 'type' => 'text',
-            ));
+            ));*/
     $wp_customize->add_panel( 'SmartBuilding', array(
         'title' => 'Soluciones hoteleras',
         'description' => 'Opciones personalizadas',
@@ -517,15 +517,15 @@ function custom_smartbuilding_register( $wp_customize ) {
         *****************
         *****************
         ****************/
-        $wp_customize->add_section( 'hoteleras__post', array(
+        /*$wp_customize->add_section( 'hoteleras__post', array(
             'title' => __( 'Tercer post', 'textdomain' ),
             'panel' => 'SmartBuilding',
             'priority' => 4,
         ));
-                /** Setting TEXT TITULO POST**********/
-                $wp_customize->add_setting( 'htitulo-aguas__posts', array(
-                'type' => 'option',
-                'capability' => 'edit_theme_options',
+            /** Setting TEXT TITULO POST**********/
+            /*$wp_customize->add_setting( 'htitulo-aguas__posts', array(
+            'type' => 'option',
+            'capability' => 'edit_theme_options',
             ));
             $wp_customize->add_control('htitulo-aguas__posts', array(
                 'label' => __( 'Título del post', 'textdomain' ),
@@ -534,7 +534,7 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'type' => 'text',
             ));
             /** Setting TEXT-AREA CONTENIDO POST*****/
-            $wp_customize->add_setting( 'hcontenido-aguas__posts', array(
+            /*$wp_customize->add_setting( 'hcontenido-aguas__posts', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));
@@ -545,7 +545,7 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'type' => 'textarea',
             ));
             /** Setting Imagen para post **/
-            $wp_customize->add_setting( 'himge__aguas', array (
+            /*$wp_customize->add_setting( 'himge__aguas', array (
                 'default'        => get_template_directory_uri() . '/img/Soluciones/agua3.jpg',
                 'capability'     => 'edit_theme_options',
                 'type'           => 'option',
@@ -557,7 +557,7 @@ function custom_smartbuilding_register( $wp_customize ) {
                 'priority'   => 3,
             )));
             /** Setting URL para el post **/
-            $wp_customize->add_setting( 'hdurl__aguas', array(
+            /*$wp_customize->add_setting( 'hdurl__aguas', array(
                 'type' => 'option',
                 'capability' => 'edit_theme_options',
             ));

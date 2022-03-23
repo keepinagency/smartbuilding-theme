@@ -28,8 +28,8 @@ $nuevo_arreglo = new WP_Query(array(
             <p>El 62% del consumo energético en oficinas promedio en Chile es en Climatización e Iluminación.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-corporativo.png'?>" style="width:50%;"/>
         </div>
-        <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #2C5660;">
-            <h3 class="text-center py-3">Climatización e Iluminación</h3>
+        <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white d-lg-flex justify-content-lg-center" style="background: #2C5660;">
+            <h3 class="text-center py-3">Calefacción y/o Climatización</h3>
             <p class="px-5 pb-3 text-center">Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: Primero, 
             incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de Calor que sea eficiente tanto en los Consumos 
             como en la transmisión del calor que genera al ambiente.</p>
@@ -42,7 +42,7 @@ $nuevo_arreglo = new WP_Query(array(
                         echo category_description( $catID[0] );
                     ?>
                 </div-->
-                <div class="row d-flex flex-lg-row col-12 p-0 m-0 col-lg-4">
+                <div class="row d-flex flex-lg-row col-12 p-0 m-0 col-lg-5 p-lg-5">
                     <div class="col-12 col-lg-12 cont-img text-center">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('') ;?>
@@ -51,7 +51,7 @@ $nuevo_arreglo = new WP_Query(array(
                     <div class="row cont-corpotel col-12 m-0 p-0 text-center">
                         <div class="col-12 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class="text-decoration-none p-0 m-0" href="<?php the_permalink(); ?>">
-                                <div class="p-2 m-0 text-white text-center">
+                                <div class="p-2 m-0 text-white text-center text-uppercase">
                                     <h3><?php the_title();?></h3>
                                 </div>
                             </a>
