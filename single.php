@@ -2,9 +2,9 @@
 
     <div class="row page col-md-12 p-0 m-0">
         <?php if ( have_posts() ) { ?>
-            <div class="page-title col-12 text-center col-lg-12 pb-lg-2 pt-lg-4">
+            <!--div class="page-title col-12 text-center col-lg-12 pb-lg-2 pt-lg-4">
                 <h1><?php the_title(); ?></h1>
-            </div>
+            </div-->
             <div class="col-12 col-lg-12 p-0 m-0" 
             style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; background-position: center; width:100%; min-height:70vh;">
                 &nbsp;
