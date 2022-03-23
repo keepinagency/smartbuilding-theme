@@ -12,23 +12,22 @@
 <div class="container-fluid p-0 m-0 h-100">
     <div class="header p-0 m-0 row">
 
-        <nav class="navbar navbar-expand-lg navbar-light col-12 p-0 m-0">
+        <nav class="navbar navbar-expand-lg navbar-light col-12 p-0 m-0 ">
 
-            <div class="container-fluid p-0 m-0 pb-2">
-                <div class="col-3 p-1 col-lg-1 mt-lg-1 ms-lg-3 border-end">
-                    <a class=""
-                       href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" 
-                       target="_blank">
-                        <img class="p-0 m-0 img-fluid" src="<?= smartbuilding_IMG. 'logo-awards80.png'?>"/>
-                    </a>
-                </div>
-                <a class="navbar-brand col-5 p-0 m-0 col-lg-4 ps-lg-0 py-lg-2 "  
+            <div class="container-fluid p-0 m-0 my-3">
+                <a class="img-award p-0 mt-lg-2 ms-lg-3 pe-1 ps-lg-2 pe-lg-3  border-end"
+                    href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" 
+                    target="_blank">
+                    <img class="p-0 m-0"
+                            src="<?= smartbuilding_IMG. 'logo-awards80.png'?>"/>
+                </a>
+                <a class="navbar-brandxxx p-0 m-0  col-lg-4  py-lg-0 "  
                     href="<?php echo get_home_url(); ?>">
                     <?php
                         $custom_logo_id = get_theme_mod( 'custom_logo' );
                         $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
                     ?>
-                    <img class="logo m-0 p-0 ms-lg-2 py-3"
+                    <img class="logo m-0 p-0 ms-lg-2 my-2 ps-1"
                             src="<?=esc_url( $custom_logo_url )?>" 
                             alt="Logo ">
                 </a>
