@@ -16,6 +16,8 @@ $nuevo_arreglo = new WP_Query(array(
     /*'post__in' => array(43, 55, 58 )---> Local */ 
     'post__in' => array(58, 45, 62 )/*Ambiente DEV*/
 ));
+$climat1 = get_option( 'climat1', '' );
+$climat2 = get_option( 'climat2', '' );
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
@@ -31,11 +33,18 @@ $nuevo_arreglo = new WP_Query(array(
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-comercio-industria.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #2C5660;">
-            <h3 class="text-center py-3 text-uppercase">Calefacción y/o Climatización</h3>
-            <p class="px-5 pb-3 text-center">Para la climatización de grandes espacios necesarios para desarrollar las operaciones tanto en el comercio como de la industria con el 
-                menor tiempo con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: Primero, incorporar elementos de aislación térmica al recinto a climatizar y segundo, 
-                proveer de una fuente de Calor o frío que sea eficiente tanto en los Consumos como en la transmisión de la energía que genera al ambiente.
-                <b>La forma más eficiente de iluminar los espacios, es aprovechar lo máximo posible la luz natural, soluciones como View y SmartGlass hacen esto posible.</b></p>
+            <h3 class="text-center py-3">
+                <?php if(empty($climat1)){ echo "Calefacción y/o Climatización"; } else { echo $climat1; }?>
+            </h3>
+            <p class="px-5 pb-3 text-center">
+                <?php if(empty($climat2)){ 
+                    echo "Para la climatización de grandes espacios necesarios para desarrollar las operaciones tanto en el comercio como de la industria con el 
+                    menor tiempo con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: Primero, incorporar elementos de aislación térmica al recinto a climatizar y segundo, 
+                    proveer de una fuente de Calor o frío que sea eficiente tanto en los Consumos como en la transmisión de la energía que genera al ambiente.
+                    <b>La forma más eficiente de iluminar los espacios, es aprovechar lo máximo posible la luz natural, soluciones como View y SmartGlass hacen esto posible.</b>"; } 
+                else { echo $climat2; }?>
+            
+            </p>
             <?php while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">
                     <?php $current_cat_id = the_category_ID(false);

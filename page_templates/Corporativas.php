@@ -14,6 +14,9 @@ $nuevo_arreglo = new WP_Query(array(
 	'posts_per_page'=>3,
 	'paged'=>$paginacion_nueva 
 ));
+
+$clima1 = get_option( 'clima1', '' );
+$clima2 = get_option( 'clima2', '' );
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
     <?php if ($nuevo_arreglo->have_posts()) : ?>
@@ -29,10 +32,16 @@ $nuevo_arreglo = new WP_Query(array(
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-corporativo.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white d-lg-flex justify-content-lg-center" style="background: #2C5660;">
-            <h3 class="text-center py-3">Calefacción y/o Climatización</h3>
-            <p class="px-5 pb-3 text-center">Para climatizar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: Primero, 
-            incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de energía que sea eficiente tanto en los Consumos 
-            como en la transmisión del calor que genera al ambiente.</p>
+            <h3 class="text-center py-3">
+                <?php if(empty($clima1)){ echo "Calefacción y/o Climatización"; } else { echo $clima1; }?>
+            </h3>
+            <p class="px-5 pb-3 text-center">
+                <?php if(empty($clima2)){ 
+                    echo "Para climatizar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
+                    Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de energía que sea eficiente 
+                    tanto en los Consumos como en la transmisión del calor que genera al ambiente."; } 
+                else { echo $clima2; }?>
+            </p>
         <?php 
             while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">

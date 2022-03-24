@@ -30,9 +30,9 @@ $contpost_aguas = get_option( 'contenido-aguas-posts', '' );
 $url_aguas = get_option( 'durl-aguas', '' );
 $img_aguas = get_option( 'imge-aguas', '' );
 
-/*$titpost_aguat = get_option( 'titulo-aguas__posts', '' );
-$contpost_aguat = get_option( 'contenido-aguas__posts', '' );
-$url_aguat = get_option( 'durl__aguas', '' );
+$clima1 = get_option( 'clima1', '' );
+$clima2 = get_option( 'clima2', '' );
+/*$url_aguat = get_option( 'durl__aguas', '' );
 $img_aguat = get_option( 'imge__aguas', '' );*/
 ?>
 <div class="row container-fluid col-12 p-0 m-0">
@@ -49,10 +49,17 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-residencial.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #FF8900;">
-            <h3 class="text-center py-3 text-uppercase">Calefacción y/o Climatización</h3>
-            <p class="px-5 pb-3 text-center">Para climatizar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
-                Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de energía que sea eficiente 
-                tanto en los Consumos como en la transmisión del calor que genera al ambiente.</p>
+            <h3 class="text-center py-3">
+                <?php if(empty($clima1)){ echo "Calefacción y/o Climatización"; } else { echo $clima1; }?>
+            </h3>
+            
+            <p class="px-5 pb-3 text-center">
+                <?php if(empty($clima2)){ 
+                    echo "Para climatizar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
+                    Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de energía que sea eficiente 
+                    tanto en los Consumos como en la transmisión del calor que genera al ambiente."; } 
+                else { echo $clima2; }?>
+            </p>
             <?php while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">
                     <?php $current_cat_id = the_category_ID(false);
