@@ -6,11 +6,11 @@
 $arreglo_productos = new WP_Query(array(
 	'post_type'=>'post', 
     'category_name' => 'productos',
-    'order'=>'ASC',
+    'order'=>'DESC',
 	'posts_per_page'=>7
 ));
 ?>
-<div class="row contenedor-productoHome p-0 m-0 p-3 ">
+<div class="row contenedor-productoHome p-0 m-0 p-3 d-flex flex-column-reverse">
     <?php if ($arreglo_productos->have_posts()) :?>
         <div class="row col-12 p-0 m-0">
             <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
@@ -19,10 +19,15 @@ $arreglo_productos = new WP_Query(array(
 
             <?php  
             $i = 0;
-            $col = 4;
+            $col = 3;
             $x = 0;
             while ($arreglo_productos->have_posts()) : $arreglo_productos->the_post();
+            /*$myposts = $wp_query->post_count;
+            $o = $wp_query->found_posts;
+            echo $myposts . '-' . $o;*/
+
                 if (is_int ($i / $col) ){
+                    
                     if (!is_float($x)){?>
                         </div> <?php
                     }
@@ -36,8 +41,6 @@ $arreglo_productos = new WP_Query(array(
                                 flex-lg-grow-1 me-lg-3 mb-lg-3" 
                          style="background-image: url('<?php echo the_post_thumbnail_url('');?>'); 
                                 background-size: cover;"> 
-
-                        
 
                         <div class="col-12 ">
                             <!-- href="<?php the_permalink(); ?>" -->
