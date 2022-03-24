@@ -10,12 +10,13 @@ $arreglo_productos = new WP_Query(array(
 	'posts_per_page'=>7
 ));
 ?>
+<div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
+                <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</p>
+            </div>
 <div class="row contenedor-productoHome p-0 m-0 p-3 d-flex flex-column-reverse">
     <?php if ($arreglo_productos->have_posts()) :?>
         <div class="row col-12 p-0 m-0">
-            <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
-                <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</p>
-            </div>
+            
 
             <?php  
             $i = 0;
