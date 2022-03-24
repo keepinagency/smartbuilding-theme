@@ -11,8 +11,8 @@ $arreglo_productos = new WP_Query(array(
 ));
 ?>
 <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
-                <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</p>
-            </div>
+    <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</p>
+</div>
 <div class="row contenedor-productoHome p-0 m-0 p-3 d-flex flex-column-reverse">
     <?php if ($arreglo_productos->have_posts()) :?>
         <div class="row col-12 p-0 m-0">
@@ -23,9 +23,6 @@ $arreglo_productos = new WP_Query(array(
             $col = 3;
             $x = 0;
             while ($arreglo_productos->have_posts()) : $arreglo_productos->the_post();
-            /*$myposts = $wp_query->post_count;
-            $o = $wp_query->found_posts;
-            echo $myposts . '-' . $o;*/
 
                 if (is_int ($i / $col) ){
                     
@@ -33,7 +30,7 @@ $arreglo_productos = new WP_Query(array(
                         </div> <?php
                     }
                     ?>
-                    <div class="p-0 m-0 d-lg-flex d-md-none ps-lg-1 pb-lg-1"> <?php 
+                    <div class="p-0 m-0 d-lg-flex d-md-none ps-lg-1 pb-lg-1 d-flex flex-row-reverse"> <?php 
                     $x++;
                 }
                 ?>
