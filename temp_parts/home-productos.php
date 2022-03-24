@@ -24,7 +24,7 @@ $arreglo_productos = new WP_Query(array(
             while ($arreglo_productos->have_posts()) : $arreglo_productos->the_post();
                 if (is_int ($i / $col) ){
                     if (!is_float($x)){?>
-                        </div> <?php 
+                        </div> <?php
                     }
                     ?>
                     <div class="p-0 m-0 d-lg-flex d-md-none ps-lg-1 pb-lg-1"> <?php 
