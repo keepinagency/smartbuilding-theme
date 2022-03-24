@@ -19,7 +19,7 @@
                     href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" 
                     target="_blank">
                     <img class="p-0 m-0"
-                            src="<?= smartbuilding_IMG. 'logo-awards80.png'?>"/>
+                            src="<?= smartbuilding_IMG. '2021-Construction-Engineering-Awards-SmartBuilding100.png'?>"/>
                 </a>
                 <a class="navbar-brandxxx p-0 m-0  col-lg-4  py-lg-0 "  
                     href="<?php echo get_home_url(); ?>">
