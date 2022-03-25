@@ -135,8 +135,18 @@ a{
   text-align: end;
 }
 .read-more a{
+  color: #fff;
+  text-align: end;
+  background-color: #86AA35;
+  padding: 0.8em;
+  border-radius: 5px;
+}
+.read-more a:hover{
   color: #86AA35;
   text-align: end;
+  background-color: #fff;
+  padding: 0.8em;
+  border-radius: 5px;
 }
 
   /*****HOME - SERVICIOS*****

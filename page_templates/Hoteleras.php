@@ -80,6 +80,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );*/
                             echo $hcontpost_agua;} 
                     ?>  
                 </p>
+                <div class="col-12 read-more"><a href="<?= $url_agua ?>">Leer mas -></a></div>
             </div>
 
         <!--SEGUNDO POST-->
@@ -99,6 +100,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );*/
                             echo $hcontpost_aguas;} 
                     ?> 
                 </p>
+                <div class="col-12 read-more"><a href="<?= $url_agua ?>">Leer mas -></a></div>
             </div>
 
         <!--TERCER POST-->

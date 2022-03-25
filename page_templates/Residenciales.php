@@ -114,6 +114,7 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
                             echo $contpost_agua;} 
                     ?> 
                 </p>
+                <div class="col-12 read-more"><a href="<?= $url_agua ?>">Leer mas -></a></div>
             </div>
 
         <!--SEGUNDO POST-->
@@ -133,6 +134,7 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
                             echo $contpost_aguas;} 
                     ?> 
                 </p>
+                <div class="col-12 read-more"><a href="<?= $url_aguas ?>">Leer mas -></a></div>
             </div>
 
         <!--TERCER POST-->
