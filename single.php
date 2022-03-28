@@ -6,7 +6,7 @@
                 <h1><?php the_title(); ?></h1>
             </div-->
             <div class="col-12 col-lg-12 p-0 m-0" 
-            style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; background-position: center; width:100%; min-height:70vh;">
+            style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; background-position: center; width:100%; min-height:80vh;">
                 &nbsp;
             </div>
         <?php
