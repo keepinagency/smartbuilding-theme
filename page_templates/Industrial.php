@@ -51,7 +51,7 @@ $climat2 = get_option( 'climat2', '' );
                         echo '<h3>' . get_cat_name($current_cat_id) . '</h3>';
                     ?>
                 </div-->
-                <div class="row d-flex justify-content-center flex-lg-row col-12 p-0 m-0 col-lg-4 px-lg-5 pb-lg-3">
+                <div class="row d-flex justify-content-center flex-lg-row col-12 p-0 m-0 col-lg-6 px-lg-5 pb-lg-3">
                     <div class="col-12 col-lg-12 cont-img text-center">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('') ;?>
