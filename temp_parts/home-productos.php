@@ -13,7 +13,7 @@ $arreglo_productos = new WP_Query(array(
 <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
     <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</p>
 </div>
-<div class="row contenedor-productoHome p-0 m-0 p-3 d-lg-flex flex-lg-column-reverse">
+<div class="row contenedor-productoHome p-0 m-0 p-3 d-flex flex-column-reverse">
     <?php if ($arreglo_productos->have_posts()) :?>
         <div class="row col-12 p-0 m-0">
             
@@ -30,12 +30,12 @@ $arreglo_productos = new WP_Query(array(
                         </div> <?php
                     }
                     ?>
-                    <div class="p-0 m-0 d-lg-flex d-md-none ps-lg-1 pb-lg-1 flex-lg-row-reverse"> <?php 
+                    <div class="p-0 m-0 d-lg-flex d-md-none ps-lg-1 pb-lg-1 flex-row-reverse"> <?php 
                     $x++;
                 }
                 ?>
                  
-                    <div class="miniatura-producto d-flex flex-lg-column align-items-end p-0 m-0 mb-4 
+                    <div class="miniatura-producto d-flex flex-column align-items-end p-0 m-0 mb-4 
                                 flex-lg-grow-1 me-lg-3 mb-lg-3" 
                          style="background-image: url('<?php echo the_post_thumbnail_url('');?>'); 
                                 background-size: cover;"> 
