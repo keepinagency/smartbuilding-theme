@@ -30,7 +30,7 @@ $arreglo_productos = new WP_Query(array(
                         </div> <?php
                     }
                     ?>
-                    <div class="p-0 m-0 d-lg-flex d-md-none ps-lg-1 pb-lg-1 flex-row-reverse"> <?php 
+                    <div class="p-0 m-0d-md-none ps-lg-1 pb-lg-1 d-lg-flex flex-lg-row-reverse d-flex flex-column-reverse"> <?php 
                     $x++;
                 }
                 ?>
