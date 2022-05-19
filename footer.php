@@ -12,61 +12,40 @@
 	$tel = get_option( 'telefono', '+ 56 22 938 0016' );
 	$correo = get_option( 'correo', 'contacto@smartbuilding.cl' );
 	$web = get_option( 'web', 'https://www.smartbuilding.cl' );	
-	$quienes = get_option('quienes', '');
-
-	/*$url_pint = get_option( 'pinturl', 'https://www.pinterest.com/' );
-	$url_lik = get_option( 'linkeurl', 'http://www.linkedin.com' );
-	$pintlogo = get_option( 'pintlogo', '/img/pinterest.jpeg' );
-	$linkelogo = get_option( 'linkelogo', '/img/linked-in.jpeg' );*/
 
 ?>
 <!-- /.row -->
 </div><!-- /.container -->
 <!-- Footer -->
  <!-- Redes Sociales -->
-<footer class="footer text-center p-0 m-0 ">
-    <div class="row col-12 conten-social p-0 m-0 py-2 d-none">
-		<div class="col-lg-5 align-self-center">
-			<p class="parrafo-info ps-2">
-			<b class="titulo-negrita">¿Quiénes Somos?</b> 
-				<?php if (empty($quienes)) {
-					echo "Queremos ser referentes en la industria de la Construcción Sustentable y la eficiencia energética, con aplicaciones residenciales y Comerciales. 
-					Líderes en ofrecer tecnologías y soluciones para las personas que buscan no sólo ahorros en sus consumos energéticos sino que también su impacto en el entorno y el planeta";
-				}else{
-					echo $quienes;
-				} ?>.
-			</p>
-		</div>
-		<div class="col-12 col-lg-3">
-			<div class="conten-social-redes">
-				<p class="titulo-redes">Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales</p>
-			</div>
-			<div class="col-12 p-0 d-flex justify-content-center">
-				<!-- Red social - 1 -->
-				<a href="<?=$url_1?>" target="_blank" class="text-decoration-none me-2">
-					<img src="<?= $logored1;?>"/>
-				</a>
-				<!-- Red Social - 2 -->
-				<a href="<?=$url_2?>" target="_blank" class="text-decoration-none me-2">
-					<img src="<?= $logored2;?>"/>
-				</a>
-				<!-- Red Social - 3 -->
-				<a href="<?=$url_3?>" target="_blank" class="text-decoration-none me-2">
-					<img src="<?= $logored3;?>"/>
-				</a>
-				<!-- LinkedIn >
-				<a href="<?=$url_lik?>" class="text-decoration-none me-2">
-					<img src="<?= $linkelogo;?>"/>
-				</a>
-				< Pinterest >
-				<a href="<?=$url_pint?>" class="text-decoration-none me-2">
-					<img src="<?= $pintlogo;?>"/>
-				</a-->
+<footer class="footer text-center p-0 m-0">
+
+    <div class="row col-12 conten-social p-0 m-0 py-2">
+		<!--Social Media-->
+		<div class="col-12 col-lg-3 py-2 m-0">
+			<div class="conten-social-redes row">
+				<div class="titulo-redes p-0 m-0 col-lg-8">Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales:</div>
+				<div class="col-lg-4 p-0 m-0 d-flex justify-content-center">
+					<!-- Red social - 1 -->
+					<a href="<?=$url_1?>" target="_blank" class="text-decoration-none me-2">
+						<img src="<?= $logored1;?>"/>
+					</a>
+					<!-- Red Social - 2 -->
+					<a href="<?=$url_2?>" target="_blank" class="text-decoration-none me-2">
+						<img src="<?= $logored2;?>"/>
+					</a>
+					<!-- Red Social - 3 -->
+					<a href="<?=$url_3?>" target="_blank" class="text-decoration-none me-2">
+						<img src="<?= $logored3;?>"/>
+					</a>
+				</div>
 			</div>
 		</div>
-		<div class="col-lg-4 p-0 m-0 col-12">
-			<div class="contact-details row p-lg-0 m-lg-0 mt-3 d-none">
-				<div class="col-lg-6">
+
+		<!--Contacto-->
+		<div class="col-lg-5 p-0 m-0 col-12 py-2">
+			<div class="contact-details row p-lg-0 m-lg-0 mt-3 m-0 p-0">
+				<div class="col-lg-5 p-0 m-0">
 					<span>
 						<i class="fa-solid fa-house"></i> DIRECCIÓN
 					</span>
@@ -76,34 +55,51 @@
 						echo $dir;
 						}?></p>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-3 p-0 m-0">
 					<span>
-						<i class="fa-solid fa-square-phone"></i> TELÉFONO
+						<i class="fa fa-whatsapp"></i> TELÉFONO
 					</span>
-					<p><?php if (empty($tel)) {
-						echo "+ 56 22 938 0016";
-					}else {
-						echo $tel;
+					<p><?php if (empty($tel)) {?>
+						<a href:"https://api.whatsapp.com/send?phone=56229380016&text=Hola,%20les%20escribo%20desde%20www.smartbuilding.cl" target="_blank">+56229380016<a>
+					<?php } else {?>
+						<a href="https://api.whatsapp.com/send?phone=<?=$tel?>&text=Hola,%20les%20escribo%20desde%20www.smartbuilding.cl" target="_blank"><?=$tel?></a>
+						<?php
 						}?></p>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-4 p-0 m-0">
 					<span>
 					<i class="fa-solid fa-envelope"></i> CORREO
 					</span>
 					<p><?php if (empty($correo)) {
-						echo "contacto@smartbuilding.cl";
+						echo "<a href:'mailto:contacto@smartbuilding.cl'>contacto@smartbuilding.cl<a>";
 					}else {
-						echo $correo;
-						}?></p>
-				</div>
-				<div class="col-lg-6">
-					<span>
-					<i class="fa-solid fa-globe"></i> SITIO WEB
-					</span>
-					<p>https://www.smartbuilding.cl</p>
+						?>
+						<a href="mailto:<?= $correo; ?>"><?=$correo?></a>
+						<?php
+					}?></p>
+					
 				</div>
 			</div>
-		</div><!-- Contact Us Widget -->
+		</div>
+
+		<!--MENÚ-->
+		<div class="col-lg-4 col-12 p-0 justify-content-center p-0 m-0">
+			<nav class="navbar navbar-ligth col-12 p-0 m-0">
+				<div class="col-12 p-0 m-0">
+					<?php
+						wp_nav_menu( array(
+							'container'       => 'div',
+							'container_class' => 'footer-div col-12 col-lg-12 d-lg-block p-0 m-0',
+							'container_id'    => 'menusmartbuilding',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s p-0 m-0 w-100 nav nav-tabs justify-content-center border-0">%3$s</ul>',
+							'theme_location'  => 'footer-menu',
+							'menu_class'      => 'footer-menu',
+							'walker'          => new WP_Bootstrap_Navwalker())
+						);
+					?>
+				</div>
+			</nav>
+		</div>
 	</div>
 	
 	<!-- Copyright -->
@@ -112,24 +108,6 @@
 			<a class="text-reset fw-bold" href="https://www.keepinagency.com/" target="blank">Keepin Agency</a>
 		</p>
 	</div>
-	<!--MENÚ-->
-	<!---div class="col-12 d-md-flex flex-md-row p-0 justify-content-center">
-		<nav class="navbar navbar-ligth col-12 p-0 m-0">
-			<div class="col-12 p-0 pb-lg-0 pt-lg-0 h-100">
-				<?php
-					wp_nav_menu( array(
-						'container'       => 'div',
-						'container_class' => 'col-12 col-lg-12 d-lg-block p-0 m-0',
-						'container_id'    => 'idFooterMenu',
-						'items_wrap'      => '<ul id="%1$s" class="%2$s p-0 m-0 w-100 nav nav-tabs justify-content-center ">%3$s</ul>',
-						'theme_location'  => 'footer-menu',
-						'menu_class'      => 'footer-menu',
-						'walker'          => new WP_Bootstrap_Navwalker())
-					);
-				?>
-			</div>
-		</nav>
-	</div-->
 </footer>
 <!-- Footer -->
 

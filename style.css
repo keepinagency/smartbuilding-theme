@@ -31,7 +31,7 @@ a{
   text-align: left !important;
   color: #413a4d;
   margin-left: 2%;
-  border: thin solid white;
+  /*border: thin solid white;*/
 }
 .dropdown-menu{
   display: none;
@@ -272,6 +272,20 @@ a{
 }
 .footer{
   background: #323131;
+}
+.footer a{
+  color: #fff;
+  font-size: 1em;
+}
+.footer-menu a{
+  color: #fff;
+  font-size: 1em;
+}
+.footer-menu a:hover{
+  color: #86AA35;
+}
+.nav-tabs .nav-link{
+  border: none;
 }
 .conten-social-redes{
   font-size: 0.8em;
