@@ -88,6 +88,22 @@ a{
   font-size: 2.2em;
   color: #fff;
 }
+.titulo-pages:hover{
+    background: rgba(134,170,53, 0.8) !important;
+    border-bottom:  2px solid rgba(255,255,255, 0.8);
+}
+.titulo-pages h2{
+  background: rgba(134,170,53, 0.8);
+  font-size: 2em;
+  color:#fff;
+  min-height: 8vh;
+}
+.cont-post p{
+  background: rgba(255,255,255, 0.8) !important;
+  text-align: justify;
+  color:#242629;
+  max-width: 100%;
+}
 
   /*****HOME - PRODUCTO*****
   **************************/
@@ -334,14 +350,12 @@ a{
   html{
     font-size: 4vw;
   }
-  
   .logo{
     min-width: 200px;
     width: 5vw !important;
     position: absolute;
     top:0;
     left: 20vw;
-    
   }
   .img-award{
     width:20vw;
