@@ -2,19 +2,18 @@
 
     <div class="row page col-md-12 p-0 m-0">
         <?php if ( have_posts() ) { ?>
-            <!--div class="page-title col-12 text-center col-lg-12 pb-lg-2 pt-lg-4">
-                <h1><?php the_title(); ?></h1>
-            </div-->
-            <div class="col-12 col-lg-12 p-0 m-0" 
+            <div class="col-12 col-lg-12 p-0 m-0 d-flex justify-content-center" 
             style="background-image: url('<?= the_post_thumbnail_url('');?>'); background-repeat: no-repeat; background-size:cover; background-position: center; width:100%; min-height:80vh;">
-                &nbsp;
+                <div class="col-12 text-center col-lg-6 text-lg-center pt-5 p-0 m-0 titulo-page">
+                    <h1><?php the_title(); ?></h1>
+                </div>
             </div>
         <?php
             while ( have_posts() ) : the_post();
                 ?>
-                <div class="row page-cont col-12 d-flex-lg justify-content-lg-center p-0 m-0">
+                <div class="row col-12 d-flex-lg justify-content-lg-center p-0 my-2">
 
-                    <div class="pag-post col-12 p-0 m-0 d-flex-lg justify-content-lg-center text-justify col-lg-10 p-lg-0 m-lg-0 col-12">
+                    <div class="col-12 p-0 m-0 d-flex-lg justify-content-lg-center text-justify col-lg-10 p-lg-0 m-lg-0 col-12">
                         <?php the_content(); ?>
                     </div>
                 </div><!-- /.blog-post -->
@@ -25,7 +24,7 @@
     </div>
     <!--Navegacion para cada entrada o post-->
     <!--div class="navegacion_entradas">    
-        <-?php 
+        <?php 
             if ( is_singular( 'post' ) ) {
                 the_post_navigation( array(
                     'prev_text'          => __( '&nbsp;' ).'<span class="nav_post">%title</span>',
