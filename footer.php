@@ -22,10 +22,10 @@
 
     <div class="row col-12 conten-social p-0 m-0 py-2">
 		<!--Social Media-->
-		<div class="col-12 col-lg-3 py-2 m-0">
+		<div class="col-12 col-lg-3 col-xl-4 py-2 m-0">
 			<div class="conten-social-redes row">
-				<div class="titulo-redes p-0 m-0 col-lg-8">Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales:</div>
-				<div class="col-lg-4 p-0 m-0 d-flex justify-content-center">
+				<div class="titulo-redes p-0 m-0 col-lg-8 col-xl-7">Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales:</div>
+				<div class="col-lg-4 col-xl-5 p-0 m-0 d-flex justify-content-start">
 					<!-- Red social - 1 -->
 					<a href="<?=$url_1?>" target="_blank" class="text-decoration-none me-2">
 						<img src="<?= $logored1;?>"/>
@@ -43,7 +43,7 @@
 		</div>
 
 		<!--Contacto-->
-		<div class="col-lg-5 p-0 m-0 col-12 py-2">
+		<div class="col-lg-5 col-xl-4 p-0 m-0 col-12 py-2">
 			<div class="contact-details row p-lg-0 m-lg-0 mt-3 m-0 p-0">
 				<div class="col-lg-5 p-0 m-0">
 					<span>
@@ -83,7 +83,7 @@
 		</div>
 
 		<!--MENÚ-->
-		<div class="col-lg-4 col-12 p-0 justify-content-center p-0 m-0">
+		<div class="col-lg-4 col-xl-4 col-12 p-0 justify-content-center p-0 m-0">
 			<nav class="navbar navbar-ligth col-12 p-0 m-0">
 				<div class="col-12 p-0 m-0">
 					<?php
