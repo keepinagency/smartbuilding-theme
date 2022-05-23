@@ -28,14 +28,14 @@ $climat2 = get_option( 'climat2', '' );
             </div>
         </div>
         <div class="col-12 text-center my-5">
-            <h3>Sector Comercio e Industria</h3>
+            <h2>Sector Comercio e Industria</h2>
             <p>El 85% del consumo energético promedio en el comercio y en la industria en Chile es en Climatización e Iluminación.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-comercio-industria.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #2C5660;">
-            <h3 class="text-center py-3">
+            <h2 class="text-center py-3">
                 <?php if(empty($climat1)){ echo "Calefacción y/o Climatización"; } else { echo $climat1; }?>
-            </h3>
+            </h2>
             <p class="px-5 pb-3 text-center">
                 <?php if(empty($climat2)){ 
                     echo "Para la climatización de grandes espacios necesarios para desarrollar las operaciones tanto en el comercio como de la industria con el 
@@ -48,7 +48,7 @@ $climat2 = get_option( 'climat2', '' );
             <?php while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">
                     <?php $current_cat_id = the_category_ID(false);
-                        echo '<h3>' . get_cat_name($current_cat_id) . '</h3>';
+                        echo '<h2>' . get_cat_name($current_cat_id) . '</h2>';
                     ?>
                 </div-->
                 <div class="row d-flex justify-content-center flex-lg-row col-12 p-0 m-0 col-lg-6 px-lg-5 pb-lg-3">
@@ -61,7 +61,7 @@ $climat2 = get_option( 'climat2', '' );
                         <div class="col-12 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class="text-decoration-none p-0 m-0" href="<?php the_permalink(); ?>">
                                 <div class="p-2 m-0 text-white text-center">
-                                    <h3><?php the_title();?></h3>
+                                    <h2><?php the_title();?></h2>
                                 </div>
                             </a>
                             <div class="p-2 m-0 text-lg-justify text-white text-center">

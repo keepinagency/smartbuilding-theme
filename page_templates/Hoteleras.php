@@ -40,14 +40,14 @@ $himg_aguat = get_option( 'himge__aguas', '' );*/
             </div>
         </div>
         <div class="col-12 text-center mt-3">
-            <h3>Sector Hotelero</h3>
+            <h2>Sector Hotelero</h2>
             <p>El 84% del consumo energético en hoteles promedio en Chile es en Agua Caliente, Climatización e Iluminación.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-hotelero.png'?>" style="width:50%;"/>
         </div>
         <div class="col-12 text-white row p-0 m-0 d-lg-flex justify-content-lg-center" style="background: #32B2D0;">
-            <h3 class="text-center py-3"> 
+            <h2 class="text-center py-3"> 
                 <?php if(empty($htit_agua)){ echo "Agua Caliente"; } else { echo $htit_agua; }?>
-            </h3>
+            </h2>
             <p class="px-5 pb-3 text-center">
                 <?php if(empty($hcont_agua)) { 
                     echo "En hotelería existen una enormidad de servicios y funciones donde el agua caliente juega un rol fundamental. 
@@ -124,9 +124,9 @@ $himg_aguat = get_option( 'himge__aguas', '' );*/
         </div>
 
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white d-lg-flex justify-content-lg-center" style="background: #2C5660;">
-            <h3 class="text-center py-3">
+            <h2 class="text-center py-3">
                 <?php if(empty($clima1)){ echo "Calefacción y/o Climatización"; } else { echo $clima1; }?>
-            </h3>
+            </h2>
             <p class="px-5 pb-3 text-center">
                 <?php if(empty($clima2)){ 
                     echo "Para climatizar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
@@ -138,7 +138,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );*/
             while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">
                     <?php $current_cat_id = the_category_ID(false);
-                        echo '<h3>' . get_cat_name($current_cat_id) . '</h3>';
+                        echo '<h2>' . get_cat_name($current_cat_id) . '</h2>';
                         $catID = get_the_category();
                         echo category_description( $catID[0] );
                     ?>
@@ -153,7 +153,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );*/
                         <div class="col-12 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class="text-decoration-none p-0 m-0" href="<?php the_permalink(); ?>">
                                 <div class="p-2 m-0 text-white text-center text-uppercase">
-                                    <h3><?php the_title();?></h3>
+                                    <h2><?php the_title();?></h2>
                                 </div>
                             </a>
                             <div class="p-2 m-0 text-lg-justify text-white text-center">

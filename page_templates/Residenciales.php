@@ -44,14 +44,14 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
             </div>
         </div>
         <div class="col-12 text-center my-5">
-            <h3>Sector Residencial</h3>
+            <h2>Sector Residencial</h2>
             <p>El 67% del consumo energético de un hogar promedio en Chile (Casa o Departamento) es en Calefacción y Agua Caliente.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-residencial.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white" style="background: #FF8900;">
-            <h3 class="text-center py-3">
+            <h2 class="text-center py-3">
                 <?php if(empty($clima1)){ echo "Calefacción y/o Climatización"; } else { echo $clima1; }?>
-            </h3>
+            </h2>
             
             <p class="px-5 pb-3 text-center">
                 <?php if(empty($clima2)){ 
@@ -63,7 +63,7 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
             <?php while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">
                     <?php $current_cat_id = the_category_ID(false);
-                        echo '<h3>' . get_cat_name($current_cat_id) . '</h3>';
+                        echo '<h2>' . get_cat_name($current_cat_id) . '</h2>';
                     ?>
                 </div-->
                 <div class="row d-flex d-lg-flex justify-content-center flex-lg-row col-12 p-0 m-0 col-lg-6 px-lg-5 pb-lg-3">
@@ -76,7 +76,7 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
                         <div class="col-12 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class="p-0 m-0 text-decoration-none" href="<?php the_permalink(); ?>">
                                 <div class="p-2 m-0 text-white text-center text-uppercase">
-                                    <h3 class=""><?php the_title();?></h3>
+                                    <h2 class=""><?php the_title();?></h2>
                                 </div>
                             </a>
                             <div class="p-2 m-0 text-lg-justify text-white text-center">
@@ -88,7 +88,7 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
         <div class="col-12 text-white row p-0 m-0 d-lg-flex justify-content-lg-center" style="background: #32B2D0;">
-            <h3 class="text-center py-3"><?php if(empty($tit_agua)){ echo "Agua Caliente"; } else { echo $tit_agua; }?></h3>
+            <h2 class="text-center py-3"><?php if(empty($tit_agua)){ echo "Agua Caliente"; } else { echo $tit_agua; }?></h2>
             <p class="px-5 pb-3 text-center">
                 <?php if(empty($cont_agua)) {echo "Para calefaccionar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
                     Primero, incorporar elementos de aislación térmica al recinto a calefaccionar y segundo, proveer una fuente de Calor que sea eficiente 

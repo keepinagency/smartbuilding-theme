@@ -31,7 +31,7 @@ $arreglo_servicios = new WP_Query(array(
                </div>
                <div class="row col-lg-6 col-8 p-lg-0 m-lg-0 p-0 m-0">
                     <div class="titulo-servicios col-lg-12 col-12 p-0 m-0 d-flex align-items-end">
-                        <?php the_title(); ?>
+                        <h2><?php the_title(); ?></h2>
                     </div>
                     <div class="post-servicios col-lg-12 col-12 p-0 m-0">
                         <?php the_excerpt();?>

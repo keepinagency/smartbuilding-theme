@@ -48,9 +48,9 @@ $arreglo_productos = new WP_Query(array(
                                 role="button" aria-expanded="false" aria-controls="producto<?=$i?>"
                                 onclick="let wact = jQuery(this).parent().parent().width();
                                          jQuery(this).parent().parent().css('max-width',wact);">      
-                                <h4 class="enlace-post text-uppercase text-center text-white w-100">
+                                <h1 class="enlace-post text-uppercase text-center text-white w-100">
                                     <?php the_title(); ?>
-                                </h4>
+                                </h1>
                             </a>
                             
                         </div>

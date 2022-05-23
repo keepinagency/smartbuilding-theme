@@ -27,14 +27,14 @@ $clima2 = get_option( 'clima2', '' );
             </div>
         </div>
         <div class="col-12 text-center mt-3">
-            <h3>Sector Corporativo</h3>
+            <h2>Sector Corporativo</h2>
             <p>El 62% del consumo energético en oficinas promedio en Chile es en Climatización e Iluminación.</p>
             <img src="<?= smartbuilding_IMG. 'Soluciones/Sector-corporativo.png'?>" style="width:50%;"/>
         </div>
         <div class="row col-12 p-0 m-0 m-lg-0 p-lg-0 text-white d-lg-flex justify-content-lg-center" style="background: #2C5660;">
-            <h3 class="text-center py-3">
+            <h2 class="text-center py-3">
                 <?php if(empty($clima1)){ echo "Calefacción y/o Climatización"; } else { echo $clima1; }?>
-            </h3>
+            </h2>
             <p class="px-5 pb-3 text-center">
                 <?php if(empty($clima2)){ 
                     echo "Para climatizar una casa o departamento con el menor costo de operación y mantención se deben tener en cuenta dos aspectos principalmente: 
@@ -46,7 +46,7 @@ $clima2 = get_option( 'clima2', '' );
             while ($nuevo_arreglo->have_posts()) : $nuevo_arreglo->the_post();?>
                 <!--div class="col-12 bg-warning">
                     <?php $current_cat_id = the_category_ID(false);
-                        echo '<h3>' . get_cat_name($current_cat_id) . '</h3>';
+                        echo '<h2>' . get_cat_name($current_cat_id) . '</h2>';
                         $catID = get_the_category();
                         echo category_description( $catID[0] );
                     ?>
@@ -61,7 +61,7 @@ $clima2 = get_option( 'clima2', '' );
                         <div class="col-12 col-lg-12 m-0 p-0 cont_tit_blog">
                             <a class="text-decoration-none p-0 m-0" href="<?php the_permalink(); ?>">
                                 <div class="p-2 m-0 text-white text-center text-uppercase">
-                                    <h3><?php the_title();?></h3>
+                                    <h2><?php the_title();?></h2>
                                 </div>
                             </a>
                             <div class="p-2 m-0 text-lg-justify text-white text-center">
