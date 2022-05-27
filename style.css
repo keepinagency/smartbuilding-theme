@@ -351,14 +351,13 @@ a{
     font-size: 4vw;
   }
   .logo{
-    min-width: 200px;
-    width: 5vw !important;
-    position: absolute;
+    width: 45vw !important;
+    /*position: absolute;
     top:0;
-    left: 20vw;
+    left: 20vw;*/
   }
   .img-award{
-    width:20vw;
+    width:35vw;
   }
   .menu-item {
     text-align: center !important;
