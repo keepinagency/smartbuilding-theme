@@ -16,7 +16,7 @@
 
             <div class="container-fluid p-0 m-0 my-3">
                 
-                <a class="p-0 mt-lg-2 ms-lg-3 pe-1 ps-lg-2 pe-lg-3 border-end"
+                <a class="p-0 mt-lg-2 ms-lg-3 pe-1 ps-lg-2 pe-lg-3 border-end d-none d-sm-block d-sm-none d-md-block"
                     href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" 
                     target="_blank">
 
