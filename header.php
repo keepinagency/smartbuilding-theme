@@ -16,14 +16,14 @@
 
             <div class="container-fluid p-0 m-0 my-3">
                 
-                <a class="p-0 mt-lg-2 ms-lg-3 pe-1 ps-lg-2 pe-lg-3 border-end d-none d-sm-block d-sm-none d-md-block"
+                <!--a class="p-0 mt-lg-2 ms-lg-3 pe-1 ps-lg-2 pe-lg-3 border-end d-none d-sm-block d-sm-none d-md-block"
                     href="https://build-review.com/issues/construction-and-engineering-awards-2021/72/" 
                     target="_blank">
 
                     <img class="img-award p-0 m-0"
                             src="<?= smartbuilding_IMG. '2021-Construction-Engineering-Awards-SmartBuilding100.png'?>"/>
-                </a>
-                <a class="navbar-brand p-0 m-0 col-lg-4 py-lg-0 "  
+                </a-->
+                <a class="navbar-brand p-0 m-0 col-lg-6 py-lg-0 ps-lg-5"  
                     href="<?php echo get_home_url(); ?>">
                     <?php
                         $custom_logo_id = get_theme_mod( 'custom_logo' );
