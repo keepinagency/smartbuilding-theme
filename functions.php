@@ -132,7 +132,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smartbuildingContacto', array(
         'title' => 'Contáctanos home',
         'description' => 'Opciones personalizadas',
-        'priority' => 2,
+        'priority' => 101,
     ));
         /*INICIO SECCION*
         *****************
@@ -169,16 +169,16 @@ function custom_smartbuilding_register( $wp_customize ) {
     /********SECCIÓN PARA TEXTO CLIMATIZACIÓN**********
     ***************************************************/
     $wp_customize->add_panel( 'smartbuildingClima', array(
-        'title' => 'Climatización',
+        'title' => 'Climatización y/o Calefacción',
         'description' => 'Opciones personalizadas',
-        'priority' => 3,
+        'priority' => 102,
     ));
         /*INICIO SECCION*
         *****************
         *****************
         ****************/
         $wp_customize->add_section( 'Clima', array(
-            'title' => __( 'Contenido en páginas Hoteleras, Residenciales y Corporativas', 'textdomain' ),
+            'title' => __( 'Soluciones Hoteleras, Residenciales y Corporativas', 'textdomain' ),
             'panel' => 'smartbuildingClima',
             'priority' => 1,
         ));
@@ -209,7 +209,7 @@ function custom_smartbuilding_register( $wp_customize ) {
         *****************
         ****************/
         $wp_customize->add_section( 'Climat', array(
-            'title' => __( 'Contenido en página Industrial', 'textdomain' ),
+            'title' => __( 'Soluciones industriales', 'textdomain' ),
             'panel' => 'smartbuildingClima',
             'priority' => 1,
         ));
@@ -241,7 +241,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smartbuilding', array(
         'title' => 'Soluciones residenciales',
         'description' => 'Opciones personalizadas',
-        'priority' => 4,
+        'priority' => 174,
     ));
     
         /*INICIO SECCION*
@@ -440,7 +440,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'SmartBuilding', array(
         'title' => 'Soluciones hoteleras',
         'description' => 'Opciones personalizadas',
-        'priority' => 5,
+        'priority' => 175,
     ));
     /****SECCIÓN PARA SOLUCIONES HOTELERAS - INTERNAS****
     ****************************************************/        
@@ -644,7 +644,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smart building', array(
         'title' => 'Personalizar Footer',
         'description' => 'Opciones personalizadas',
-        'priority' => 6,
+        'priority' => 176,
     ));
         /******* SECCIÓN PARA RED SOCIAL - 1 FOOTER **********/
         $wp_customize->add_section( 'Red social - 1', array(
@@ -869,7 +869,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smartbuild-ing', array(
         'title' => 'Aplicar SEO en header',
         'description' => 'Opciones personalizadas',
-        'priority' => 1,
+        'priority' => 61,
     ));
         /******* SECCIÓN PARA H1 HEADER **********/
         $wp_customize->add_section( 'h1', array(
