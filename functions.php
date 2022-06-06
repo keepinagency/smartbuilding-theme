@@ -132,7 +132,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smartbuildingContacto', array(
         'title' => 'Contáctanos home',
         'description' => 'Opciones personalizadas',
-        'priority' => 1,
+        'priority' => 2,
     ));
         /*INICIO SECCION*
         *****************
@@ -171,7 +171,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smartbuildingClima', array(
         'title' => 'Climatización',
         'description' => 'Opciones personalizadas',
-        'priority' => 2,
+        'priority' => 3,
     ));
         /*INICIO SECCION*
         *****************
@@ -241,7 +241,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smartbuilding', array(
         'title' => 'Soluciones residenciales',
         'description' => 'Opciones personalizadas',
-        'priority' => 3,
+        'priority' => 4,
     ));
     
         /*INICIO SECCION*
@@ -440,7 +440,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'SmartBuilding', array(
         'title' => 'Soluciones hoteleras',
         'description' => 'Opciones personalizadas',
-        'priority' => 4,
+        'priority' => 5,
     ));
     /****SECCIÓN PARA SOLUCIONES HOTELERAS - INTERNAS****
     ****************************************************/        
@@ -644,7 +644,7 @@ function custom_smartbuilding_register( $wp_customize ) {
     $wp_customize->add_panel( 'smart building', array(
         'title' => 'Personalizar Footer',
         'description' => 'Opciones personalizadas',
-        'priority' => 5,
+        'priority' => 6,
     ));
         /******* SECCIÓN PARA RED SOCIAL - 1 FOOTER **********/
         $wp_customize->add_section( 'Red social - 1', array(
@@ -860,6 +860,48 @@ function custom_smartbuilding_register( $wp_customize ) {
             $wp_customize->add_control('correo', array(
                 'label' => __( 'Indique su email', 'textdomain' ),
                 'section' => 'Correo',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+     /** Panel OPCIONES SMART BUILDING HEADER para el personalizador **
+    ****************************************************************
+    ***************************************************************/
+    $wp_customize->add_panel( 'smartbuild-ing', array(
+        'title' => 'Aplicar SEO en header',
+        'description' => 'Opciones personalizadas',
+        'priority' => 1,
+    ));
+        /******* SECCIÓN PARA H1 HEADER **********/
+        $wp_customize->add_section( 'h1', array(
+            'title' => __( 'Título H1', 'textdomain' ),
+            'panel' => 'smartbuild-ing',
+            'priority' => 1,
+        ));
+            /** Setting H1 HEADER **/
+            $wp_customize->add_setting( 'h1', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('h1', array(
+                'label' => __( 'Indique el texto para el H1', 'textdomain' ),
+                'section' => 'h1',
+                'priority' => 1,
+                'type' => 'text',
+            ));
+        /******* SECCIÓN PARA ATRIBUTO ALT HEADER **********/
+        $wp_customize->add_section( 'alt', array(
+            'title' => __( 'Atributo alt', 'textdomain' ),
+            'panel' => 'smartbuild-ing',
+            'priority' => 2,
+        ));
+            /** Setting ALT HEADER **/
+            $wp_customize->add_setting( 'alt', array(
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+            ));
+            $wp_customize->add_control('alt', array(
+                'label' => __( 'Indique el texto para atributo alt', 'textdomain' ),
+                'section' => 'alt',
                 'priority' => 1,
                 'type' => 'text',
             ));

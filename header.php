@@ -24,6 +24,10 @@
                             src="<?= smartbuilding_IMG. '2021-Construction-Engineering-Awards-SmartBuilding100.png'?>"/>
                 </a-->
                 <?php
+
+                    $txth1 = get_option( 'h1', '' );
+                    $txtalt = get_option( 'alt', '' );
+
                     $custom_logo_id = get_theme_mod( 'custom_logo' );
                     $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
                     if (!is_home())
@@ -32,8 +36,17 @@
                         href="<?php echo get_home_url(); ?>">
                     <img class="logo m-0 p-0 ms-lg-2 my-2 ps-1"
                                 src="<?=esc_url( $custom_logo_url )?>" 
-                                alt="SmartBuilding.cl - Eficiencia energética y construcción sustentable"
-                            title="SmartBuilding.cl - Eficiencia energética y construcción sustentable">
+                                alt="<?php if(empty($txtalt)) {
+                                    echo 'SmartBuilding.cl - Eficiencia energética y construcción sustentable';
+                                    }else {
+                                        echo $txtalt;
+                                    }?>"
+                            title="<?php if(empty($txth1)) {
+                                    echo 'SmartBuilding.cl - Eficiencia energética y construcción sustentable';
+                                    }else {
+                                        echo $txth1;
+                                    }?>"
+                        >
                     </a>
                     <?php
                     }else{
@@ -43,8 +56,17 @@
                             href="<?php echo get_home_url(); ?>">
                             <img class="logo m-0 p-0 ms-lg-2 my-2 ps-1"
                                     src="<?=esc_url( $custom_logo_url )?>" 
-                                    alt="SmartBuilding.cl - Eficiencia energética y construcción sustentable"
-                                    title="SmartBuilding.cl - Eficiencia energética y construcción sustentable">
+                                    alt="<?php if(empty($txtalt)) {
+                                        echo 'SmartBuilding.cl - Eficiencia energética y construcción sustentable';
+                                        }else {
+                                            echo $txtalt;
+                                        }?>"
+                                    title="<?php if(empty($txth1)) {
+                                        echo 'SmartBuilding.cl - Eficiencia energética y construcción sustentable';
+                                        }else {
+                                            echo $txth1;
+                                        }?>
+                                ">
                         </a>
                         </h1>
                     <?php
