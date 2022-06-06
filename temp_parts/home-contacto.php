@@ -57,13 +57,13 @@ $logored3 = get_option( 'logored3', '' );
                 <span class="text-secondary">
                     <i class="fa-solid fa-square-phone pt-4 pe-2"></i> Teléfono:
                 </span>
-                <p><?php if (empty($tel)) {
-                    echo "+ 56 22 938 0016";
-                }else {
-                    ?>
-                    <a href="tel:<?= $tel; ?>"><?=$tel?></a>
-                    <?php
-                    }?></p>
+                <p>
+                    <?php if (empty($tel)) {?>
+                        <a href="https://wa.me/56229380016?text=Hola,%20les%20escribo%20desde%20www.smartbuilding.cl" target="_blank">+56229380016<a>
+                    <?php } else {?>
+                        <a href="https://wa.me/<?=$tel?>?text=Hola,%20les%20escribo%20desde%20www.smartbuilding.cl" target="_blank"><?=$tel?></a>
+                    <?php }?>
+                </p>
                 <span class="text-secondary">
                     <i class="fa-solid fa-envelope pt-4 pe-2"></i> Correo:
                 </span>

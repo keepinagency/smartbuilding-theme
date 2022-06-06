@@ -59,12 +59,13 @@
 					<span>
 						<i class="fa fa-whatsapp"></i> TELÉFONO
 					</span>
-					<p><?php if (empty($tel)) {?>
-						<a href:"https://api.whatsapp.com/send?phone=56229380016&text=Hola,%20les%20escribo%20desde%20www.smartbuilding.cl" target="_blank">+56229380016<a>
-					<?php } else {?>
-						<a href="https://api.whatsapp.com/send?phone=<?=$tel?>&text=Hola,%20les%20escribo%20desde%20www.smartbuilding.cl" target="_blank"><?=$tel?></a>
-						<?php
-						}?></p>
+					<p>
+						<?php if (empty($tel)) {?>
+							<a href="https://wa.me/56229380016?text=Hola,%20les%20escribo%20desde%20www.smartbuilding.cl" target="_blank">+56229380016<a>
+						<?php } else {?>
+							<a href="https://wa.me/<?=$tel?>?text=Hola,%20les%20escribo%20desde%20www.smartbuilding.cl" target="_blank"><?=$tel?></a>
+						<?php }?>
+					</p>
 				</div>
 				<div class="col-lg-4 p-0 m-0">
 					<span>
