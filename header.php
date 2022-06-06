@@ -23,16 +23,33 @@
                     <img class="img-award p-0 m-0"
                             src="<?= smartbuilding_IMG. '2021-Construction-Engineering-Awards-SmartBuilding100.png'?>"/>
                 </a-->
-                <a class="navbar-brand p-0 m-0 col-lg-6 py-lg-0 ps-lg-5"  
-                    href="<?php echo get_home_url(); ?>">
-                    <?php
-                        $custom_logo_id = get_theme_mod( 'custom_logo' );
-                        $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-                    ?>
+                <?php
+                    $custom_logo_id = get_theme_mod( 'custom_logo' );
+                    $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
+                    if (!is_home())
+                { ?>
+                    <a class="navbar-brand p-0 m-0 col-lg-6 py-lg-0 ps-lg-5"  
+                        href="<?php echo get_home_url(); ?>">
                     <img class="logo m-0 p-0 ms-lg-2 my-2 ps-1"
-                            src="<?=esc_url( $custom_logo_url )?>" 
-                            alt="Logo ">
-                </a>
+                                src="<?=esc_url( $custom_logo_url )?>" 
+                                alt="SmartBuilding.cl - Eficiencia energética y construcción sustentable"
+                            title="SmartBuilding.cl - Eficiencia energética y construcción sustentable">
+                    </a>
+                    <?php
+                    }else{
+                    ?>
+                        <h1>
+                        <a class="navbar-brand p-0 m-0 col-lg-6 py-lg-0 ps-lg-5"  
+                            href="<?php echo get_home_url(); ?>">
+                            <img class="logo m-0 p-0 ms-lg-2 my-2 ps-1"
+                                    src="<?=esc_url( $custom_logo_url )?>" 
+                                    alt="SmartBuilding.cl - Eficiencia energética y construcción sustentable"
+                                    title="SmartBuilding.cl - Eficiencia energética y construcción sustentable">
+                        </a>
+                        </h1>
+                    <?php
+                    }
+                    ?>
                 <button class="navbar-toggler h-100 me-1" type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#menusmartbuilding" 
