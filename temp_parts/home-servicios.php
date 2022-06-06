@@ -15,7 +15,7 @@ $arreglo_servicios = new WP_Query(array(
 <div id="servicios" class="col-12 row p-0 m-0 ">
     <?php if ($arreglo_servicios->have_posts()) : ?>
         <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
-            <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Principios</p>
+            <h2 class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Principios</h2>
         </div>
         <div class="col-12 row p-0 m-0" style="background-color: rgba(0, 0, 0, 0.05);">
         <?php while ($arreglo_servicios->have_posts()) : $arreglo_servicios->the_post();?>
@@ -31,7 +31,7 @@ $arreglo_servicios = new WP_Query(array(
                </div>
                <div class="row col-lg-6 col-8 p-lg-0 m-lg-0 p-0 m-0">
                     <div class="titulo-servicios col-lg-12 col-12 p-0 m-0 d-flex align-items-end">
-                        <h2><?php the_title(); ?></h2>
+                        <h3><?php the_title(); ?></h3>
                     </div>
                     <div class="post-servicios col-lg-12 col-12 p-0 m-0">
                         <?php the_excerpt();?>

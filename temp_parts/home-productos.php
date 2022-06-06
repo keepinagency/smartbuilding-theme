@@ -11,7 +11,7 @@ $arreglo_productos = new WP_Query(array(
 ));
 ?>
 <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
-    <p class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</p>
+    <h2 class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</h2>
 </div>
 <div class="row contenedor-productoHome p-0 m-0 p-3 d-flex flex-column-reverse">
     <?php if ($arreglo_productos->have_posts()) :?>
@@ -48,9 +48,9 @@ $arreglo_productos = new WP_Query(array(
                                 role="button" aria-expanded="false" aria-controls="producto<?=$i?>"
                                 onclick="let wact = jQuery(this).parent().parent().width();
                                          jQuery(this).parent().parent().css('max-width',wact);">      
-                                <h1 class="enlace-post text-uppercase text-center text-white w-100">
+                                <h3 class="enlace-post text-uppercase text-center text-white w-100">
                                     <?php the_title(); ?>
-                                </h1>
+                                </h3>
                             </a>
                             
                         </div>
