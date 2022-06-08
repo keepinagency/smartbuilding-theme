@@ -4,10 +4,20 @@
 <script src="https://kit.fontawesome.com/485d462403.js" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php wp_head(); ?>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WXDVPSDKHY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+	gtag('config', 'G-WXDVPSDKHY');
+</script>
 </head>
 
 <body
  <?php body_class(); ?> class="p-0 m-0">
+ 
  <script type="text/javascript" src="https://clientify.net/web-marketing/webforms/script/72198.js"></script>
 <div class="container-fluid p-0 m-0 h-100">
     <div class="header p-0 m-0 row">
