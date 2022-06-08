@@ -23,7 +23,7 @@ $arreglo_productos = new WP_Query(array(
             </div>
         </div><!-- .error-404 -->   
             <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center m-3 titulos-pages">
-                <p><?php _e( 'Quizás alguno de estos articulos sean de tu interes' ); ?></p>
+                <p><?php _e( 'Quizás alguno de estos artículos sean de tú interés' ); ?></p>
             </div>
                 
             <div class="row contenedor-productoHome p-0 m-0 p-3 d-flex align-items-center justify-content-center">
@@ -60,7 +60,7 @@ $arreglo_productos = new WP_Query(array(
             </div>
             <div>
                 <div class="d-flex align-items-center justify-content-center m-3">
-                    <p>si es tu preferencia, puedes ir a la página principal a través de este enlace <a class="btn btn-404" href="<?php echo get_home_url(); ?>" role="button">Inicio</a> 
+                    <p>Puedes ir a la página principal a través de este enlace <a class="btn btn-404" href="<?php echo get_home_url(); ?>" role="button">Inicio</a> 
                     </p>
                 </div>
             </div>
