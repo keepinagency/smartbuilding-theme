@@ -60,7 +60,7 @@ $arreglo_productos = new WP_Query(array(
             </div>
             <div>
                 <div class="d-flex align-items-center justify-content-center m-3">
-                    <p>Puedes ir a la página principal a través de este enlace <a class="btn btn-404" href="<?php echo get_home_url(); ?>" role="button">Inicio</a> 
+                    <p>Puedes ir a la página principal a través de este enlace <a class="btn btn-404 text-white" href="<?php echo get_home_url(); ?>" role="button">Inicio</a> 
                     </p>
                 </div>
             </div>
