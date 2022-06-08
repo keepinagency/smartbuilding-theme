@@ -121,7 +121,7 @@ function guardar_sub_titulo() {
 /*FUNCIÓN PARA 404*/
 
 function redirigir_404(){
-    $url = 'https://smartbuilding.cl/s';
+    $url = 'https://smartbuilding.cl/';
     if(is_404()){
         wp_redirect( $url, 301 );
         exit;
