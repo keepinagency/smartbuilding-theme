@@ -118,6 +118,16 @@ function guardar_sub_titulo() {
     $price= $_POST['sub_titulo'];
     update_post_meta($post_id, 'sub_titulo', $price);
 }
+/*FUNCIÓN PARA 404*/
+
+function redirigir_todos_los_404(){
+    $url_a_redireccionar = 'https://smartbuilding.cl/s';
+    if(is_404()){
+        wp_redirect( $url_a_redireccionar, 301 );
+        exit;
+        }
+  }
+add_action('template_redirect', 'redirigir_todos_los_404');
 
 /***** FUNCIONES CUSTOM PARA EL PERSONZALIDOR *******
 *****************************************************/
