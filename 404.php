@@ -10,7 +10,7 @@ $arreglo_productos = new WP_Query(array(
     'order'=>'DESC',
 	'posts_per_page'=>3,
     'orderby' => 'post__in',
-    'post__in' => array(48, 67, 45 )/*Ambiente PRO*/
+    'post__in' => array(48, 678, 45 )/*Ambiente PRO*/
 ));
 ?>
 
@@ -26,7 +26,7 @@ $arreglo_productos = new WP_Query(array(
                 <p><?php _e( 'Quizás alguno de estos articulos sean de tu interes' ); ?></p>
             </div>
                 
-            <div class="row contenedor-productoHome p-0 m-0 p-3 ">
+            <div class="row contenedor-productoHome p-0 m-0 p-3 d-flex align-items-center justify-content-center">
                 <?php if ($arreglo_productos->have_posts()) : while ($arreglo_productos->have_posts()) : $arreglo_productos->the_post();  ?>
                     <div class="col-lg-4 p-0 m-0 d-md-none ps-lg-1 pb-lg-1 d-lg-flex flex-lg-row-reverse d-flex flex-column-reverse"> 
 
