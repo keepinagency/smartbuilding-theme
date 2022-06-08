@@ -120,14 +120,14 @@ function guardar_sub_titulo() {
 }
 /*FUNCIÓN PARA 404*/
 
-function redirigir_todos_los_404(){
-    $url_a_redireccionar = 'https://smartbuilding.cl/s';
+function redirigir_404(){
+    $url = 'https://smartbuilding.cl/s';
     if(is_404()){
-        wp_redirect( $url_a_redireccionar, 301 );
+        wp_redirect( $url, 301 );
         exit;
         }
   }
-add_action('template_redirect', 'redirigir_todos_los_404');
+add_action('template_redirect', 'redirigir_404');
 
 /***** FUNCIONES CUSTOM PARA EL PERSONZALIDOR *******
 *****************************************************/
