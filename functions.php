@@ -867,13 +867,13 @@ function custom_smartbuilding_register( $wp_customize ) {
     ****************************************************************
     ***************************************************************/
     $wp_customize->add_panel( 'smartbuild-ing', array(
-        'title' => 'Aplicar SEO en header',
+        'title' => 'Aplicar H1 en el HomePage',
         'description' => 'Opciones personalizadas',
         'priority' => 61,
     ));
         /******* SECCIÓN PARA H1 HEADER **********/
         $wp_customize->add_section( 'h1', array(
-            'title' => __( 'Título H1', 'textdomain' ),
+            'title' => __( 'Coloque titulo h1', 'textdomain' ),
             'panel' => 'smartbuild-ing',
             'priority' => 1,
         ));
@@ -885,23 +885,6 @@ function custom_smartbuilding_register( $wp_customize ) {
             $wp_customize->add_control('h1', array(
                 'label' => __( 'Indique el texto para el H1', 'textdomain' ),
                 'section' => 'h1',
-                'priority' => 1,
-                'type' => 'text',
-            ));
-        /******* SECCIÓN PARA ATRIBUTO ALT HEADER **********/
-        $wp_customize->add_section( 'alt', array(
-            'title' => __( 'Atributo alt', 'textdomain' ),
-            'panel' => 'smartbuild-ing',
-            'priority' => 2,
-        ));
-            /** Setting ALT HEADER **/
-            $wp_customize->add_setting( 'alt', array(
-                'type' => 'option',
-                'capability' => 'edit_theme_options',
-            ));
-            $wp_customize->add_control('alt', array(
-                'label' => __( 'Indique el texto para atributo alt', 'textdomain' ),
-                'section' => 'alt',
                 'priority' => 1,
                 'type' => 'text',
             ));
