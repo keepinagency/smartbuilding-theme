@@ -380,7 +380,7 @@ a{
   .navbar-light .navbar-toggler{
     color: #86AA35 !important;
   }
-  .carousel-caption h3{
+  .carousel-caption h2{
     color: #E9E135;
     background-color: rgba(0, 0, 0, 0.8);
     font-size: 1.8rem;
