@@ -14,7 +14,7 @@ $arreglo_productos = new WP_Query(array(
 ?>
 <div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2">
     <!--h2 class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</h2-->
-    <h1 class="border-2 border-bottom border-success">
+    <h1 class="border-2 border-bottom border-success px-1 m-0 text-center">
         <?php if (empty($txth1)) {
             echo "soluciones multi industria para el ahorro energético";
             }else{

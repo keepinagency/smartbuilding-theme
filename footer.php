@@ -25,7 +25,7 @@
 		<div class="col-12 col-lg-3 col-xl-4 py-2 m-0">
 			<div class="conten-social-redes row">
 				<div class="titulo-redes p-0 m-0 col-lg-8 col-xl-7">Siguenos en <b class="titulo-negrita">Redes</b>&nbsp;Sociales:</div>
-				<div class="col-lg-4 col-xl-5 p-0 m-0 d-flex justify-content-start">
+				<div class="col-lg-4 col-xl-5 p-0 m-0 d-flex justify-content-center d-lg-flex justify-content-lg-start">
 					<!-- Red social - 1 -->
 					<a href="<?=$url_1?>" target="_blank" class="text-decoration-none me-2">
 						<img src="<?= $logored1;?>"/>
