@@ -74,7 +74,6 @@ $arreglo_slides = new WP_Query(array (
 <?php
 /********************** Sección Nuestros Productos ***********************/  
 /*************************************************************************/
-//$txth1 = get_option( 'h1', '' );
 $arreglo_productos = new WP_Query(array(
 	'post_type'=>'post', 
     'category_name' => 'productos',
@@ -82,17 +81,6 @@ $arreglo_productos = new WP_Query(array(
 	'posts_per_page'=>7
 ));
 ?>
-<!--div class="titulo-producto text-uppercase d-flex align-items-center justify-content-center pt-4 pb-2"-->
-    <!--h2 class="border-2 border-bottom border-success"><b class="titulo-negrita">Nuestros</b>&nbsp;Productos</h2-->
-    <!--h1 class="border-2 border-bottom border-success px-1 m-0 text-center">
-        <?php if (empty($txth1)) {
-            echo "soluciones multi industria para el ahorro energético";
-            }else{
-                echo $txth1;
-            }
-        ?>    
-    </h1>
-</div-->
 <div class="row contenedor-productoHome p-0 m-0 p-3 d-flex flex-column-reverse">
     <?php if ($arreglo_productos->have_posts()) :?>
         <div class="row col-12 p-0 m-0">

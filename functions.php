@@ -29,7 +29,8 @@ function smartbuilding_cssjs(){
 }
 function smartbuilding_enqueue_scripts() {
     /*** Archivos JS BootStrap y sus dependencias ***/
-    $dependencies = array('jquery');
+    //$dependencies = array('jquery');
+    $dependencies = "";
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', $dependencies, '', true );
     wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', $dependencies, '', true );
     wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', $dependencies, '', true );
