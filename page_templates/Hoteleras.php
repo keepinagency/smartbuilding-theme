@@ -63,7 +63,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );*/
             <div class="col-lg-4 col-12 m-lg-5">
                 <a class="text-decoration-none"href="<?php echo $hurl_agua; ?>">
                     <?php if(empty($himg_agua)) {
-                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;"><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $himg_agua ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
@@ -87,7 +87,7 @@ $himg_aguat = get_option( 'himge__aguas', '' );*/
             <div class="col-lg-4 col-12 m-lg-5">
                 <a class="text-decoration-none"href="<?php echo $hurl_aguas; ?>">
                     <?php if(empty($himg_aguas)) {
-                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" style="max-width:100%;><br><br>'; }
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua2.jpg' . '" class="ima-post"><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $himg_aguas ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
