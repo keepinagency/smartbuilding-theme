@@ -175,7 +175,7 @@ a{
   background: rgba(255,255,255, 0.8) !important;
   text-align: justify;
   color:#3F4F6B;
-  max-width: 100%;
+  /*max-width: 100%;*/
 }
 
 .read-more{

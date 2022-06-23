@@ -22,18 +22,19 @@ function smartbuilding_setup(){
 
 /*Archivos JS y CSS*/
 function smartbuilding_cssjs(){
-	wp_enqueue_style('bootstrap_5', get_template_directory_uri() . '/css/bootstrap.min.css');
-	wp_enqueue_script('bootstrap_js_5', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true);
-	$dependencies = array('bootstrap_5');
+	/*wp_enqueue_style('bootstrap_5', get_template_directory_uri() . '/css/bootstrap.min.css');
+	$dependencies = array('bootstrap_5');*/
+    $dependencies = "";
 	wp_enqueue_style( 'smartbuilding-style', get_stylesheet_uri(), $dependencies );
 }
 function smartbuilding_enqueue_scripts() {
     /*** Archivos JS BootStrap y sus dependencias ***/
-    //$dependencies = array('jquery');
-    $dependencies = "";
+    $dependencies = array('jquery');
+    //$dependencies = "";
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', $dependencies, '', true );
-    wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', $dependencies, '', true );
-    wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', $dependencies, '', true );
+    //wp_enqueue_script('bootstrap_js_5', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true);
+    //wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', $dependencies, '', true );
+    //wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', $dependencies, '', true );
 
 }
 
@@ -894,7 +895,7 @@ function custom_smartbuilding_register( $wp_customize ) {
 
 /*Ejecución de acciones o funciones definidas*/
 add_action('wp_enqueue_scripts', 'smartbuilding_cssjs'); 				    // CCS
-add_action( 'wp_enqueue_scripts', 'smartbuilding_enqueue_scripts' );		// Scripts Javas	
+
 add_action('after_setup_theme', 'smartbuilding_setup');					    // Colocar título, logo de la página e imagen destacada desde wordpress
 add_action('after_setup_theme', 'smartbuilding_register_menu');			    // Menú
 add_action( 'customize_register', 'custom_smartbuilding_register' );		// Personalizador
@@ -910,3 +911,5 @@ add_action( 'save_post', 'guardar_subtitulo' );                 //guardar subtit
 add_action( 'publish_post', 'guardar_subtitulo' );              //Publicar subtitulo metabox en PAGE
 add_action('save_post', 'guardar_sub_titulo');                  //guardar sub_titulo metabox en PAGE
 add_action('publish_post', 'guardar_sub_titulo');               //Publicar sub_titulo metabox en PAGE
+
+add_action( 'wp_enqueue_scripts', 'smartbuilding_enqueue_scripts' );		// Scripts Javas	

@@ -54,10 +54,16 @@ $arreglo_productos = new WP_Query(array(
                             <!-- href="<?php the_permalink(); ?>" -->
                             
                             <a class="titulo-post d-flex align-items-center text-center" 
-                                data-toggle="collapse" href="#producto<?=$i?>" 
+                                data-bs-toggle="collapse" href="#producto<?=$i?>" 
                                 role="button" aria-expanded="false" aria-controls="producto<?=$i?>"
-                                onclick="let wact = jQuery(this).parent().parent().width();
-                                         jQuery(this).parent().parent().css('max-width',wact);">      
+                                onclick="/*let wact = jQuery(this).parent().parent().width(); 
+                                            jQuery(this).parent().parent().attr('style',  'border:thin solid red');
+                                            alert(wact);
+                                         jQuery(this).parent().parent().css('max-width',wact);
+                                         var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+                                            var collapseList = collapseElementList.map(function (collapseEl) {
+                                            return new bootstrap.Collapse(collapseEl)
+                                            })*/">      
                                 <h3 class="enlace-post text-uppercase text-center text-white w-100">
                                     <?php the_title(); ?>
                                 </h3>
@@ -68,7 +74,15 @@ $arreglo_productos = new WP_Query(array(
                         <div  class="contenido-producto p-3 h-75 collapse multi-collapse" id="producto<?=$i?>">
                             <?php the_excerpt(); ?>
                         </div>
-                        
+                        <script>
+                            var myCollapsible = document.getElementById('producto<?=$i?>')
+                            myCollapsible.addEventListener('show.bs.collapse', function () {
+                                console.log(myCollapsible);
+                                let wact = document.getElementById('producto<?=$i?>').parentElement.offsetWidth;
+                                document.getElementById('producto<?=$i?>').style.maxWidth = wact+'px';
+                                document.getElementById('producto<?=$i?>').parentElement.style.maxWidth = wact+'px';
+                            })
+                        </script>
                         
                     </div> 
                     
