@@ -101,8 +101,8 @@ a{
 .carousel-caption p{
   background-color: #E9E135;
   font-size: 1.5em;
+  color:  rgba(0, 0, 0, 0.8);
   text-shadow: 1px 1px #666;
-  color: #FFF;
 }
 .titulo-page h1{
   background-color: rgba(139, 139, 137, 0.70);
@@ -404,7 +404,9 @@ a{
   .carousel-caption p{
     font-size: 0.8em;
     font-weight: bold;
-    background-color: rgba(139, 139, 137, 0.65);
+    background-color: #E9E135;
+    color:  rgba(0, 0, 0, 0.8);
+    text-shadow: none;
   }
   .miniatura-producto{
     background-position: center;
