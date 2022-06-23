@@ -135,7 +135,30 @@ a{
   color:#242629;
   max-width: 100%;
 }
-
+.cont_pag_numbers{
+  width: 100%;
+  text-align: center;
+}
+.cont_pag_numbers span{
+  color:#fff;
+  margin: 5px;
+  padding: 5px;
+  background-color: #86AA35;
+  border-radius: 10px;
+} 
+.cont_pag_numbers a{
+  color:#fff;
+  margin: 5px;
+  padding: 5px;
+  background-color:rgba(49, 52, 55, 0.5);
+  border-radius: 10px;
+} 
+@media (max-width: 768px) {
+  .cont_pag_numbers{
+    width: 100%;
+    text-align: center;
+  }
+}
   /*****HOME - PRODUCTO*****
   **************************/
 .titulo-producto{
