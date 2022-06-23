@@ -75,6 +75,22 @@ a{
 .btn-404:hover{
   color: #fff;
 }
+.ima-post{
+  max-width: 400px !important;
+  max-height: 200px;
+}
+@media (max-width: 768px) {
+  .ima-post{
+    max-width: 250px !important;
+    max-height: 500px;
+  }
+  .read-more{
+    margin: 0.8rem 0rem 0.8rem 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
   /***HOME - PRESENTACIÓN***
   **************************/
 .carousel-caption h2{

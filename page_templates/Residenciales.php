@@ -13,7 +13,7 @@ $nuevo_arreglo = new WP_Query(array(
 	'posts_per_page'=>4,
     'orderby' => 'post__in',
     /*'post__in' => array(43, 55, 58 )---> Local */ 
-    'post__in' => array(58, 45, 62 )/*Ambiente DEV*/
+    /*'post__in' => array(58, 45, 62 )/*Ambiente DEV*/
     
 ));
 
@@ -69,7 +69,16 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
                 <div class="row d-flex d-lg-flex justify-content-center flex-lg-row col-12 p-0 m-0 col-lg-6 px-lg-5 pb-lg-3">
                     <div class="col-12 col-lg-12 cont-img text-center">
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('') ;?>
+                            <?php //get_the_post_thumbnail_url($post_id, 0, 'class="ima-post"') ;?>
+                            <?php $image = wp_get_attachment_image_src(
+                                            get_post_thumbnail_id( 
+                                                get_the_ID() ), 
+                                                    'single-post-thumbnail'
+                                            );
+                                if ($image) {
+                                    echo "<img src='" . $image[0] . "' class='ima-post' />";
+                                }
+                            ?>
                         </a>
                     </div> 
                     <div class="cont-corpotel col-12 m-0 p-0 text-center">
@@ -101,7 +110,7 @@ $img_aguat = get_option( 'imge__aguas', '' );*/
             <div class="col-lg-4 col-12 m-lg-5">
                 <a class="text-decoration-none"href="<?= $url_agua ?>">
                     <?php if(empty($img_agua)) {
-                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;><br><br>'; }
+                            echo '<img src="'.smartbuilding_IMG.'Soluciones/agua1.jpg' . '" style="max-width:100%;"><br><br>'; }
                         else{
                             echo '<img src="' . esc_url( $img_agua ) . '" style="max-width:100%;"><br><br>'; }
                     ?>
